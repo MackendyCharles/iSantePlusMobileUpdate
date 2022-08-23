@@ -1,0 +1,242 @@
+<ion-header>
+    <ion-toolbar color="segundary">
+
+      <ion-buttons>
+        <ion-menu-button menu="main-menu"><ion-icon name="menu"></ion-icon></ion-menu-button>
+        <ion-title>iSantePlus</ion-title>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content>
+
+    <div style="font-size: 18px; color: #363463; font-weight: bold;">
+        <ion-icon name="home" style="font-size: 18px; margin-right: 5px; margin-left: 4px; float: left"></ion-icon>
+        <!--    <mat-icon >home</mat-icon>-->
+        <ion-icon name="arrow-forward" style="font-size: 20px; margin-right: 7px; float: left"></ion-icon>
+        <!--    <mat-icon >navigate_next</mat-icon>-->
+        <p (click)="showDashPatient()" style=" font-size: 14px; float: left;  text-decoration: underline; color: #363463; font-weight: bold;">{{patientName}} </p>
+
+      </div>
+    <!-- <span style="font-size: x-small; font-weight: bold; text-transform: capitalize; color: #363463"><img src="assets/images/entete.png" style="width: 30px; height: 20px; padding-top: 5px ">{{patientName}}</span> -->
+    <div style="clear:both;"></div>
+    <br/>
+    <div style="width: 100%; background-color: #009D8E; color:#FFFFFF; font-size: 11px; font-weight: bold;">&nbsp; ENCOUNTER DETAILS</div>
+
+    <form [formGroup]="ordonnanceForm" full style="padding: 1px;">
+
+        <ng-template matStepLabel>Date:</ng-template>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Date:</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="pickerDateEnr" [formControl]="date" [value]="date"
+                   formControlName="dateEnCtrl" required
+                   readonly="true"/>
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="pickerDateEnr"></mat-datepicker-toggle>
+            <mat-datepicker #pickerDateEnr></mat-datepicker>
+        </mat-form-field>
+
+
+        <br/><br/>
+        <div style="width: 100%; background-color: #009D8E; color:#FFFFFF; font-size: 11px; font-weight: bold;">&nbsp;  VISITE ASSOCIEE</div>
+
+        <mat-label> Patient inscrit dans programme ARV:</mat-label><br/>
+        <mat-radio-group aria-label="Select an option" formControlName="arv" appearance="outline">
+            <mat-radio-button value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Oui&nbsp;&nbsp;</mat-radio-button>
+            <mat-radio-button value="1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non</mat-radio-button>
+        </mat-radio-group>
+        <br/><br/>
+        <mat-divider></mat-divider>
+
+        <section class="example-section" appearance="outline" >
+            <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" formControlName="dispensationComm">Dispensation communautaire&nbsp;&nbsp;</mat-checkbox>
+            <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" formControlName="dispensationDDP">Dispensation DDP</mat-checkbox>
+        </section>
+        <mat-divider></mat-divider>
+        <br/>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+        <mat-radio-group aria-label="Select an option" formControlName="visite" appearance="outline">
+            <mat-radio-button value="164180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Visite initiale&nbsp;&nbsp;
+            </mat-radio-button>
+            <mat-radio-button value="160530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Visite de suivi</mat-radio-button>
+        </mat-radio-group>
+        <ng-template matStepLabel>Date Visite</ng-template>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Date Visite</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="pickerDateVis" [formControl]="date" [value]="date"
+                   formControlName="pickerDateVis" required
+                   readonly="true"/>
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="pickerDateVis"></mat-datepicker-toggle>
+            <mat-datepicker #pickerDateVis></mat-datepicker>
+        </mat-form-field>
+
+
+        <ng-template matStepLabel>Date d'initiation ARV</ng-template>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Date d'initiation ARV</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="pickerDateIni" [formControl]="date" [value]="date"
+                   formControlName="pickerDateIni" required
+                   readonly="true"/>
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="pickerDateIni"></mat-datepicker-toggle>
+            <mat-datepicker #pickerDateIni></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+        <br/>
+        <mat-radio-group aria-label="Select an option" formControlName="regime">
+            <mat-radio-button value="dd69cffe-d7b8-4cf1-bc11-3ac302763d48">Régime de 1ère ligne</mat-radio-button>
+            <br/>
+            <mat-radio-button value="77488a7b-957f-4ebc-892a-e53e7c910363">Régime de 2ème ligne</mat-radio-button>
+            <br/>
+            <mat-radio-button value="99d88c3e-00ad-4122-a300-a88ff5c125c9">Régime de 3ème ligne</mat-radio-button>
+        </mat-radio-group>
+
+    </form>
+
+    <br/>
+    <mat-divider></mat-divider>
+
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="pet">
+            <ion-segment-button value="arv">
+                Regime ARV
+            </ion-segment-button>
+            <ion-segment-button value="nonarv">
+                Regime NON-ARV
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+
+    <div [ngSwitch]="pet">
+        <ion-list *ngSwitchCase="'arv'">
+            <div style="float: left">
+                <button ion-button color="danger" clear icon-only style="border-radius: 50%; margin-right: 1px; padding: 1px;"
+                        (click)="openDialog()">
+                    <ion-icon name='add-circle' is-active="true"
+                              style="font-size: 30px; font-weight: bold; color: #00463f;"></ion-icon>
+                </button>
+            </div>
+            <div style="clear:both;"></div>
+            <ion-item>
+                <ion-list *ngIf="dataSource" style="margin-top: 0px; padding-top: 0px; width: 100%">
+                    <ion-item  class="listMargin">
+
+                        <div style="width: 100%;">
+                            <div style="float: left;">
+                                <ion-thumbnail item-start>
+                                    <img src="assets/images/regimeARV.png" style="width: 32px; height: 32px; margin-top: 10px;"/>
+                                </ion-thumbnail>
+                            </div>
+                            <div style="font-size: small; float: left; padding-top: 20px;">
+                                {{ showRegime }}
+                            </div>
+                            <div style="float: right; padding-top: 20px; margin-right: 10px;">
+                                <button ion-button color="primary" outline icon-only style="margin-right: 0px; color: rgb(9, 78, 168);">
+                                    <ion-icon name='eye' is-active="false"></ion-icon>
+                                </button>&nbsp;
+                                <button ion-button color="danger" clear icon-only (click)="editRegimeARV(dataSource)" style="margin-right: 0px; color: rgb(238, 166, 22);" >
+                                    <ion-icon name='create' is-active="false"></ion-icon>
+                                </button>&nbsp;
+                                <button ion-button color="danger" clear icon-only (click)="deleteRegimeARV(dataSource)" style="margin-right: 0px; color: rgb(247, 3, 55);">
+                                    <ion-icon name='trash' is-active="false"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                </ion-list>
+            </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'nonarv'">
+            <ion-item>
+                <h2>Luna</h2>
+            </ion-item>
+        </ion-list>
+    </div>
+
+
+    <form [formGroup]="ordonnanceForm1" full style="padding: 1px;">
+        <div style="width: 100%; background-color: #009D8E; color:#FFFFFF; font-size: 11px; font-weight: bold;">
+            COLLECTE DES MEDICAMENTS/PROCHAINE VISITE
+        </div>
+
+        <mat-label>Informations sur la personne prenant les médicaments.</mat-label>
+        <mat-form-field appearance="outline">
+            <mat-label>Nom</mat-label>
+            <input matInput placeholder="Nom" formControlName="nomIPPM"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Relation avec le patient :</mat-label>
+            <mat-select formControlName="relationP">
+                <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Père</mat-option>
+                <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Mère</mat-option>
+                <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Grand-père</mat-option>
+                <mat-option value="159772AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Grand-mère</mat-option>
+                <mat-option value="974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Oncle</mat-option>
+                <mat-option value="975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Tante</mat-option>
+                <mat-option value="160729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Frère</mat-option>
+                <mat-option value="160730AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Soeur</mat-option>
+                <mat-option value="160727AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Fils</mat-option>
+                <mat-option value="160728AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Fille</mat-option>
+                <mat-option value="5618AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Ami</mat-option>
+                <mat-option value="5617AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Partenaire du conjoint</mat-option>
+                <mat-option value="5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Autre</mat-option>
+                <mat-option value="1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Inconnu</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <ng-template matStepLabel>Date de prochaine dispensation de médicament</ng-template>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <input matInput [max]="maxDate" [matDatepicker]="pickerDatePDARV" [formControl]="date" [value]="date"
+                   formControlName="pickerDatePDARV" required
+                   readonly="true"/>
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="pickerDatePDARV"></mat-datepicker-toggle>
+            <mat-datepicker #pickerDatePDARV></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>SIGNATURE DU PRESTATAIRE:</mat-label>
+            <input matInput placeholder="Nom" formControlName="signaturePrest"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>SIGNATURE DU PHARMACIEN/DISPENSATEUR:</mat-label>
+            <input matInput placeholder="Nom" formControlName="signaturePharmPrest"/>
+        </mat-form-field>
+
+        <mat-label>Statut de la fiche</mat-label>
+        <mat-radio-group aria-label="Select an option" formControlName="statutFiche">
+            <mat-radio-button value="163339AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Incomplète. A mettre à jour ultérieurement&nbsp;</mat-radio-button>
+            <mat-radio-button value="1267AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Complète</mat-radio-button>
+        </mat-radio-group>
+
+        <br/><br/>
+        <mat-checkbox class="example-margin" formControlName="revueFiche">La fiche doit être passée en revue par la
+            personne responsable de la qualité des données.
+        </mat-checkbox>
+
+        <mat-label>
+            <p>Remarques (Prière d'inscrire les remarques au-dessus de la ligne en pointillés.)</p>
+            <p>Ces remarques peuvent être à propos des données de cette fiche, des problèmes de saisie ou d'utilisation
+                de ce système,
+                ou encore des suggestions d'ordre général.</p>
+        </mat-label>
+        <mat-form-field appearance="outline">
+            <textarea matInput placeholder="remarque" formControlName="remarque"></textarea>
+        </mat-form-field>
+
+    </form>
+    <div mat-dialog-actions [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="saveOrdonnance()">Save</button>
+
+    </div>
+
+</ion-content>

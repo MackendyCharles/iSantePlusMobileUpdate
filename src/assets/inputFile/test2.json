@@ -1,0 +1,3100 @@
+{
+    "sessionId": "6E0FE715AF414726DA12302852630C02",
+    "authenticated": true,
+    "user": {
+        "uuid": "62b36085-12b5-468e-b599-f7261fa71add",
+        "display": "maxy",
+        "username": "maxy",
+        "systemId": "6-7",
+        "userProperties": {
+            "loginAttempts": "0",
+            "emrapi.lastViewedPatientIds": "21,26"
+        },
+        "person": {
+            "uuid": "90277c04-cbf0-4f9d-ac0a-0977173df977",
+            "display": "Jean Daboul MAXY",
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "/ws/rest/v1/person/90277c04-cbf0-4f9d-ac0a-0977173df977"
+                }
+            ]
+        },
+        "privileges": [
+            {
+                "uuid": "1b80aeaf-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Field Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aeaf-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "bb0c0d38-6dc3-49da-9eff-4cab02e00c2d",
+                "display": "Add HL7 Source",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/bb0c0d38-6dc3-49da-9eff-4cab02e00c2d"
+                    }
+                ]
+            },
+            {
+                "uuid": "a6282c20-447c-46e0-b507-0396c94b406f",
+                "display": "Manage Reports",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/a6282c20-447c-46e0-b507-0396c94b406f"
+                    }
+                ]
+            },
+            {
+                "uuid": "dc2aa8c5-34e1-4f0e-9798-b795d47bc517",
+                "display": "View Outgoing Messages",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/dc2aa8c5-34e1-4f0e-9798-b795d47bc517"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80aa6f-79f6-11ec-a118-0800273a8418",
+                "display": "Add Users",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aa6f-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "e5add5df-ea68-449b-8872-36e616a91bad",
+                "display": "Provider Management Dashboard - View Historical",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/e5add5df-ea68-449b-8872-36e616a91bad"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ace1-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Patient Programs",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ace1-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "ca35268f-62c1-40b5-8026-8edb351ec59f",
+                "display": "Manage Address Hierarchy",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/ca35268f-62c1-40b5-8026-8edb351ec59f"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b585-79f6-11ec-a118-0800273a8418",
+                "display": "View Patient Identifiers",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b585-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b0d6-79f6-11ec-a118-0800273a8418",
+                "display": "Patient Dashboard - View Forms Section",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b0d6-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ac4b-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Concept Proposals",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ac4b-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b3cd-79f6-11ec-a118-0800273a8418",
+                "display": "View Concepts",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b3cd-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ad1e-79f6-11ec-a118-0800273a8418",
+                "display": "Edit People",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ad1e-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "840fd7f4-3a61-497a-90c8-19b1adf432e0",
+                "display": "Task: appointmentschedulingui.viewConfidential",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/840fd7f4-3a61-497a-90c8-19b1adf432e0"
+                    }
+                ]
+            },
+            {
+                "uuid": "bf76e288-de0e-458d-a27d-a62eb67fc227",
+                "display": "Task: Modify Allergies",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/bf76e288-de0e-458d-a27d-a62eb67fc227"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b3ed-79f6-11ec-a118-0800273a8418",
+                "display": "View Data Entry Statistics",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b3ed-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80aad4-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Encounters",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aad4-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80aca6-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Orders",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aca6-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "4dd1ddf1-9acc-47bc-821b-70364cb7a1ce",
+                "display": "Add HL7 Inbound Queue",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/4dd1ddf1-9acc-47bc-821b-70364cb7a1ce"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80add4-79f6-11ec-a118-0800273a8418",
+                "display": "Form Entry",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80add4-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "bf338e31-e50d-41ad-bea8-7bf6e920f79f",
+                "display": "Manage Visit Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/bf338e31-e50d-41ad-bea8-7bf6e920f79f"
+                    }
+                ]
+            },
+            {
+                "uuid": "7a309bad-1ae2-49db-8a3a-d1f1f2ee4779",
+                "display": "View Provider Schedules",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/7a309bad-1ae2-49db-8a3a-d1f1f2ee4779"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b46e-79f6-11ec-a118-0800273a8418",
+                "display": "View Forms",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b46e-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "bb95033a-b6f3-4e0f-ac24-8bb2303da315",
+                "display": "Add HL7 Inbound Exception",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/bb95033a-b6f3-4e0f-ac24-8bb2303da315"
+                    }
+                ]
+            },
+            {
+                "uuid": "3d9a3684-a992-4e12-ad7c-bc0740fc85e7",
+                "display": "Manage Order Sets",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/3d9a3684-a992-4e12-ad7c-bc0740fc85e7"
+                    }
+                ]
+            },
+            {
+                "uuid": "3aa130b3-5412-444e-aad7-e2c1288ef94d",
+                "display": "Remove Problems",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/3aa130b3-5412-444e-aad7-e2c1288ef94d"
+                    }
+                ]
+            },
+            {
+                "uuid": "acf5c7f5-3dc5-4102-89b0-ba86f3b0a3fc",
+                "display": "Task: appointmentschedulingui.requestAppointments",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/acf5c7f5-3dc5-4102-89b0-ba86f3b0a3fc"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80aa31-79f6-11ec-a118-0800273a8418",
+                "display": "Add Report Objects",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aa31-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "ea862fb7-be44-4e68-9ace-fff908e3893a",
+                "display": "Get Concept Attribute Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/ea862fb7-be44-4e68-9ace-fff908e3893a"
+                    }
+                ]
+            },
+            {
+                "uuid": "cb1b25de-1cee-49db-b004-c237954b434c",
+                "display": "Manage Data Set Definitions",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/cb1b25de-1cee-49db-b004-c237954b434c"
+                    }
+                ]
+            },
+            {
+                "uuid": "52145035-5dc9-4575-861d-4e480aec6cb0",
+                "display": "Run Chart Search commands",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/52145035-5dc9-4575-861d-4e480aec6cb0"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b602-79f6-11ec-a118-0800273a8418",
+                "display": "View Person Attribute Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b602-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "f82d4069-ef0f-4c0b-8b64-5673742446d2",
+                "display": "App: appointmentschedulingui.viewAppointments",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/f82d4069-ef0f-4c0b-8b64-5673742446d2"
+                    }
+                ]
+            },
+            {
+                "uuid": "31cfef9d-16af-4135-b736-9f5549d585e0",
+                "display": "Provider Management API",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/31cfef9d-16af-4135-b736-9f5549d585e0"
+                    }
+                ]
+            },
+            {
+                "uuid": "fc775cd6-6232-45e5-8497-f2b157aa7162",
+                "display": "Edit Allergies",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/fc775cd6-6232-45e5-8497-f2b157aa7162"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b548-79f6-11ec-a118-0800273a8418",
+                "display": "View Orders",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b548-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "8cde5ac9-6f4e-463d-990a-8c5158735a74",
+                "display": "Manage Concept Map Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/8cde5ac9-6f4e-463d-990a-8c5158735a74"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80adf1-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Alerts",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80adf1-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "63062193-d12c-49d5-a92d-3735ca7cc9fa",
+                "display": "Squeezing Appointments",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/63062193-d12c-49d5-a92d-3735ca7cc9fa"
+                    }
+                ]
+            },
+            {
+                "uuid": "68d2ddcc-7548-4c74-8688-0e58728ad816",
+                "display": "App: referenceapplication.vitals",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/68d2ddcc-7548-4c74-8688-0e58728ad816"
+                    }
+                ]
+            },
+            {
+                "uuid": "7729bbc3-9f49-4213-94fc-21928afcb90f",
+                "display": "Add Allergies",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/7729bbc3-9f49-4213-94fc-21928afcb90f"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80a8e4-79f6-11ec-a118-0800273a8418",
+                "display": "Add Encounters",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80a8e4-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "8639e502-bd99-4399-afa7-9f397e522800",
+                "display": "Run Reports",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/8639e502-bd99-4399-afa7-9f397e522800"
+                    }
+                ]
+            },
+            {
+                "uuid": "625c4514-3e45-4aeb-9e85-b39bf2f308bc",
+                "display": "View Appointments Blocks",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/625c4514-3e45-4aeb-9e85-b39bf2f308bc"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b4af-79f6-11ec-a118-0800273a8418",
+                "display": "View Identifier Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b4af-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b6e2-79f6-11ec-a118-0800273a8418",
+                "display": "View Reports",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b6e2-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "09ba3565-21e1-4fcf-8519-f2271c52541d",
+                "display": "Manage Atlas Data",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/09ba3565-21e1-4fcf-8519-f2271c52541d"
+                    }
+                ]
+            },
+            {
+                "uuid": "60c88138-9e96-4ec1-aab1-0bba2cfc77db",
+                "display": "Manage HL7 Messages",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/60c88138-9e96-4ec1-aab1-0bba2cfc77db"
+                    }
+                ]
+            },
+            {
+                "uuid": "3c5be378-d55d-4139-a8ec-b68a555434a4",
+                "display": "View Token Registrations",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/3c5be378-d55d-4139-a8ec-b68a555434a4"
+                    }
+                ]
+            },
+            {
+                "uuid": "e26622c4-ff01-4826-909d-495dde43d4f5",
+                "display": "Delete Notes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/e26622c4-ff01-4826-909d-495dde43d4f5"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ae90-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Encounter Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ae90-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "20fc30f7-e966-4f1e-ae68-a32531321ffe",
+                "display": "Manage Search Index",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/20fc30f7-e966-4f1e-ae68-a32531321ffe"
+                    }
+                ]
+            },
+            {
+                "uuid": "a86484e3-d0df-4d4f-b441-dab06ca29fc9",
+                "display": "App: appointmentschedulingui.providerSchedules",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/a86484e3-d0df-4d4f-b441-dab06ca29fc9"
+                    }
+                ]
+            },
+            {
+                "uuid": "c6d6704d-fbd8-4e34-84a7-c0988897ec55",
+                "display": "Manage Location Tags",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/c6d6704d-fbd8-4e34-84a7-c0988897ec55"
+                    }
+                ]
+            },
+            {
+                "uuid": "1621a514-a801-4840-b536-be72e9055fd5",
+                "display": "Provider Management Dashboard - Edit Providers",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1621a514-a801-4840-b536-be72e9055fd5"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80abd1-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Report Objects",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80abd1-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "05e7d2cf-0e6a-4c8a-a417-4a2e2da65bb6",
+                "display": "Get Order Sets",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/05e7d2cf-0e6a-4c8a-a417-4a2e2da65bb6"
+                    }
+                ]
+            },
+            {
+                "uuid": "d09590f7-ec79-4433-ba26-d09d8a94aee2",
+                "display": "View Appointment Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d09590f7-ec79-4433-ba26-d09d8a94aee2"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b3ad-79f6-11ec-a118-0800273a8418",
+                "display": "View Concept Sources",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b3ad-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1f82d96a-9ae8-49b3-ba90-dd7c7684e827",
+                "display": "View Patient Appointment History",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1f82d96a-9ae8-49b3-ba90-dd7c7684e827"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ad00-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Patients",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ad00-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "3e211d18-289d-49b1-8ae1-c1969e37128b",
+                "display": "Provider Management Dashboard - View Patients",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/3e211d18-289d-49b1-8ae1-c1969e37128b"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ac87-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Observations",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ac87-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "f6e1df9c-297f-46b4-9aec-aa736ea9ff86",
+                "display": "Provider Management API - Read-only",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/f6e1df9c-297f-46b4-9aec-aa736ea9ff86"
+                    }
+                ]
+            },
+            {
+                "uuid": "a8bc9bdb-9701-4f13-beee-d60d8cebd0a1",
+                "display": "Delete Visits",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/a8bc9bdb-9701-4f13-beee-d60d8cebd0a1"
+                    }
+                ]
+            },
+            {
+                "uuid": "65d14b28-3989-11e6-899a-a4d646d86a8a",
+                "display": "Add Visits",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/65d14b28-3989-11e6-899a-a4d646d86a8a"
+                    }
+                ]
+            },
+            {
+                "uuid": "54129ff7-177e-4793-9555-93a59043fcc7",
+                "display": "Manage Appointments Settings",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/54129ff7-177e-4793-9555-93a59043fcc7"
+                    }
+                ]
+            },
+            {
+                "uuid": "d2d0cb85-7481-43bd-b0bc-401b7d548099",
+                "display": "Remove Allergies",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d2d0cb85-7481-43bd-b0bc-401b7d548099"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80a7cc-79f6-11ec-a118-0800273a8418",
+                "display": "Add Cohorts",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80a7cc-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b5c4-79f6-11ec-a118-0800273a8418",
+                "display": "View Patients",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b5c4-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "de1efd06-9c56-4de7-a588-81d761767fb4",
+                "display": "Delete HL7 Inbound Exception",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/de1efd06-9c56-4de7-a588-81d761767fb4"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80af51-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Locations",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80af51-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80acc3-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Patient Identifiers",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80acc3-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "4234e032-07c1-4731-8847-6c9b3252df24",
+                "display": "View Appointments",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/4234e032-07c1-4731-8847-6c9b3252df24"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ac0d-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Users",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ac0d-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "552df9c8-483f-4173-a1af-a788247fcdc5",
+                "display": "Manage Concept Attribute Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/552df9c8-483f-4173-a1af-a788247fcdc5"
+                    }
+                ]
+            },
+            {
+                "uuid": "19551d4c-c2f5-4519-acc2-a709c552e718",
+                "display": "Edit Problems",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/19551d4c-c2f5-4519-acc2-a709c552e718"
+                    }
+                ]
+            },
+            {
+                "uuid": "51630cb1-6e0a-41d1-85ea-87e05e6b23e3",
+                "display": "Task: coreapps.createVisit",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/51630cb1-6e0a-41d1-85ea-87e05e6b23e3"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b18d-79f6-11ec-a118-0800273a8418",
+                "display": "Purge Field Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b18d-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "430029d6-9154-4e23-ab2a-2c0a186c065b",
+                "display": "Get Outgoing Messages",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/430029d6-9154-4e23-ab2a-2c0a186c065b"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b06e-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Scheduler",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b06e-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "c509e16c-9bfb-43d4-b71b-b27cad51cfea",
+                "display": "Manage Provider Schedules",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/c509e16c-9bfb-43d4-b71b-b27cad51cfea"
+                    }
+                ]
+            },
+            {
+                "uuid": "a2024352-1a3d-4b76-b4fb-974fd89bf803",
+                "display": "Task: coreapps.createRetrospectiveVisit",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/a2024352-1a3d-4b76-b4fb-974fd89bf803"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ae2f-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Concept Datatypes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ae2f-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "3504f3db-82e8-4b71-aa0c-7e2619e02a0c",
+                "display": "App: appointmentschedulingui.appointmentTypes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/3504f3db-82e8-4b71-aa0c-7e2619e02a0c"
+                    }
+                ]
+            },
+            {
+                "uuid": "a4c177d9-c956-4625-8053-edda58525d29",
+                "display": "Add Problems",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/a4c177d9-c956-4625-8053-edda58525d29"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80aa8d-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Cohorts",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aa8d-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "84532a00-7e25-4389-b0bb-b05e5352cd44",
+                "display": "Edit Notes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/84532a00-7e25-4389-b0bb-b05e5352cd44"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ab11-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Orders",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ab11-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "37c181cc-ee88-4a7e-bf6a-382934f76a7e",
+                "display": "App: coreapps.patientDashboard",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/37c181cc-ee88-4a7e-bf6a-382934f76a7e"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80aeee-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Forms",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aeee-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "b12f1467-9807-4200-9192-97eb7074499a",
+                "display": "Get Order Frequencies",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/b12f1467-9807-4200-9192-97eb7074499a"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b1ad-79f6-11ec-a118-0800273a8418",
+                "display": "Upload XSN",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b1ad-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "f3a7c0db-b55b-4f23-8554-56d8498bac15",
+                "display": "View Calculations",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/f3a7c0db-b55b-4f23-8554-56d8498bac15"
+                    }
+                ]
+            },
+            {
+                "uuid": "dff89769-b1eb-4307-96f3-aef241267fe9",
+                "display": "Update HL7 Inbound Archive",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/dff89769-b1eb-4307-96f3-aef241267fe9"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b6c2-79f6-11ec-a118-0800273a8418",
+                "display": "View Report Objects",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b6c2-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "2cd37cbf-ef5f-4faf-9a4c-9152ecc1509d",
+                "display": "Task: referenceapplication.simpleDischarge",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/2cd37cbf-ef5f-4faf-9a4c-9152ecc1509d"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b4cd-79f6-11ec-a118-0800273a8418",
+                "display": "View Locations",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b4cd-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "c88c1ecd-8954-46fa-aa9c-2e6576ce7d27",
+                "display": "Get Notes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/c88c1ecd-8954-46fa-aa9c-2e6576ce7d27"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b48c-79f6-11ec-a118-0800273a8418",
+                "display": "View Global Properties",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b48c-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "fb1b0995-91b7-47f5-8eac-30d7ea9b218c",
+                "display": "Manage Cohort Definitions",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/fb1b0995-91b7-47f5-8eac-30d7ea9b218c"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80af30-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Identifier Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80af30-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1383de51-2504-4a19-975b-07d1e653195e",
+                "display": "Task: coreapps.mergeVisits",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1383de51-2504-4a19-975b-07d1e653195e"
+                    }
+                ]
+            },
+            {
+                "uuid": "f50127db-4aa4-4f12-b33d-dc62a68a2a73",
+                "display": "Manage Encounter Roles",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/f50127db-4aa4-4f12-b33d-dc62a68a2a73"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ab72-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Patients",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ab72-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a215",
+                "display": "Get Visit Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a215"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80aaad-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Concept Proposals",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aaad-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a216",
+                "display": "Get HL7 Inbound Exception",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a216"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b367-79f6-11ec-a118-0800273a8418",
+                "display": "View Concept Datatypes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b367-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "6aeb67b2-77c3-4827-a0ed-4e53c54369a7",
+                "display": "Add HL7 Inbound Archive",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/6aeb67b2-77c3-4827-a0ed-4e53c54369a7"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ad3d-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Relationships",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ad3d-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a213",
+                "display": "Get Visit Attribute Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a213"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a214",
+                "display": "Get Visits",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a214"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80abef-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Reports",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80abef-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a211",
+                "display": "Get Providers",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a211"
+                    }
+                ]
+            },
+            {
+                "uuid": "b63d84c8-9449-40ca-aba0-a0e07e699e35",
+                "display": "App: atlas.manage",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/b63d84c8-9449-40ca-aba0-a0e07e699e35"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a212",
+                "display": "Get Location Attribute Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a212"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a210",
+                "display": "Get Encounter Roles",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a210"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80afcf-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Privileges",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80afcf-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "cf3dd05c-8538-4989-a91e-581ba092f894",
+                "display": "Manage Metadata Mapping",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/cf3dd05c-8538-4989-a91e-581ba092f894"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b44f-79f6-11ec-a118-0800273a8418",
+                "display": "View Field Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b44f-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a219",
+                "display": "Get HL7 Source",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a219"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ad97-79f6-11ec-a118-0800273a8418",
+                "display": "Edit User Passwords",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ad97-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a217",
+                "display": "Get HL7 Inbound Archive",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a217"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b0b4-79f6-11ec-a118-0800273a8418",
+                "display": "Patient Dashboard - View Encounters Section",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b0b4-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a218",
+                "display": "Get HL7 Inbound Queue",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a218"
+                    }
+                ]
+            },
+            {
+                "uuid": "2f98929b-6f03-4f10-bd18-c38289a0b045",
+                "display": "App: formentryapp.forms",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/2f98929b-6f03-4f10-bd18-c38289a0b045"
+                    }
+                ]
+            },
+            {
+                "uuid": "73d08153-a9ad-473f-a97c-ef329414a4ca",
+                "display": "Task: coreapps.endVisit",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/73d08153-a9ad-473f-a97c-ef329414a4ca"
+                    }
+                ]
+            },
+            {
+                "uuid": "d8af296e-d9a8-4fd3-b6fd-014191f34013",
+                "display": "Manage Order Frequencies",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d8af296e-d9a8-4fd3-b6fd-014191f34013"
+                    }
+                ]
+            },
+            {
+                "uuid": "e77da452-e7e2-4763-b5cb-8a7a567c108c",
+                "display": "Manage Appointment Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/e77da452-e7e2-4763-b5cb-8a7a567c108c"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80adb8-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Users",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80adb8-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "6506f826-7c8d-49df-9be3-6dd7bc1fd855",
+                "display": "Task: appointmentschedulingui.bookAppointments",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/6506f826-7c8d-49df-9be3-6dd7bc1fd855"
+                    }
+                ]
+            },
+            {
+                "uuid": "496f220b-49fd-43a7-bba1-e4fab9fa9419",
+                "display": "Generate Batch of Identifiers",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/496f220b-49fd-43a7-bba1-e4fab9fa9419"
+                    }
+                ]
+            },
+            {
+                "uuid": "cc5b634f-8853-41ad-9e9f-68d08de9ae7a",
+                "display": "Manage Token Registrations",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/cc5b634f-8853-41ad-9e9f-68d08de9ae7a"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b333-79f6-11ec-a118-0800273a8418",
+                "display": "View Concept Classes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b333-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b166-79f6-11ec-a118-0800273a8418",
+                "display": "Patient Dashboard - View Regimen Section",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b166-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d9d2e0ac-4ba8-47b9-bf60-f8f7472eeb49",
+                "display": "View RESTWS",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d9d2e0ac-4ba8-47b9-bf60-f8f7472eeb49"
+                    }
+                ]
+            },
+            {
+                "uuid": "93c00269-f02e-4cc4-8403-b7d3d3b00749",
+                "display": "Task: emr.patient.encounter.edit",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/93c00269-f02e-4cc4-8403-b7d3d3b00749"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ae6d-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Concepts",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ae6d-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "e699a1f2-0473-4736-99db-2bac379ef7d4",
+                "display": "Patient Dashboard - View Visits Section",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/e699a1f2-0473-4736-99db-2bac379ef7d4"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ae10-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Concept Classes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ae10-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80a99b-79f6-11ec-a118-0800273a8418",
+                "display": "Add Patient Programs",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80a99b-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "175cc0b8-298a-4159-9952-f69a7d35a489",
+                "display": "Provider Management - Admin",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/175cc0b8-298a-4159-9952-f69a7d35a489"
+                    }
+                ]
+            },
+            {
+                "uuid": "253740a7-94fb-4200-93ab-2d8c166ebeff",
+                "display": "App: registrationapp.registerPatient",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/253740a7-94fb-4200-93ab-2d8c166ebeff"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a237",
+                "display": "Get Concept Datatypes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a237"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a238",
+                "display": "Get Concept Classes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a238"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a235",
+                "display": "Get Roles",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a235"
+                    }
+                ]
+            },
+            {
+                "uuid": "5926a34d-ecc1-4d6e-87bf-465c600a74c6",
+                "display": "View Metadata Via Mapping",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/5926a34d-ecc1-4d6e-87bf-465c600a74c6"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a236",
+                "display": "Get Privileges",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a236"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a233",
+                "display": "Get Order Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a233"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b663-79f6-11ec-a118-0800273a8418",
+                "display": "View Programs",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b663-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ac69-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Encounters",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ac69-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a234",
+                "display": "Get Field Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a234"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a231",
+                "display": "Get Concept Sources",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a231"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a232",
+                "display": "Get Relationship Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a232"
+                    }
+                ]
+            },
+            {
+                "uuid": "9900293a-a5eb-489d-b3de-55a2ae222794",
+                "display": "Manage Flags",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/9900293a-a5eb-489d-b3de-55a2ae222794"
+                    }
+                ]
+            },
+            {
+                "uuid": "498a2a49-d1de-4762-a3ab-be15590e7d3b",
+                "display": "Upload Batch of Identifiers",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/498a2a49-d1de-4762-a3ab-be15590e7d3b"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80af0f-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Global Properties",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80af0f-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "7b318aff-4824-47cd-afaf-88142fb86628",
+                "display": "Manage Visit Attribute Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/7b318aff-4824-47cd-afaf-88142fb86628"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a239",
+                "display": "Get Identifier Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a239"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80afad-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Person Attribute Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80afad-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b120-79f6-11ec-a118-0800273a8418",
+                "display": "Patient Dashboard - View Overview Section",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b120-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "bcaff157-ef0d-499a-a0d5-2a115484b922",
+                "display": "Assign System Developer Role",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/bcaff157-ef0d-499a-a0d5-2a115484b922"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a240",
+                "display": "Get Forms",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a240"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a241",
+                "display": "Get Orders",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a241"
+                    }
+                ]
+            },
+            {
+                "uuid": "62af5ed1-e9b8-4a10-aaa2-31d4510ee7d5",
+                "display": "Task: appointmentschedulingui.overbookAppointments",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/62af5ed1-e9b8-4a10-aaa2-31d4510ee7d5"
+                    }
+                ]
+            },
+            {
+                "uuid": "27036ef7-85f0-4918-91ad-33e9dbe46b0c",
+                "display": "Delete HL7 Inbound Archive",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/27036ef7-85f0-4918-91ad-33e9dbe46b0c"
+                    }
+                ]
+            },
+            {
+                "uuid": "fa4047f1-942d-4576-a923-b47a7e678887",
+                "display": "Schedule Appointments",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/fa4047f1-942d-4576-a923-b47a7e678887"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80a93d-79f6-11ec-a118-0800273a8418",
+                "display": "Add Orders",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80a93d-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b04b-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Roles",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b04b-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80a8ad-79f6-11ec-a118-0800273a8418",
+                "display": "Add Concept Proposals",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80a8ad-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a226",
+                "display": "Get Global Properties",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a226"
+                    }
+                ]
+            },
+            {
+                "uuid": "a5f80382-da56-4a6e-b858-bd032c0f39d9",
+                "display": "Manage Concept Stop Words",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/a5f80382-da56-4a6e-b858-bd032c0f39d9"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a227",
+                "display": "Get Patient Programs",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a227"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a224",
+                "display": "Get People",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a224"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a225",
+                "display": "Get Person Attribute Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a225"
+                    }
+                ]
+            },
+            {
+                "uuid": "b78b88f9-93de-4563-a8b7-36954c6851c8",
+                "display": "Manage Synonym Groups",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/b78b88f9-93de-4563-a8b7-36954c6851c8"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a222",
+                "display": "Get Database Changes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a222"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a223",
+                "display": "Get Relationships",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a223"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a220",
+                "display": "Get Allergies",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a220"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a221",
+                "display": "Get Problems",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a221"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b700-79f6-11ec-a118-0800273a8418",
+                "display": "View Roles",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b700-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b509-79f6-11ec-a118-0800273a8418",
+                "display": "View Observations",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b509-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b08b-79f6-11ec-a118-0800273a8418",
+                "display": "Patient Dashboard - View Demographics Section",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b08b-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a228",
+                "display": "Get Programs",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a228"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a229",
+                "display": "Get Concept Reference Terms",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a229"
+                    }
+                ]
+            },
+            {
+                "uuid": "dd0f918d-6271-412c-8709-64cacbbe2c3e",
+                "display": "Update HL7 Inbound Queue",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/dd0f918d-6271-412c-8709-64cacbbe2c3e"
+                    }
+                ]
+            },
+            {
+                "uuid": "1c229cbd-bf11-4ecd-9216-a91d0d9fc476",
+                "display": "Update HL7 Inbound Exception",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1c229cbd-bf11-4ecd-9216-a91d0d9fc476"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b5e2-79f6-11ec-a118-0800273a8418",
+                "display": "View People",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b5e2-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a230",
+                "display": "Get Concept Map Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a230"
+                    }
+                ]
+            },
+            {
+                "uuid": "9884be06-0c97-4b3c-8393-91ab840e2906",
+                "display": "Test Flags",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/9884be06-0c97-4b3c-8393-91ab840e2906"
+                    }
+                ]
+            },
+            {
+                "uuid": "301c6ecd-622d-4fcc-b14b-fb9575718fa5",
+                "display": "App: coreapps.configuremetadata",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/301c6ecd-622d-4fcc-b14b-fb9575718fa5"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b4eb-79f6-11ec-a118-0800273a8418",
+                "display": "View Navigation Menu",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b4eb-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "922010ef-8303-4e5c-8de0-e08958eb3293",
+                "display": "Manage Implementation Id",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/922010ef-8303-4e5c-8de0-e08958eb3293"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b643-79f6-11ec-a118-0800273a8418",
+                "display": "View Problems",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b643-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b5a5-79f6-11ec-a118-0800273a8418",
+                "display": "View Patient Programs",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b5a5-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ac2c-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Cohorts",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ac2c-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80a9c7-79f6-11ec-a118-0800273a8418",
+                "display": "Add Patients",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80a9c7-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "daa9a1f3-bb7d-40bd-aa6d-10fc01e9d38d",
+                "display": "Task: referenceapplication.simpleTransfer",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/daa9a1f3-bb7d-40bd-aa6d-10fc01e9d38d"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b145-79f6-11ec-a118-0800273a8418",
+                "display": "Patient Dashboard - View Patient Summary",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b145-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "6d570b40-3f35-45e9-b1bc-d768a8123115",
+                "display": "Manage Address Templates",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/6d570b40-3f35-45e9-b1bc-d768a8123115"
+                    }
+                ]
+            },
+            {
+                "uuid": "ca211345-0c91-44e0-88a3-094627667d28",
+                "display": "Manage Indicator Definitions",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/ca211345-0c91-44e0-88a3-094627667d28"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ab93-79f6-11ec-a118-0800273a8418",
+                "display": "Delete People",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ab93-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a262",
+                "display": "Patient Overview - View Relationships",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a262"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a263",
+                "display": "Patient Overview - View Programs",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a263"
+                    }
+                ]
+            },
+            {
+                "uuid": "df1be5e6-e2b9-480a-ad40-76097501b006",
+                "display": "Update Appointment Status",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/df1be5e6-e2b9-480a-ad40-76097501b006"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a260",
+                "display": "Patient Overview - View Problem List",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a260"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a261",
+                "display": "Patient Overview - View Allergies",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a261"
+                    }
+                ]
+            },
+            {
+                "uuid": "cd3bdb09-a21f-4369-a423-c1a9752cb9ff",
+                "display": "Manage Auto Generation Options",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/cd3bdb09-a21f-4369-a423-c1a9752cb9ff"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b566-79f6-11ec-a118-0800273a8418",
+                "display": "View Patient Cohorts",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b566-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a248",
+                "display": "Get Encounters",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a248"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80aa50-79f6-11ec-a118-0800273a8418",
+                "display": "Add Reports",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aa50-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a249",
+                "display": "Get Users",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a249"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b722-79f6-11ec-a118-0800273a8418",
+                "display": "View Unpublished Forms",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b722-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a246",
+                "display": "Get Locations",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a246"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a247",
+                "display": "Get Encounter Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a247"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a244",
+                "display": "Get Patients",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a244"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a245",
+                "display": "Get Observations",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a245"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a242",
+                "display": "Get Patient Cohorts",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a242"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a243",
+                "display": "Get Patient Identifiers",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a243"
+                    }
+                ]
+            },
+            {
+                "uuid": "7fa1808c-eea4-40b8-8fe2-d6b0149bad1f",
+                "display": "View Appointments Statistics",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/7fa1808c-eea4-40b8-8fe2-d6b0149bad1f"
+                    }
+                ]
+            },
+            {
+                "uuid": "496881ed-192b-49e8-8f2d-6deaa961970c",
+                "display": "Manage Concept Name tags",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/496881ed-192b-49e8-8f2d-6deaa961970c"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80a912-79f6-11ec-a118-0800273a8418",
+                "display": "Add Observations",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80a912-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b42f-79f6-11ec-a118-0800273a8418",
+                "display": "View Encounters",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b42f-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "9b60247a-5a74-4352-b6af-6604e2fdab63",
+                "display": "Manage Location Attribute Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/9b60247a-5a74-4352-b6af-6604e2fdab63"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80a9ee-79f6-11ec-a118-0800273a8418",
+                "display": "Add People",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80a9ee-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b02b-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Relationships",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b02b-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b52a-79f6-11ec-a118-0800273a8418",
+                "display": "View Order Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b52a-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a251",
+                "display": "Get Concepts",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a251"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b621-79f6-11ec-a118-0800273a8418",
+                "display": "View Privileges",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b621-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80aaf3-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Observations",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aaf3-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a250",
+                "display": "Get Concept Proposals",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a250"
+                    }
+                ]
+            },
+            {
+                "uuid": "95dfd0bb-f1e1-4386-a0e1-3a3c283321ae",
+                "display": "Manage synonym group",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/95dfd0bb-f1e1-4386-a0e1-3a3c283321ae"
+                    }
+                ]
+            },
+            {
+                "uuid": "069c26d0-2231-46b6-a95e-38e24e3be903",
+                "display": "Task: referenceapplication.simpleAdmission",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/069c26d0-2231-46b6-a95e-38e24e3be903"
+                    }
+                ]
+            },
+            {
+                "uuid": "561192cc-d749-4b2a-809f-9495f7eb5bb3",
+                "display": "Update HL7 Source",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/561192cc-d749-4b2a-809f-9495f7eb5bb3"
+                    }
+                ]
+            },
+            {
+                "uuid": "9362a951-b4f4-4801-b56a-cdc9ada8a508",
+                "display": "App: appointmentschedulingui.home",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/9362a951-b4f4-4801-b56a-cdc9ada8a508"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80af8f-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Order Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80af8f-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "8421b37b-96f8-48ae-a036-13609c2b4583",
+                "display": "Edit Visits",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/8421b37b-96f8-48ae-a036-13609c2b4583"
+                    }
+                ]
+            },
+            {
+                "uuid": "d72e2296-cff3-4702-83ce-b173b17f816b",
+                "display": "Patient Overview - View Patient Flags",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d72e2296-cff3-4702-83ce-b173b17f816b"
+                    }
+                ]
+            },
+            {
+                "uuid": "ebf7fc21-e425-4522-b259-3e208ff5c232",
+                "display": "App: referenceapplication.legacyAdmin",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/ebf7fc21-e425-4522-b259-3e208ff5c232"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b40f-79f6-11ec-a118-0800273a8418",
+                "display": "View Encounter Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b40f-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "67a10a75-99d3-47f7-9965-4178d327c5fc",
+                "display": "Delete HL7 Inbound Queue",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/67a10a75-99d3-47f7-9965-4178d327c5fc"
+                    }
+                ]
+            },
+            {
+                "uuid": "6b3ef894-6031-4318-a3d6-910ab0b46d87",
+                "display": "Manage OWA",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/6b3ef894-6031-4318-a3d6-910ab0b46d87"
+                    }
+                ]
+            },
+            {
+                "uuid": "2f34615f-d756-4a95-96a3-66a21753cf02",
+                "display": "Get Care Settings",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/2f34615f-d756-4a95-96a3-66a21753cf02"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80a96b-79f6-11ec-a118-0800273a8418",
+                "display": "Add Patient Identifiers",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80a96b-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ab52-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Patient Programs",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ab52-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "d05118c6-2490-4d78-a41a-390e3596a264",
+                "display": "Patient Overview - View Patient Actions",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d05118c6-2490-4d78-a41a-390e3596a264"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b1ee-79f6-11ec-a118-0800273a8418",
+                "display": "View Allergies",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b1ee-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "8b6e7c76-04a3-4900-b473-44e6eec70bbc",
+                "display": "App: coreapps.activeVisits",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/8b6e7c76-04a3-4900-b473-44e6eec70bbc"
+                    }
+                ]
+            },
+            {
+                "uuid": "d016038c-c052-4152-ab53-34ca642240f6",
+                "display": "Task: referenceapplication.simpleVisitNote",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/d016038c-c052-4152-ab53-34ca642240f6"
+                    }
+                ]
+            },
+            {
+                "uuid": "3e19d242-3f3e-4efd-85e1-362ae03e9219",
+                "display": "Configure Visits",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/3e19d242-3f3e-4efd-85e1-362ae03e9219"
+                    }
+                ]
+            },
+            {
+                "uuid": "4ebee856-95bd-47b2-b791-2a6821906381",
+                "display": "Manage Dimension Definitions",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/4ebee856-95bd-47b2-b791-2a6821906381"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80af71-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Modules",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80af71-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b0fc-79f6-11ec-a118-0800273a8418",
+                "display": "Patient Dashboard - View Graphs Section",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b0fc-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "b3201078-e9b9-4e5c-a706-0798ff0cd390",
+                "display": "Manage Identifier Sources",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/b3201078-e9b9-4e5c-a706-0798ff0cd390"
+                    }
+                ]
+            },
+            {
+                "uuid": "389028c7-ca78-460f-9afc-478ec284be87",
+                "display": "App: coreapps.patientVisits",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/389028c7-ca78-460f-9afc-478ec284be87"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ab32-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Patient Identifiers",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ab32-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80aecd-79f6-11ec-a118-0800273a8418",
+                "display": "Manage FormEntry XSN",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aecd-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "aaf7d4e3-a2d2-49c8-888f-9e7660b7ebc2",
+                "display": "Request Appointments",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/aaf7d4e3-a2d2-49c8-888f-9e7660b7ebc2"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b00c-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Relationship Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b00c-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "35eddc80-c5d5-4dd0-8656-ac8f8e81ec87",
+                "display": "Manage Report Designs",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/35eddc80-c5d5-4dd0-8656-ac8f8e81ec87"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80aa0f-79f6-11ec-a118-0800273a8418",
+                "display": "Add Relationships",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80aa0f-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80abb1-79f6-11ec-a118-0800273a8418",
+                "display": "Delete Relationships",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80abb1-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ae4e-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Concept Sources",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ae4e-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b742-79f6-11ec-a118-0800273a8418",
+                "display": "View Users",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b742-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ad5b-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Report Objects",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ad5b-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b6a3-79f6-11ec-a118-0800273a8418",
+                "display": "View Relationships",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b6a3-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "a0773fe5-6021-4bff-9ffa-cbfb8f108b1b",
+                "display": "Share Metadata",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/a0773fe5-6021-4bff-9ffa-cbfb8f108b1b"
+                    }
+                ]
+            },
+            {
+                "uuid": "2cc71be0-8c9d-4c29-9f68-47540be80572",
+                "display": "Provider Management Dashboard - Edit Patients",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/2cc71be0-8c9d-4c29-9f68-47540be80572"
+                    }
+                ]
+            },
+            {
+                "uuid": "e4c71e3d-a6cc-45c6-8e2c-cc632c02440e",
+                "display": "App: coreapps.findPatient",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/e4c71e3d-a6cc-45c6-8e2c-cc632c02440e"
+                    }
+                ]
+            },
+            {
+                "uuid": "768312f6-1e15-475f-8466-87085dfd9248",
+                "display": "Patient Dashboard - View Chart Search Section",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/768312f6-1e15-475f-8466-87085dfd9248"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b682-79f6-11ec-a118-0800273a8418",
+                "display": "View Relationship Types",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b682-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "3098714a-c4a4-4644-9040-d6b4dd3cfb1b",
+                "display": "Manage Providers",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/3098714a-c4a4-4644-9040-d6b4dd3cfb1b"
+                    }
+                ]
+            },
+            {
+                "uuid": "f3d443b0-6ef5-41ae-94e1-85b961e6b0e1",
+                "display": "Manage RESTWS",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/f3d443b0-6ef5-41ae-94e1-85b961e6b0e1"
+                    }
+                ]
+            },
+            {
+                "uuid": "133f938d-6c82-4236-83e6-19f5badc979e",
+                "display": "Manage Scheduled Report Tasks",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/133f938d-6c82-4236-83e6-19f5badc979e"
+                    }
+                ]
+            },
+            {
+                "uuid": "6a2a1962-77ca-41a2-94a0-14987525a78c",
+                "display": "Provider Management Dashboard - View Providers",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/6a2a1962-77ca-41a2-94a0-14987525a78c"
+                    }
+                ]
+            },
+            {
+                "uuid": "455fcfe9-771c-431a-9253-6def8530d77a",
+                "display": "Task: emr.patient.encounter.delete",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/455fcfe9-771c-431a-9253-6def8530d77a"
+                    }
+                ]
+            },
+            {
+                "uuid": "1eec4e2c-e98b-4310-8102-a76dc65c9b55",
+                "display": "Manage Report Definitions",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1eec4e2c-e98b-4310-8102-a76dc65c9b55"
+                    }
+                ]
+            },
+            {
+                "uuid": "bd8f46a5-2229-4b4e-9409-aaf8bfcc3671",
+                "display": "Task: referenceapplication.vitals",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/bd8f46a5-2229-4b4e-9409-aaf8bfcc3671"
+                    }
+                ]
+            },
+            {
+                "uuid": "a2a69319-ccd4-4af6-8b75-9f08910e1785",
+                "display": "Manage Concept Reference Terms",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/a2a69319-ccd4-4af6-8b75-9f08910e1785"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b38a-79f6-11ec-a118-0800273a8418",
+                "display": "View Concept Proposals",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b38a-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80ad79-79f6-11ec-a118-0800273a8418",
+                "display": "Edit Reports",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80ad79-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80b1cc-79f6-11ec-a118-0800273a8418",
+                "display": "View Administration Functions",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80b1cc-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            },
+            {
+                "uuid": "11939154-838c-496c-abeb-abb2175ac652",
+                "display": "App: coreapps.systemAdministration",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/11939154-838c-496c-abeb-abb2175ac652"
+                    }
+                ]
+            },
+            {
+                "uuid": "1b80afed-79f6-11ec-a118-0800273a8418",
+                "display": "Manage Programs",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/privilege/1b80afed-79f6-11ec-a118-0800273a8418"
+                    }
+                ]
+            }
+        ],
+        "roles": [
+            {
+                "uuid": "a8900c71-09ea-4f24-aca8-037afe5460f1",
+                "display": "Application: Enters Vitals",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/a8900c71-09ea-4f24-aca8-037afe5460f1"
+                    }
+                ]
+            },
+            {
+                "uuid": "32223b4b-633e-4333-a23a-fcb661aa4d96",
+                "display": "Application: Edits Existing Encounters",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/32223b4b-633e-4333-a23a-fcb661aa4d96"
+                    }
+                ]
+            },
+            {
+                "uuid": "1aaf6942-5c9d-408d-860c-73bda925116b",
+                "display": "Application: Registers Patients",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/1aaf6942-5c9d-408d-860c-73bda925116b"
+                    }
+                ]
+            },
+            {
+                "uuid": "ddea81ba-3454-416f-81e1-8d56b6dddebc",
+                "display": "Application: Configures Metadata",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/ddea81ba-3454-416f-81e1-8d56b6dddebc"
+                    }
+                ]
+            },
+            {
+                "uuid": "8cccbcb8-a560-4710-a4eb-7c569c03c5d1",
+                "display": "Application: Has Super User Privileges",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/8cccbcb8-a560-4710-a4eb-7c569c03c5d1"
+                    }
+                ]
+            },
+            {
+                "uuid": "85f7547b-b896-4c0f-9bc3-766ed38ac3ba",
+                "display": "Application: Manages Provider Schedules",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/85f7547b-b896-4c0f-9bc3-766ed38ac3ba"
+                    }
+                ]
+            },
+            {
+                "uuid": "9b1c6e14-0da2-4a14-8a6e-2a162f738307",
+                "display": "Application: Configures Appointment Scheduling",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/9b1c6e14-0da2-4a14-8a6e-2a162f738307"
+                    }
+                ]
+            },
+            {
+                "uuid": "1271fe59-0d0d-4495-a67c-f0f9801e7ed1",
+                "display": "Application: Configures Forms",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/1271fe59-0d0d-4495-a67c-f0f9801e7ed1"
+                    }
+                ]
+            },
+            {
+                "uuid": "61ae9a85-227c-402e-a0e8-f9aea96659d3",
+                "display": "Application: Schedules And Overbooks Appointments",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/61ae9a85-227c-402e-a0e8-f9aea96659d3"
+                    }
+                ]
+            },
+            {
+                "uuid": "15c76979-d628-409d-a612-6b3a2f87a489",
+                "display": "Application: Sees Appointment Schedule",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/15c76979-d628-409d-a612-6b3a2f87a489"
+                    }
+                ]
+            },
+            {
+                "uuid": "7da8b310-2268-4359-918f-017ad775d89e",
+                "display": "Application: Requests Appointments",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/7da8b310-2268-4359-918f-017ad775d89e"
+                    }
+                ]
+            },
+            {
+                "uuid": "ab2160f6-0941-430c-9752-6714353fbd3c",
+                "display": "Privilege Level: Full",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/ab2160f6-0941-430c-9752-6714353fbd3c"
+                    }
+                ]
+            },
+            {
+                "uuid": "17faac87-885b-4d45-bd62-39b4f6dd603a",
+                "display": "Application: Uses Capture Vitals App",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/17faac87-885b-4d45-bd62-39b4f6dd603a"
+                    }
+                ]
+            },
+            {
+                "uuid": "1ed72dd1-4664-42a4-9f7d-076d6ae6acfd",
+                "display": "Application: Schedules Appointments",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/1ed72dd1-4664-42a4-9f7d-076d6ae6acfd"
+                    }
+                ]
+            },
+            {
+                "uuid": "8d94f280-c2cc-11de-8d13-0010c6dffd0f",
+                "display": "Provider",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/8d94f280-c2cc-11de-8d13-0010c6dffd0f"
+                    }
+                ]
+            },
+            {
+                "uuid": "5d36a45c-40c4-4ad1-94cb-5265c5290525",
+                "display": "Application: Enters ADT Events",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/5d36a45c-40c4-4ad1-94cb-5265c5290525"
+                    }
+                ]
+            },
+            {
+                "uuid": "77f39a3e-54bc-42b6-8199-989cdd398ad5",
+                "display": "Application: Manages Atlas",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/77f39a3e-54bc-42b6-8199-989cdd398ad5"
+                    }
+                ]
+            },
+            {
+                "uuid": "dd5c1d22-f76d-4126-8486-8ab490cbcad0",
+                "display": "Application: Uses Patient Summary",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/dd5c1d22-f76d-4126-8486-8ab490cbcad0"
+                    }
+                ]
+            },
+            {
+                "uuid": "66efe2ee-c03e-42c3-9641-016a1f706435",
+                "display": "Application: Writes Clinical Notes",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/66efe2ee-c03e-42c3-9641-016a1f706435"
+                    }
+                ]
+            },
+            {
+                "uuid": "5eb7ffc9-a86b-449b-bff1-37c3dc73c40e",
+                "display": "Application: Records Allergies",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/5eb7ffc9-a86b-449b-bff1-37c3dc73c40e"
+                    }
+                ]
+            },
+            {
+                "uuid": "4e240464-afa8-4256-b01d-805ac35b0f23",
+                "display": "Application: Administers System",
+                "links": [
+                    {
+                        "rel": "self",
+                        "uri": "/ws/rest/v1/role/4e240464-afa8-4256-b01d-805ac35b0f23"
+                    }
+                ]
+            }
+        ],
+        "retired": false,
+        "links": [
+            {
+                "rel": "self",
+                "uri": "/ws/rest/v1/user/62b36085-12b5-468e-b599-f7261fa71add"
+            },
+            {
+                "rel": "full",
+                "uri": "/ws/rest/v1/user/62b36085-12b5-468e-b599-f7261fa71add?v=full"
+            }
+        ],
+        "resourceVersion": "1.8"
+    }
+}

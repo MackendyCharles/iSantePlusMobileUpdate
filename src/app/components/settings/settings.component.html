@@ -1,0 +1,43 @@
+
+<div class="  text-center " mat-dialog-title>
+  <h1 class="fonMof"  >Settings</h1>
+</div>
+
+
+<div mat-dialog-content style="margin: 0px; padding: 0px; width: 100%;" >
+
+  <form [formGroup]="settingsForm">
+
+      <mat-form-field appearance="outline">
+          <mat-label>Location</mat-label>
+          <input formControlName="locations" matInput type="text" placeholder="location">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+          <mat-label>IpAddress</mat-label>
+          <input formControlName="ipaddress" matInput type="text" placeholder="ipAddress" >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+          <mat-label>Port</mat-label>
+          <input formControlName="port" matInput  type="number" placeholder="port"  >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Protocol</mat-label>
+        <input formControlName="protocol" matInput  type="text" placeholder="protocol"  >
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Api</mat-label>
+      <input formControlName="api" matInput  type="text" placeholder="api"  >
+  </mat-form-field>
+  </form>
+
+
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addSettings()">Save</button>
+
+</div>

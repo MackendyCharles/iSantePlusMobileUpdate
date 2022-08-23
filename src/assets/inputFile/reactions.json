@@ -1,0 +1,21 @@
+[
+  { "obsId": "148888AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Anaphylaxis" },
+  { "obsId": "121629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Anemia" },
+  { "obsId": "148787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Angioedema" },
+  { "obsId": "120148AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Arrhythmia" },
+  { "obsId": "108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Bronchospasm" },
+  { "obsId": "143264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Cough" },
+  { "obsId": "142412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Diarrhea" },
+  { "obsId": "118773AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Dystonia" },
+  { "obsId": "140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Fever" },
+  { "obsId": "40039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Flushing" },
+  { "obsId": "110883AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "GI Upset" },
+  { "obsId": "139084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Headaches" },
+  { "obsId": "159098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Hepatotoxicity" },
+  { "obsId": "111061AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Hives" },
+  { "obsId": "117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Hypertension" },
+  { "obsId": "136455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Itching" },
+  { "obsId": "121677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Mental Statues Change" },
+  { "obsId": "159347AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Musculoskeletal Pain" },
+  { "obsId": "121AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reaction": "Myalgia" }
+]

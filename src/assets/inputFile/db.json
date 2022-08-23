@@ -1,0 +1,138 @@
+{
+  "vitauxList": [
+    {
+      "encounterDatetime": "2022-04-22T04:00:00.000Z",
+      "patient": "",
+      "encounterType": "",
+      "location": "",
+      "encounterProviders": [
+        {
+          "provider": "ed9ecaf9-4974-4192-99a3-3e159030a6ec",
+          "encounterRole": "ef0445e7-bfe6-4260-a351-09fc835b6bcd"
+        }
+      ],
+      "obs": [
+        {
+          "concept": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "43"
+        },
+        {
+          "concept": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "3443"
+        },
+        {
+          "concept": "5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "43"
+        },
+        {
+          "concept": "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "4334"
+        },
+        {
+          "concept": "5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "434"
+        },
+        {
+          "concept": "5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": ""
+        },
+        {
+          "concept": "5286AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": ""
+        },
+        {
+          "concept": "5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "4343"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "encounterDatetime": "2022-04-22T04:00:00.000Z",
+      "patient": "",
+      "encounterType": "",
+      "location": "",
+      "encounterProviders": [
+        {
+          "provider": "ed9ecaf9-4974-4192-99a3-3e159030a6ec",
+          "encounterRole": "ef0445e7-bfe6-4260-a351-09fc835b6bcd"
+        }
+      ],
+      "obs": [
+        {
+          "concept": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "5454"
+        },
+        {
+          "concept": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "5454"
+        },
+        {
+          "concept": "5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "5454"
+        },
+        {
+          "concept": "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "5454"
+        },
+        {
+          "concept": "5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "5454"
+        },
+        {
+          "concept": "5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": ""
+        },
+        {
+          "concept": "5286AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": ""
+        },
+        {
+          "concept": "5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "obsDateTime": "2022-04-22T04:00:00.000Z",
+          "person": "",
+          "value": "5454"
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "patientList": [],
+  "regimeARV": [],
+  "settings": [
+    {
+      "location": "8d6c993e-c2cc-11de-8d13-0010c6dffd0f",
+      "ipAddress": "192.168.1.220",
+      "port": "8081",
+      "protocol": "http",
+      "api": "openmrs/ws/rest/v1",
+      "id": 1
+    }
+  ]
+}

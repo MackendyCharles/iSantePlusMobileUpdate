@@ -1,0 +1,113 @@
+
+<div class="  text-center " mat-dialog-title>
+<h1 class="fonMof">Add Allergy</h1>
+</div>
+
+<div mat-dialog-content>
+
+  <form [formGroup]="dateForm">
+
+<!--    <ng-template matStepLabel>Date d'enregistrement</ng-template>-->
+<!--    <mat-form-field class="example-full-width" appearance="fill">-->
+<!--      <mat-label>Date d'enregistrement</mat-label>-->
+<!--      <input matInput [max]="maxDate" [matDatepicker]="pickerDateEnr" [formControl]="date"-->
+<!--             formControlName="dateEnCtrl" required-->
+<!--             readonly="true"/>-->
+<!--      <mat-hint>MM/DD/YYYY</mat-hint>-->
+<!--      <mat-datepicker-toggle matSuffix [for]="pickerDateEnr"></mat-datepicker-toggle>-->
+<!--      <mat-datepicker #pickerDateEnr></mat-datepicker>-->
+<!--    </mat-form-field>-->
+
+
+  </form>
+ <div >
+  <ion-segment [(ngModel)]="pet">
+    <ion-segment-button  (click)="setCodeAllergy('DRUG')" value="drug">
+      Drug
+    </ion-segment-button>
+    <ion-segment-button (click)="setCodeAllergy('FOOD')" value="food">
+      Food
+    </ion-segment-button>
+    <ion-segment-button (click)="setCodeAllergy('OTHER')" value="other">
+      Other
+    </ion-segment-button>
+  </ion-segment>
+</div>
+  <form [formGroup]="drogForm">
+  <div [ngSwitch]="pet">
+
+
+    <ion-list *ngSwitchCase="'drug'">
+
+
+
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Drug</mat-label>
+            <mat-select [(ngModel)]="selectedDrug" (selectionChange)="selectedDrug2($event)" name="drug" formControlName="drug">
+              <mat-option *ngFor="let drugResult of drugResults"   [value]="drugResult.obsId">
+                {{drugResult.drug}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'food'">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Food</mat-label>
+        <mat-select [(ngModel)]="selectedFood" (selectionChange)="selectedFood2($event)" name="food" formControlName="food">
+          <mat-option *ngFor="let foodResult of foodResults"   [value]="foodResult.obsId">
+            {{foodResult.food}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'other'">
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Other</mat-label>
+          <mat-select [(ngModel)]="selectedOther" (selectionChange)="selectedOther2($event)" name="other" formControlName="other">
+            <mat-option *ngFor="let otherResult of otherResults"   [value]="otherResult.obsId">
+              {{otherResult.other}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+    </ion-list>
+
+
+  </div>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label> Réactions </mat-label>
+      <mat-select [(ngModel)]="selectedReaction" (selectionChange)="selectedReaction2($event)" name="reactions" formControlName="reactions" multiple>
+        <mat-option *ngFor="let reactionResult of reactionResults"   [value]="reactionResult.obsId">
+          {{reactionResult.reaction}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-label> Gravité: </mat-label> <br>
+    <mat-radio-group  aria-labelledby="example-radio-group-label" class="example-radio-group" formControlName="gravite">
+    <mat-radio-button class="radioModi example-radio-button" value="1498AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">LÉGER</mat-radio-button>
+      <mat-radio-button style="    margin-left: 1px;margin-top: 1px;margin-bottom: 1px;"  class="radioModi example-radio-button" value="1499AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">MODÉRÉ</mat-radio-button>
+      <mat-radio-button style="    margin-left: 1px;margin-top: 1px;margin-bottom: 1px;" class="radioModi example-radio-button" value="1500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">SÉVÈRE</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Commentaire:</mat-label>
+      <textarea matInput placeholder="Commentaire..." formControlName="commentaire"></textarea>
+    </mat-form-field>
+
+  </form>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addVAllergies()">{{actionBtn}}</button>
+
+</div>

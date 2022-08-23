@@ -1,0 +1,345 @@
+<ion-header>
+  <ion-toolbar color="segundary">
+
+    <ion-buttons>
+      <ion-menu-button menu="main-menu"><ion-icon name="menu"></ion-icon></ion-menu-button>
+      <ion-title>iSantePlus</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="dataSourcePatient">
+  <div style="font-size: 18px; color: #363463; font-weight: bold;">
+    <ion-icon name="home" style="font-size: 18px; margin-right: 5px; margin-left: 4px; float: left"></ion-icon>
+    <!--    <mat-icon >home</mat-icon>-->
+    <ion-icon name="arrow-forward" style="font-size: 20px; margin-right: 7px; float: left"></ion-icon>
+    <!--    <mat-icon >navigate_next</mat-icon>-->
+    <p (click)="showDashPatient()" style=" font-size: 14px; float: left;  text-decoration: underline; color: #363463; font-weight: bold;">{{patientName}} </p>
+
+  </div>
+
+  <div style="float: right; padding: 5px;">
+    <button mat-mini-fab color="primary"  class="my-fab" aria-label="Example icon button with a menu icon" [matMenuTriggerFor]="menu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <mat-menu class="matMenu2" #menu="matMenu" style="width: 50%">
+      <button class="btnMenu" mat-menu-item (click)="demarrerConsultation()"  *ngIf="dataVisit !== 1">
+        <ion-icon name="location" style="margin-right: 5px; vertical-align: middle;" class="ionBtn"></ion-icon>
+
+        <span >Démarrer consultation</span>
+      </button>
+
+      <button class="btnMenu" mat-menu-item (click)="terminerConsultation()" *ngIf="dataVisit == 1">
+        <ion-icon name="power" style="margin-right: 5px; vertical-align: middle;" class="ionBtn"></ion-icon>
+        <span >Terminer la consultation</span>
+      </button>
+      <button class="btnMenu" mat-menu-item >
+        <ion-icon name="add-circle" style="margin-right: 5px; vertical-align: middle;" class="ionBtn"></ion-icon>
+        <span >Ajouter consultation antérieure</span>
+      </button>
+<!--      <button class="btnMenu" mat-menu-item >-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">account_circle</mat-icon>-->
+<!--        <span >Sommaire de l'enregistrement</span>-->
+<!--      </button>-->
+<!--      <button class="btnMenu" mat-menu-item>-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">poll</mat-icon>-->
+<!--        <span>Courbe de Croissance</span>-->
+<!--      </button>-->
+<!--      <button class="btnMenu" mat-menu-item>-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">list_alt</mat-icon>-->
+<!--        <span>Formulaires</span>-->
+<!--      </button>-->
+<!--      <button class="btnMenu" mat-menu-item>-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">local_pharmacy</mat-icon>-->
+<!--        <span>Historique de Laboratoire</span>-->
+<!--      </button>-->
+<!--      <button class="btnMenu" mat-menu-item>-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">poll</mat-icon>-->
+<!--        <span>Historique des Médicaments</span>-->
+<!--      </button>-->
+<!--      <button class="btnMenu" mat-menu-item>-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">insert_link</mat-icon>-->
+<!--        <span>Fusionner les consultations</span>-->
+<!--      </button>-->
+<!--      <button class="btnMenu" mat-menu-item>-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">local_pharmacy</mat-icon>-->
+<!--        <span>Vaccination</span>-->
+<!--      </button>-->
+<!--      <button class="btnMenu" mat-menu-item>-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">add_box</mat-icon>-->
+<!--        <span>Mark Patient Deceased</span>-->
+<!--      </button>-->
+<!--      <button class="btnMenu" mat-menu-item>-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">close</mat-icon>-->
+<!--        <span>Effacer le Patient</span>-->
+<!--      </button>-->
+
+<!--      <button class="btnMenu" mat-menu-item>-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">local_pharmacy</mat-icon>-->
+<!--        <span>Historique de charge virale</span>-->
+<!--      </button>-->
+<!--      <button class="btnMenu" mat-menu-item>-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">local_pharmacy</mat-icon>-->
+<!--        <span>Résumé du patient</span>-->
+<!--      </button>-->
+<!--      <button class="btnMenu" mat-menu-item>-->
+<!--        <mat-icon style="margin-right: 5px; vertical-align: middle;" class="ionBtn">local_pharmacy</mat-icon>-->
+<!--        <span>Antécédents Médicaux</span>-->
+<!--      </button>-->
+
+
+    </mat-menu>
+  </div>
+  <div style="clear:both;"></div>
+
+  <div style="width: 100%; height: 90px;">
+
+    <div style="width: 15%; height: 70px;  float: left;" *ngIf="dataSourcePatient.person.gender=='M'">
+        <img src="assets\images\mal.png" alt="" style="width: 100%; height: 100%;">
+    </div>
+
+    <div style="width: 15%; height: 70px;  float: left;" *ngIf="dataSourcePatient.person.gender=='F'">
+      <img src="assets\images\femal.png" alt="" style="width: 100%; height: 100%;">
+  </div>
+
+    <div style=" width: 85%; height: 90px;  float: left;">
+
+      <strong >{{dataSourcePatient.person.display}}</strong>
+      <div style="font-size: 12px; margin-top: -6px; color: #363463;">
+        <span  *ngIf="dataSourcePatient.person.gender=='M'">Masculin  </span>&nbsp;<span *ngIf="dataSourcePatient.person.gender=='F'">Feminin  </span>{{dataSourcePatient.person.age}}ans({{dataSourcePatient.person.birthdate | date}})
+        <mat-divider></mat-divider>
+        
+
+         <span *ngFor="let identifier of dataSourcePatient.identifiers" style="font-size: 12px; color: black"><p id="vitauxView"  style="font-size: 11px;">{{identifier.display}}</p></span>
+
+
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+<div style="padding: 10px; padding-top: 0px;">
+
+
+
+  <mat-accordion class="example-headers-align" multi style="padding: 20px;">
+    <mat-expansion-panel expanded='true' hideToggle >
+      <mat-expansion-panel-header  class="mac" >
+        <div class="dashPanelDiv">
+          <mat-panel-title class="menuBoVi">
+            <ion-icon class="iconModifier" name="accessibility"></ion-icon>
+           &nbsp;DIAGNOSTICS
+
+          </mat-panel-title>
+
+          <mat-panel-description>
+
+
+          </mat-panel-description>
+
+        </div>
+
+      </mat-expansion-panel-header>
+
+      <span class="code_patient">Aucun(e)</span>
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel expanded='true' hideToggle>
+      <mat-expansion-panel-header class="mac">
+
+        <div class="dashPanelDiv">
+          <mat-panel-title class="menuBoVi" >
+            <ion-icon name="fitness" class="iconModifier"></ion-icon>
+              SIGNES&nbsp;VITAUX
+
+              <div class="bottomDivDesc" >
+                <button ion-button color="danger"  (click)="addVitaux()" fxLayoutAlign="end" style="background-color: transparent;">
+                  <ion-icon name="create" class="iconModifier" style="background-color: transparent"></ion-icon>
+                </button>
+              </div>
+
+
+          </mat-panel-title>
+          <mat-panel-description  >
+
+
+          </mat-panel-description>
+
+        </div>
+
+      </mat-expansion-panel-header>
+
+
+
+      <p id="vitauxView" *ngIf="_hauteur" ><span >Hauteur (cm): <span style="color:blue">{{_hauteur[1]}} cm</span></span>
+        <span  *ngIf="!_hauteur">Hauteur (cm)____ cm</span>
+      </p>
+
+      <p id="vitauxView"><span *ngIf="_poids" >Poids (kg): <span style="color:blue">{{_poids[1]}} kg</span> </span>
+        <span  *ngIf="!_poids"> Poids (kg): ____kg </span>
+      </p>
+      <p id="vitauxView"><span  >IMC (Calculer)____ kg/m²</span></p>
+      <p id="vitauxView"><span  *ngIf="_temperature">Temperature (C): <span style="color:blue">{{_temperature[1]}} ℃</span> </span>
+        <span  *ngIf="!_temperature">Temperature (C)____ ℃</span>
+      </p>
+      <p id="vitauxView"><span *ngIf="_pouls">Pouls: <span style="color:blue">{{_pouls[1]}} /min</span></span>
+        <span  *ngIf="!_pouls">Pouls: ____ /min</span>
+      </p>
+      <p id="vitauxView"><span  *ngIf="_frequenseResp">Fréquence respiratoire:  <span style="color:blue">{{_frequenseResp[1]}} /min</span> </span>
+        <span  *ngIf="!_frequenseResp">Fréquence respiratoire____/min </span>
+      </p>
+      <p id="vitauxView"><span  *ngIf="_tensionArtSyst">Tension artérielle:  <span style="color:blue">{{_tensionArtSyst[1]}}/{{_tensionArtDiast[1]}} mmHg</span> </span>
+        <span *ngIf="!_tensionArtSyst">Tension artérielle____ mmHg </span>
+      </p>
+      <p id="vitauxView"><span  *ngIf="_saturationOxySan">Saturation en oxygène du sang:  <span style="color:blue">{{_saturationOxySan[1]}} %</span> </span>
+        <span *ngIf="!_saturationOxySan">Saturation en oxygène du sang ____ % </span>
+      </p>
+
+
+
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="mac">
+        <div class="dashPanelDiv">
+        <mat-panel-title class="menuBoVi" >
+          <ion-icon name="calendar" class="iconModifier"></ion-icon>
+           &nbsp;RECENT&nbsp;VISITS
+        </mat-panel-title>
+        <mat-panel-description>
+
+
+        </mat-panel-description>
+        </div>
+      </mat-expansion-panel-header>
+
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="mac">
+        <div class="dashPanelDiv">
+        <mat-panel-title class="menuBoVi" >
+          <ion-icon name="flag" class="iconModifier"></ion-icon>
+          &nbsp;Alerte&nbsp;des&nbsp;Patients
+        </mat-panel-title>
+        <mat-panel-description>
+
+
+        </mat-panel-description>
+        </div>
+      </mat-expansion-panel-header>
+
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+
+        <mat-expansion-panel-header class="mac">
+          <div class="dashPanelDiv">
+            <mat-panel-title class="menuBoVi" >
+              <ion-icon name="medical" class="iconModifier"></ion-icon>
+               &nbsp;ALLERGIES
+
+              <div class="bottomDivDesc">
+                <button ion-button color="danger" style="background-color: transparent"  (click)="addAllergies()" fxLayoutAlign="end">
+                  <ion-icon name="create" class="iconModifier"></ion-icon>
+                </button>
+              </div>
+            </mat-panel-title>
+            <mat-panel-description>
+
+
+            </mat-panel-description>
+
+          </div>
+
+        </mat-expansion-panel-header>
+
+
+
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="mac">
+        <div class="dashPanelDiv">
+        <mat-panel-title class="menuBoVi" >
+           &nbsp;Dernier&nbsp;test&nbsp;de&nbsp;charge&nbsp;virale
+        </mat-panel-title>
+        <mat-panel-description>
+
+
+        </mat-panel-description>
+        </div>
+      </mat-expansion-panel-header>
+
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="mac">
+        <div class="dashPanelDiv">
+        <mat-panel-title class="menuBoVi" >
+           &nbsp;Courbe&nbsp;de&nbsp;Poids
+        </mat-panel-title>
+        <mat-panel-description>
+
+
+        </mat-panel-description>
+        </div>
+      </mat-expansion-panel-header>
+
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="mac">
+        <div class="dashPanelDiv">
+        <mat-panel-title class="menuBoVi" >
+           &nbsp;Courbe&nbsp;de&nbsp;charge&nbsp;virale
+        </mat-panel-title>
+        <mat-panel-description>
+
+
+        </mat-panel-description>
+        </div>
+      </mat-expansion-panel-header>
+
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header class="mac">
+        <div class="dashPanelDiv">
+        <mat-panel-title class="menuBoVi" >
+           &nbsp;Courbe&nbsp;IMC
+        </mat-panel-title>
+        <mat-panel-description>
+
+
+        </mat-panel-description>
+        </div>
+      </mat-expansion-panel-header>
+
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+
+</div>
+
+
+
+
+
+</ion-content>

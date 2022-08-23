@@ -1,0 +1,166 @@
+.bottomDivDesc{
+    text-align: right;
+     width: 100%;
+     padding-right: 20px;
+   
+  }
+
+h2 {
+  margin: 2px;
+  font-weight: 50;
+  font-size: 10px;
+  color: rgb(40, 72, 179);
+}
+p {
+  margin: 2px;
+  font-size: 12px;
+  color: #3b44be;
+  font-weight: 100;
+  letter-spacing: 0.4px;
+}
+
+.nomPatient{
+  margin: 10px;
+  color: #060657;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration : underline;
+  font : small-caps;
+  quotes : none;
+}
+
+.markPatient {
+
+  background-color: #f7f7f8;
+  text-shadow: #060657;
+  color: #19037a;
+
+}
+.pPatient {
+
+  font-size: 11px;
+  font-style: italic;
+  text-shadow: #060657;
+
+}
+.ionPatient{
+  text-align: right;
+  font-size: 25px;
+}
+.iconPatient{
+  font-size: 10px;
+  color: #0796e9;
+}
+
+
+mat-grid-tile {
+  background: lightblue;
+  padding: 0px;
+  margin: 0px;
+}
+
+.code_patient{
+  font-size: 10px;
+  color: #3f474d;
+  font-style: italic;
+  text-decoration : underline;
+}
+
+.matMenu2 {
+  padding: 2px;
+  margin: 2px;
+}
+
+.example-action-buttons {
+  padding-bottom: 20px;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.mac.mat-expansion-panel-header{
+  padding-left: 0px !important;
+  padding-top: 1px !important;
+  //background-color: #0070c040  !important;
+  padding-bottom: 1px !important;
+}
+
+.menuBoVi {
+  color: #00463f;
+  font-weight: 500;
+  width: 100%;
+}
+
+.dashPanelDiv {
+  border-bottom: 3px solid  #00463f;
+  width: 100%;
+}
+.bottomDivDesc{
+  text-align: right;
+  width: 100%;
+}
+
+
+.nomPatient{
+  margin: 15px;
+  color: #060657;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration : underline;
+  quotes : none;
+  text-transform: capitalize;
+}
+
+.markPatient {
+
+  background-color: #f7f7f8;
+  text-shadow: #060657;
+  color: #19037a;
+  font-size: 10px;
+  text-transform: capitalize;
+
+
+}
+.pPatient {
+
+  font-size: 11px;
+  font-style: italic;
+  text-shadow: #060657;
+
+}
+
+mat-grid-tile {
+  background: lightblue;
+  padding: 0px;
+  margin: 0px;
+}
+
+::ng-deep .mat-grid-tile-content{
+  justify-content: flex-start !important ;
+  align-items: flex-start !important;
+  background-color: white;
+}
+
+ion-header{
+  background-color: #718BB7;
+  color: white;
+}
+
+p {
+  margin: 2px;
+  font-size: 12px;
+  color: #3b44be;
+  font-weight: 100;
+  letter-spacing: 0.4px;
+}

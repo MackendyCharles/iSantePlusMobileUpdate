@@ -1,0 +1,113 @@
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+ion-header{
+  background-color: #718BB7;
+  color: white;
+}
+
+
+.nomPatient{
+  margin: 15px;
+  color: #060657;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration : underline;
+  quotes : none;
+  text-transform: capitalize;
+}
+
+.markPatient {
+
+  background-color: #f7f7f8;
+  text-shadow: #060657;
+  color: #19037a;
+  font-size: 10px;
+  text-transform: capitalize;
+
+
+}
+.pPatient {
+
+  font-size: 11px;
+  font-style: italic;
+  text-shadow: #060657;
+
+}
+//
+//mat-grid-tile {
+//  background: lightblue;
+//  padding: 0px;
+//  margin: 0px;
+//}
+//
+//::ng-deep .mat-grid-tile-content{
+//  justify-content: flex-start !important ;
+//  align-items: flex-start !important;
+//  background-color: white;
+//}
+//
+
+//
+//p {
+//  margin: 2px;
+//  font-size: 12px;
+//  color: #3b44be;
+//  font-weight: 400;
+//  letter-spacing: 0px;
+//}
+//.dashPanelDiv {
+//  border-bottom: 3px solid  #00463f;
+//  width: 100%;
+//}
+//
+//.mat-expansion-panel-header {
+//  font-family: Roboto, "Helvetica Neue", sans-serif;
+//  font-size: 13px;
+//  font-weight: 400;
+//  color: #0c4128;
+//}
+//.mat-expansion-panel-header {
+//  height: 20px;
+//}
+//.mat-expansion-panel-header {
+//  display: flex;
+//  flex-direction: row;
+//  align-items: center;
+//  padding: 0 5px;
+//  border-radius: inherit;
+//  transition: height 225ms cubic-bezier(0.4, 0, 0.2, 1);
+//}
+//.mat-expansion-panel-header.mat-expanded {
+//  height: 20px;
+//}
+
+
+
+.itemTitle {
+  color: #6b83bd;
+  font-size: 15px;
+}
+
+.subtitle {
+  margin-top: 0px;
+  font-size: 19px;
+}
+
+.subtitleLI {
+  //padding: 4px;
+  font-synthesis: none;
+  list-style: none;
+  font-size: 14px;
+  //text-align: justify;
+}
+
+.subtitleLI:hover {
+  background-color: #eeeeee;
+}
+
+.iconSub {
+  color: #940089;
+  //color: forestgreen;
+}

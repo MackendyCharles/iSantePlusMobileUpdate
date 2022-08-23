@@ -1,0 +1,100 @@
+mat-form-field {
+  width: 100%;
+}
+mat-label{
+  font-size: small;
+  text-align: justify;
+}
+mat-checkbox{
+  text-align: justify;
+}
+
+
+.nomPatient{
+  margin: 15px;
+  color: #060657;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration : underline;
+  quotes : none;
+  text-transform: capitalize;
+}
+
+.markPatient {
+
+  background-color: #f7f7f8;
+  text-shadow: #060657;
+  color: #19037a;
+  font-size: 10px;
+  text-transform: capitalize;
+
+
+}
+.pPatient {
+
+  font-size: 11px;
+  font-style: italic;
+  text-shadow: #060657;
+
+}
+
+mat-grid-tile {
+  background: lightblue;
+  padding: 0px;
+  margin: 0px;
+}
+
+::ng-deep .mat-grid-tile-content{
+  justify-content: flex-start !important ;
+  align-items: flex-start !important;
+  background-color: white;
+}
+
+ion-header{
+  background-color: #718BB7;
+  color: white;
+}
+
+p {
+  margin: 2px;
+  font-size: 11px;
+  color: #3b44be;
+  font-weight: 100;
+  letter-spacing: 0.4px;
+}
+.dashPanelDiv {
+  border-bottom: 3px solid  #00463f;
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 1.0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+}
+::ng-deep.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0.1em 0; 
+}
+
+
+.mat-form-field-wrapper {
+ position: relative;
+}
+::ng-deep.mat-form-field-wrapper {
+ padding-bottom: 0em;
+}
+
+ion-segment-button {
+  height: 25px;
+  min-height: 25px;
+  font-size: 10px;
+}
+ion-segment{
+  height:10px;
+}
+
+
+
+

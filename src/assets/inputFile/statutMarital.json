@@ -1,0 +1,9 @@
+[
+  { "obsId": 1067, "statutMarital": "Inconnu" },
+  { "obsId": 5555, "statutMarital": "Marié(e)" },
+  { "obsId": 1060, "statutMarital": "Concubinage" },
+  { "obsId": 1059, "statutMarital": "Veuf(ve)" },
+  { "obsId": 1056, "statutMarital": "Séparé(e)" },
+  { "obsId": 1058, "statutMarital": "Divorcé(e)" },
+  { "obsId": 1057, "statutMarital": "Célibataire" }
+]

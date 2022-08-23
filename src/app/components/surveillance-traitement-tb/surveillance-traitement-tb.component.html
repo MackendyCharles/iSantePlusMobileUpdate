@@ -1,0 +1,157 @@
+<form [formGroup]="surveillanceTraitementTB">
+
+  <fieldset>
+    <legend>Mois 0</legend>
+
+    <ng-template matStepLabel>Date </ng-template>
+    <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+      <mat-label>Date </mat-label>
+      <input matInput [max]="maxDate" [matDatepicker]="pickerdate0STTB" formControlName="pickerdate0STTB" />
+      <mat-datepicker-toggle matSuffix [for]="pickerdate0STTB"></mat-datepicker-toggle>
+      <mat-datepicker #pickerdate0STTB> </mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Bacilloscopie:</mat-label>
+      <mat-select formControlName="BacilloscopieMois0STTB">
+        <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Pos </mat-option>
+        <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Neg</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Poids (kg) </mat-label>
+      <input matInput placeholder="Poids (kg) " formControlName="poidsMois0STTB" />
+    </mat-form-field>
+
+
+
+
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Mois 2</legend>
+
+    <ng-template matStepLabel>Date </ng-template>
+    <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+      <mat-label>Date </mat-label>
+      <input matInput [max]="maxDate" [matDatepicker]="pickerdate2STTB" formControlName="pickerdate2STTB" />
+      <mat-datepicker-toggle matSuffix [for]="pickerdate2STTB"></mat-datepicker-toggle>
+      <mat-datepicker #pickerdate2STTB> </mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Bacilloscopie:</mat-label>
+      <mat-select formControlName="BacilloscopieMois2STTB">
+        <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Pos </mat-option>
+        <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Neg</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Poids (kg) </mat-label>
+      <input matInput placeholder="Poids (kg) " formControlName="poidsMois2STTB" />
+    </mat-form-field>
+
+
+
+
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Mois 3</legend>
+
+    <ng-template matStepLabel>Date </ng-template>
+    <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+      <mat-label>Date </mat-label>
+      <input matInput [max]="maxDate" [matDatepicker]="pickerdate3STTB" formControlName="pickerdate3STTB" />
+      <mat-datepicker-toggle matSuffix [for]="pickerdate3STTB"></mat-datepicker-toggle>
+      <mat-datepicker #pickerdate3STTB> </mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Bacilloscopie:</mat-label>
+      <mat-select formControlName="BacilloscopieMois3STTB">
+        <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Pos </mat-option>
+        <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Neg</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Poids (kg) </mat-label>
+      <input matInput placeholder="Poids (kg) " formControlName="poidsMois3STTB" />
+    </mat-form-field>
+
+
+
+
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Mois 5</legend>
+
+    <ng-template matStepLabel>Date </ng-template>
+    <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+      <mat-label>Date </mat-label>
+      <input matInput [max]="maxDate" [matDatepicker]="pickerdate5STTB" formControlName="pickerdate5STTB" />
+      <mat-datepicker-toggle matSuffix [for]="pickerdate5STTB"></mat-datepicker-toggle>
+      <mat-datepicker #pickerdate5STTB> </mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Bacilloscopie:</mat-label>
+      <mat-select formControlName="BacilloscopieMois5STTB">
+        <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Pos </mat-option>
+        <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Neg</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Poids (kg) </mat-label>
+      <input matInput placeholder="Poids (kg) " formControlName="poidsMois5STTB" />
+    </mat-form-field>
+
+
+
+
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Fin de rx </legend>
+
+    <ng-template matStepLabel>Date </ng-template>
+    <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+      <mat-label>Date </mat-label>
+      <input matInput [max]="maxDate" [matDatepicker]="pickerdateFrxSTTB" formControlName="pickerdateFrxSTTB" />
+      <mat-datepicker-toggle matSuffix [for]="pickerdateFrxSTTB"></mat-datepicker-toggle>
+      <mat-datepicker #pickerdateFrxSTTB> </mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Bacilloscopie:</mat-label>
+      <mat-select formControlName="BacilloscopieMoisFrxSTTB">
+        <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Pos </mat-option>
+        <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Neg</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Poids (kg) </mat-label>
+      <input matInput placeholder="Poids (kg) " formControlName="poidsMoisFrxSTTB" />
+    </mat-form-field>
+
+
+
+
+
+  </fieldset>
+</form>

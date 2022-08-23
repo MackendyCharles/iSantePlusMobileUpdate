@@ -1,0 +1,154 @@
+<form [formGroup]="conduiteTenir">
+
+    <fieldset>
+        <legend>Medicaments prescrits / Posologie</legend>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="autre1CondTenir">Autre 1</mat-checkbox>
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Autre 1 </mat-label>
+                    <input matInput placeholder="Autre 1" formControlName="autre1TextCondTenir" />
+                </mat-form-field>
+
+            </section>
+
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="autre2CondTenir">Autre 2</mat-checkbox>
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Autre 2 </mat-label>
+                    <input matInput placeholder="Autre 2" formControlName="autre2TextCondTenir" />
+                </mat-form-field>
+
+            </section>
+
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="autre3CondTenir">Autre 3</mat-checkbox>
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Autre 3 </mat-label>
+                    <input matInput placeholder="Autre 3" formControlName="autre3TextCondTenir" />
+                </mat-form-field>
+
+            </section>
+
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="autre4CondTenir">Autre 4</mat-checkbox>
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Autre 4 </mat-label>
+                    <input matInput placeholder="Autre 4" formControlName="autre4TextCondTenir" />
+                </mat-form-field>
+
+            </section>
+
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="autre5CondTenir">Autre 5</mat-checkbox>
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Autre 5 </mat-label>
+                    <input matInput placeholder="Autre 5" formControlName="autre5TextCondTenir" />
+                </mat-form-field>
+
+            </section>
+
+        </div>
+
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Intervention</legend>
+
+        <ng-template matStepLabel>Date de Procedure</ng-template>
+        <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Date de Procedure</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="pickerdateProcedureCondTenir" formControlName="pickerdateProcedureCondTenir" />
+            <mat-datepicker-toggle matSuffix [for]="pickerdateProcedureCondTenir"></mat-datepicker-toggle>
+            <mat-datepicker #pickerdateProcedureCondTenir> </mat-datepicker>
+        </mat-form-field>
+
+        <div style="padding: 5px; ">
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="cryotherapieCondTenir">Cryotherapie</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="LEEPCondTenir">LEEP</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="thermocoagulationCondTenir">Thermocoagulation</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="conisationCondTenir">Conisation</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="hystérectomieCondTenir">Hystérectomie</mat-checkbox>
+            </section>
+
+        </div>
+
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Référence</legend>
+
+        <div style="padding: 5px; ">
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="psychologueCondTenir"> Psychologue </mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="progNutritionCondTenir">Programme de nutrition</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="planFamilialeCondTenir">Planification familiale</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="fichesRefRemplCondTenir">Fiches de référence remplie</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+                <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                              formControlName="hospitalisationCondTenir">Hospitalisation</mat-checkbox>
+            </section>
+
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Autre établissement / clinique </mat-label>
+                <input matInput placeholder="Autre établissement / clinique  " formControlName="autreEtablCliniqueCondTenir" />
+            </mat-form-field>
+
+        </div>
+
+    </fieldset>
+
+</form>

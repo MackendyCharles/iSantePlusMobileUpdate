@@ -1,0 +1,14 @@
+[
+  { "obsId": "162298AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "ACE Inhibitor" },
+  { "obsId": "162299AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "ARB (Angiotensin Receptor Blocker)" },
+  { "obsId": "162306AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "Aspirin" },
+  { "obsId": "162301AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "Cephalosporin" },
+  { "obsId": "81088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "Codeine" },
+  { "obsId": "162302AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "Erythromycins " },
+  { "obsId": "162305AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "Heparin" },
+  { "obsId": "81106AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "Morphine" },
+  { "obsId": "162306AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "NSAIDs" },
+  { "obsId": "162297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "Penicillin" },
+  { "obsId": "162307AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "Statin" },
+  { "obsId": "162170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drug": "Sulfa (Sulfonamide Antibiotics) " }
+]

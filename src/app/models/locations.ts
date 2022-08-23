@@ -1,0 +1,38 @@
+export class Locations {
+    location_id : number;
+    name: string;
+    description: string;
+    address1: string;
+    address2?: string;
+    city_village: string;
+    state_province: string;
+    postal_code: string;
+    country: string;
+    latitude: string;
+    longitude: string;
+    start_date: string;
+    end_date: string;
+    creator: number;
+    date_created: string;
+    voided: string;
+    voided_by: number;
+    date_voided: string;
+    void_reason: string;
+    county_district: string;
+    address3?: string;
+    address4?: string;
+    address5?: string;
+    address6?: string;
+    address7?: string;
+    address8?: string;
+    address9?: string;
+    address10?: string;
+    address11?: string;
+    address12?: string;
+    address13?: string;
+    address14?: string;
+    address15?: string;
+    date_changed: string;
+    changed_by: number;
+    uuid: string;
+}

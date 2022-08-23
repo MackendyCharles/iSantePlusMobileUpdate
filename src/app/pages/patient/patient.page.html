@@ -1,0 +1,575 @@
+<ion-header text-center>
+  <ion-toolbar color="segundary" style="height: 50px; margin-top: 0px; padding-top: 0px">
+
+    <ion-buttons >
+      <ion-menu-button style=" height: 20px" menu="main-menu"><ion-icon name="menu"></ion-icon></ion-menu-button>
+      <ion-title style="font-size: 18px">iSantéPlus</ion-title>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" padding>
+  <div style="font-size: 14px; color: #363463; font-weight: bold;">
+    <ion-icon name="home" style="font-size: 18px; margin-right: 5px; margin-left: 4px; float: left"></ion-icon>
+<!--    <mat-icon >home</mat-icon>-->
+    <ion-icon name="arrow-forward" style="font-size: 20px; margin-right: 7px; float: left"></ion-icon>
+<!--    <mat-icon >navigate_next</mat-icon>-->
+    <p style="float: left;  text-decoration: underline;">Enregistrer Patient</p>
+
+  </div>
+
+  <div style="width: 90%; margin: 10px 5px 10px 5px;">
+    <mat-stepper orientation="vertical" [linear]="isLinear"  #stepper>
+      <!--  Start    stepper Date d'enregistrement      -->
+
+      <mat-step [stepControl]="dateEnregistrement" fxFlexFill  >
+        <form [formGroup]="dateEnregistrement">
+          <ng-template matStepLabel>Date d'enregistrement</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;" >
+            <mat-label>Date d'enregistrement</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="pickerDateEnr"  formControlName="dateEnCtrl" required
+              readonly="true"   />
+            <mat-datepicker-toggle matSuffix [for]="pickerDateEnr" ></mat-datepicker-toggle>
+            <mat-datepicker #pickerDateEnr > </mat-datepicker>
+          </mat-form-field>
+
+          <div>
+            <button mat-flat-button color="primary" matStepperNext>Suivant</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!--  End    stepper Date d'enregistrement      -->
+
+      <!--  Start    stepper Empreintes Digitales      -->
+
+      <mat-step [stepControl]="empreintesDigitales">
+        <ng-template matStepLabel>Empreintes Digitales</ng-template>
+        <p style="font-size: x-small">
+          les données biométriques ne sont pas encore disponibles sur
+          l'application mobile
+        </p>
+        <div>
+          <button mat-flat-button color="warn" matStepperPrevious>Arrière</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button mat-flat-button color="primary" matStepperNext>Suivant</button>
+        </div>
+      </mat-step>
+
+      <!--  End    stepper Empreintes Digitales      -->
+
+      <!--  Start    stepper Données démographiques      -->
+      <mat-step [stepControl]="donneesDemographiques">
+        <form [formGroup]="donneesDemographiques">
+          <ng-template matStepLabel>Données démographiques </ng-template>
+          <mat-form-field appearance="outline" style="width: 100%;" >
+            <mat-label>Prénom patient </mat-label>
+            <input matInput placeholder="Prénom patient" formControlName="prenomPatient" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Nom patient </mat-label>
+            <input matInput placeholder="Nom patient" formControlName="nomPatient" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Sexe</mat-label>
+            <mat-select [(ngModel)]="selectedSexe" (selectionChange)="selectedSexe2($event)" name="sexePatient" formControlName="sexePatient" required>
+              <mat-option *ngFor="let sexePatient of sexePatients" [value]="sexePatient.value">
+                {{sexePatient.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Date de Naissance</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="pickerDateNais" formControlName="dateNaissance" required
+              readonly="true" />
+            <mat-datepicker-toggle matSuffix [for]="pickerDateNais"></mat-datepicker-toggle>
+            <mat-datepicker #pickerDateNais startView="multi-year"></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Nom de la mère </mat-label>
+            <input matInput placeholder="Nom de la mere" formControlName="nomMere" />
+          </mat-form-field>
+
+          <div>
+            <h2>Lieu de Naissance</h2>
+          </div>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Pays</mat-label>
+            <mat-select [(ngModel)]="selectedCountryLieuNais"  name="paysNaisPat"
+              (selectionChange)="onSelectLieuNais($event)" formControlName="paysNaisPat">
+              <mat-option *ngFor="let countryLieuNais of countriesLieuNais?.countries"  [value]="countryLieuNais.id">
+                {{countryLieuNais.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Department</mat-label>
+            <mat-select [(ngModel)]="selectedStateLieuNais.id" name="departNaisPat"
+              (selectionChange)="onSelect2LieuNais($event)" formControlName="departNaisPat">
+              <mat-option *ngFor="let stateLieuNais of statesLieuNais" [value]="stateLieuNais.id">
+                {{stateLieuNais.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Commune</mat-label>
+            <mat-select name="commNaisPat" (selectionChange)="selectedcommNais($event)" formControlName="commNaisPat">
+              <mat-option *ngFor="let municipalitieLieuNais of municipalitiesLieuNais" [value]="municipalitieLieuNais.id">
+                {{municipalitieLieuNais.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Adresse </mat-label>
+            <input matInput placeholder="Adresse" formControlName="adresseNaisPat" />
+          </mat-form-field>
+
+          <div>
+            <button mat-flat-button color="warn" matStepperPrevious>Arrière</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-flat-button color="primary" matStepperNext>Suivant</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!--  End    stepper Données démographiques      -->
+
+      <!--  Start    stepper Identifiants      -->
+
+      <mat-step [stepControl]="identifiants">
+        <form [formGroup]="identifiants">
+          <ng-template matStepLabel>Identifiants</ng-template>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>ST Code </mat-label>
+            <input matInput placeholder="ST Code" formControlName="stCodePatient" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Code National </mat-label>
+            <input matInput placeholder="Code National" formControlName="codeNationalPat" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Code PC </mat-label>
+            <input matInput placeholder="Code PC" formControlName="codePCPatient" />
+          </mat-form-field>
+
+          <div>
+            <button mat-flat-button color="warn" matStepperPrevious>Arrière</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-flat-button color="primary" matStepperNext>Suivant</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!--  End    stepper Identifiants      -->
+
+      <!--  Start    stepper Information de contact      -->
+
+      <mat-step [stepControl]="informationsContact">
+        <form [formGroup]="informationsContact">
+          <ng-template matStepLabel>Informations de contact</ng-template>
+
+          <div>
+            <h2>Adresse</h2>
+          </div>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Pays</mat-label>
+            <mat-select [(ngModel)]="selectedCountryInfCont.id" name="paysInfCont"
+              (selectionChange)="onSelectInfCont($event)" formControlName="paysInfCont">
+              <mat-option *ngFor="let countrieInfCont of countriesInfCont?.countries" [value]="countrieInfCont.id">
+                {{countrieInfCont.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Department</mat-label>
+            <mat-select [(ngModel)]="selectedStateInfCont.id" name="departInfCont"
+              (selectionChange)="onSelect2InfCont($event)" formControlName="departInfCont">
+              <mat-option *ngFor="let stateInfCont of statesInfCont" [value]="stateInfCont.id">
+                {{stateInfCont.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Commune</mat-label>
+            <mat-select name="commInfCont" (selectionChange)="selectedCommInf($event)" formControlName="commInfCont" >
+              <mat-option *ngFor="let municipalitieInfCont of municipalitiesInfCont" [value]="municipalitieInfCont.id">
+                {{municipalitieInfCont.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Adresse </mat-label>
+            <input matInput placeholder="Adresse" formControlName="adresseInfCont" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Numéro de téléphone </mat-label>
+            <input matInput type="number" placeholder="Numéro de téléphone" formControlName="telephoneInfCont" />
+          </mat-form-field>
+
+          <div>
+            <button mat-flat-button color="warn" matStepperPrevious>Arrière</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-flat-button color="primary" matStepperNext>Suivant</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!--  End    stepper Information de contact      -->
+
+      <!--  Start    stepper Social      -->
+
+      <mat-step [stepControl]="social">
+        <form [formGroup]="social">
+          <ng-template matStepLabel>Social</ng-template>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Statut marital</mat-label>
+            <mat-select [(ngModel)]="selectedStatutMarital" (selectionChange)="selectedStatut($event)"  name="statutMarital" formControlName="statutMarital">
+              <mat-option *ngFor="let statutMaritalResult of statutMaritalResults" [value]="statutMaritalResult.obsId">
+                {{statutMaritalResult.statutMarital}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Profession</mat-label>
+            <mat-select [(ngModel)]="selectedProfession" (selectionChange)="selectedProf($event)" name="profession"  formControlName="profession">
+              <mat-option *ngFor="let professionResult of professionResults"   [value]="professionResult.obsId">
+                {{professionResult.profession}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Religion</mat-label>
+            <mat-select [(ngModel)]="selectedReligion" (selectionChange)="selectedReli($event)"  name="religion" formControlName="religion">
+              <mat-option *ngFor="let religionResult of religionResults" [value]="religionResult.obsId">
+                {{religionResult.religion}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div>
+            <button mat-flat-button color="warn" matStepperPrevious>Arrière</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-flat-button color="primary" matStepperNext>Suivant</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!--  End    stepper Social      -->
+
+      <!--  Start    stepper Contact en cas d'urgence      -->
+
+      <mat-step [stepControl]="contactUrgence">
+        <form [formGroup]="contactUrgence">
+          <ng-template matStepLabel>Contact en cas d'urgence</ng-template>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Lien Parental</mat-label>
+            <mat-select [(ngModel)]="selectedLienCon" (selectionChange)="selectedLienConUrg($event)" name="lienParentConUrg" formControlName="lienParentConUrg">
+              <mat-option *ngFor="let lienResult of lienResultsCon" [value]="lienResult.obsId">
+                {{lienResult.lien}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Nom et Prenom </mat-label>
+            <input matInput placeholder="Nom et Prenom" formControlName="nomPrenomLienConUrg" />
+          </mat-form-field>
+
+          <div>
+            <h2>Adresse</h2>
+          </div>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Pays</mat-label>
+            <mat-select [(ngModel)]="selectedCountryConUrg.id" name="paysConUrg"
+              (selectionChange)="onSelectConUrg($event)" formControlName="paysConUrg">
+              <mat-option *ngFor="let countrieConUrg of countriesConUrg?.countries" [value]="countrieConUrg.id">
+                {{countrieConUrg.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Department</mat-label>
+            <mat-select [(ngModel)]="selectedStateConUrg.id" name="departConUrg"
+              (selectionChange)="onSelect2ConUrg($event)" formControlName="departConUrg">
+              <mat-option *ngFor="let stateConUrg of statesConUrg" [value]="stateConUrg.id">
+                {{stateConUrg.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Commune</mat-label>
+            <mat-select name="commConUrg" (selectionChange)="selectedCommCon($event)" formControlName="commConUrg">
+              <mat-option *ngFor="let municipalitieConUrg of municipalitiesConUrg" [value]="municipalitieConUrg.id">
+                {{municipalitieConUrg.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Adresse </mat-label>
+            <input matInput placeholder="Adresse" formControlName="adresseConUrg" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Numéro de téléphone </mat-label>
+            <input matInput type="number" placeholder="Numéro de téléphone" formControlName="telephoneConUrg" />
+          </mat-form-field>
+
+          <div>
+            <button mat-flat-button color="warn" matStepperPrevious>Arrière</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-flat-button color="primary" matStepperNext>Suivant</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!--  End    stepper Contact en cas d'urgence      -->
+
+      <!--  Start    stepper Premiere personne Responsable      -->
+
+      <mat-step [stepControl]="premPersResponsables">
+        <form [formGroup]="premPersResponsables">
+          <ng-template matStepLabel>Premiere Personne Responsables</ng-template>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Lien Parental</mat-label>
+            <mat-select [(ngModel)]="selectedLienPre" (selectionChange)="selectedLienPre2($event)" name="lienParentPre" formControlName="lienParentPre">
+              <mat-option *ngFor="let lienResult of lienResultsPre" [value]="lienResult.obsId">
+                {{lienResult.lien}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Nom et Prenom </mat-label>
+            <input matInput placeholder="Nom et Prenom" formControlName="nomPrenomLienPre" />
+          </mat-form-field>
+
+          <div>
+            <h2>Adresse</h2>
+          </div>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Pays</mat-label>
+            <mat-select [(ngModel)]="selectedCountryPrePer.id" name="paysPre" (selectionChange)="onSelectPrePer($event)"
+              formControlName="paysPre">
+              <mat-option *ngFor="let countriePrePer of countriesPrePer?.countries" [value]="countriePrePer.id">
+                {{countriePrePer.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Department</mat-label>
+            <mat-select [(ngModel)]="selectedStatePrePer.id" name="departPre" (selectionChange)="onSelect2PrePer($event)"
+              formControlName="departPre">
+              <mat-option *ngFor="let statePrePer of statesPrePer" [value]="statePrePer.id">
+                {{statePrePer.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Commune</mat-label>
+            <mat-select name="commPre" (selectionChange)="selectedCommPre($event)" formControlName="commPre">
+              <mat-option *ngFor="let municipalitiePrePer of municipalitiesPrePer" [value]="municipalitiePrePer.id">
+                {{municipalitiePrePer.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Adresse </mat-label>
+            <input matInput placeholder="Adresse" formControlName="adressePre" />
+          </mat-form-field>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Numéro de téléphone </mat-label>
+            <input matInput type="number" placeholder="Numéro de téléphone" formControlName="telephonePre" />
+          </mat-form-field>
+
+          <div>
+            <button mat-flat-button color="warn" matStepperPrevious>Arrière</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-flat-button color="primary" matStepperNext>Suivant</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!--  End    stepper Premiere personne Responsable      -->
+
+      <!--  Start    stepper Deuxieme personne Responsable      -->
+
+      <mat-step [stepControl]="deuxPersResponsables">
+        <form [formGroup]="deuxPersResponsables">
+          <ng-template matStepLabel>Deuxieme Personne Responsables</ng-template>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Lien Parental</mat-label>
+            <mat-select [(ngModel)]="selectedLienDeu" (selectionChange)="selectedLienDeu2($event)" name="lienParentDeu" formControlName="lienParentDeu">
+              <mat-option *ngFor="let lienResult of lienResultsDeu" [value]="lienResult.obsId">
+                {{lienResult.lien}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Nom et Prenom </mat-label>
+            <input matInput placeholder="Nom et Prenom" formControlName="nomPrenomLienDeu" />
+          </mat-form-field>
+
+          <div>
+            <h2>Adresse</h2>
+          </div>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Pays</mat-label>
+            <mat-select [(ngModel)]="selectedCountryDeuPer.id" name="paysDeu" (selectionChange)="onSelectDeuPer($event)"
+              formControlName="paysDeu">
+              <mat-option *ngFor="let countrieDeuPer of countriesDeuPer?.countries" [value]="countrieDeuPer.id">
+                {{countrieDeuPer.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Department</mat-label>
+            <mat-select [(ngModel)]="selectedStateDeuPer.id" name="departDeu" (selectionChange)="onSelect2DeuPer($event)"
+              formControlName="departDeu">
+              <mat-option *ngFor="let stateDeuPer of statesDeuPer" [value]="stateDeuPer.id">
+                {{stateDeuPer.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Commune</mat-label>
+            <mat-select name="commDeu" (selectionChange)="selectedCommDeu($event)" formControlName="commDeu">
+              <mat-option *ngFor="let municipalitieDeuPer of municipalitiesDeuPer" [value]="municipalitieDeuPer.id">
+                {{municipalitieDeuPer.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Adresse </mat-label>
+            <input matInput placeholder="Adresse" formControlName="adresseDeu" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Numéro de téléphone </mat-label>
+            <input matInput type="number" placeholder="Numéro de téléphone" formControlName="telephoneDeu" />
+          </mat-form-field>
+
+          <div>
+            <button mat-flat-button color="warn" matStepperPrevious>Arrière</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-flat-button color="primary" matStepperNext>Suivant</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <!--  End    stepper Deuxieme personne Responsable      -->
+
+      <!--  Start    stepper Confirmer      -->
+
+      <mat-step label="Confirmer" >
+        <mat-list style="padding: 0; margin: 0;">
+
+          <p class="confi-p" >  <strong>Date d'enregistrement:&nbsp;</strong>{{this.dateEnregistrement.value.dateEnCtrl | date : 'dd/MM/YYYY'}}</p>
+            <strong>Empreintes digitales:&nbsp;</strong> --
+
+
+         <p class="confi-p" >
+            <strong>Nom:&nbsp;</strong>{{this.donneesDemographiques.value.prenomPatient}}&nbsp;{{this.donneesDemographiques.value.nomPatient}}
+          </p>
+          <p class="confi-p" >
+            <strong>Sexe:&nbsp;</strong>{{sexeSelected}}
+          </p>
+          <p class="confi-p" >
+            <strong>Date de naissance:&nbsp;</strong>{{this.donneesDemographiques.value.dateNaissance | date : 'dd/MM/YYYY'}}
+          </p>
+          <p class="confi-p" >
+            <strong>Nom de la mère:&nbsp;</strong>{{this.donneesDemographiques.value.nomMere}}
+          </p>
+          <p class="confi-p" >
+            <strong>Lieu de naissance:&nbsp;</strong>{{this.donneesDemographiques.value.adresseNaisPat}},&nbsp;
+            {{commLieuNaisSelected}},&nbsp;
+            {{departLieuNaisSelected}},&nbsp;
+            {{paysLieuNaisSelected}}&nbsp;
+          </p>
+
+          <p class="confi-p" > <strong>ST Code:&nbsp;</strong>{{this.identifiants.value.stCodePatient}}</p>
+          <p class="confi-p" > <strong>Code National:&nbsp;</strong>{{this.identifiants.value.codeNationalPat}}</p>
+          <p class="confi-p" > <strong>Code PC:&nbsp;</strong>{{this.identifiants.value.codePCPatient}}</p>
+
+
+          <p class="confi-p" > <strong>Adresse:&nbsp;</strong>{{this.informationsContact.value.adresseInfCont}}&nbsp;
+            {{commInfConSelected}}&nbsp;
+            {{departInfContSelected}}&nbsp;
+            {{paysInfContSelected}}
+          </p>
+          <p class="confi-p" ><strong>Numéro de téléphone:&nbsp;</strong>{{this.informationsContact.value.telephoneInfCont}}</p>
+
+
+          <p class="confi-p" > <strong>Statut marital:&nbsp;</strong>{{statutMaritalSelected}}</p>
+          <p class="confi-p" > <strong>Profession:&nbsp;</strong>{{professionSelected}}</p>
+          <p class="confi-p" > <strong>Religion:&nbsp;</strong>{{religionSelected}}</p>
+
+
+
+          <p class="confi-p" > <strong>Nom et Lien:&nbsp;</strong>{{this.contactUrgence.value.nomPrenomLienConUrg}},&nbsp;{{LienConUrgselected}}</p>
+          <p class="confi-p" > <strong>Adresse:&nbsp;</strong>{{this.contactUrgence.value.adresseConUrg}},&nbsp;
+            {{commConUrgSelected}},&nbsp;
+            {{departConUrgSelected}},&nbsp;
+            {{paysConUrgSelected}}&nbsp;</p>
+          <p class="confi-p" > <strong>Téléphone:&nbsp;</strong>{{this.contactUrgence.value.telephoneConUrg}}&nbsp;</p>
+
+
+          <p class="confi-p" > <strong>Nom et Lien:&nbsp;</strong>{{this.premPersResponsables.value.nomPrenomLienPre}},&nbsp;{{LienPre2selected}}</p>
+         <p class="confi-p" > <strong>Adresse:&nbsp;</strong>{{this.premPersResponsables.value.adressePre}},&nbsp;
+            {{commPreSelected}},&nbsp;
+            {{departPreSelected}},&nbsp;
+            {{paysPreSelected}}&nbsp;</p>
+          <p class="confi-p" > <strong>Téléphone:&nbsp;</strong>{{this.premPersResponsables.value.telephonePre}}&nbsp;</p>
+
+
+          <p class="confi-p" > <strong>Nom et Lien:&nbsp;</strong>{{this.deuxPersResponsables.value.nomPrenomLienDeu}},&nbsp;{{LienDeu2selected}}</p>
+          <p class="confi-p" > <strong>Adresse:&nbsp;</strong>{{this.deuxPersResponsables.value.adresseDeu}},&nbsp;
+            {{commDeuSelected}},&nbsp;
+            {{departDeuSelected}},&nbsp;
+            {{paysDeuSelected}}&nbsp;</p>
+          <p class="confi-p" > <strong>Téléphone:&nbsp;</strong>{{this.deuxPersResponsables.value.telephoneDeu}}&nbsp;</p>
+        </mat-list>
+        <div>
+          <button mat-flat-button color="warn" matStepperPrevious>Arrière</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-flat-button color="primary" (click)="AddPatient()" matStepperNext>Confirmer</button>
+        </div>
+      </mat-step>
+
+
+    </mat-stepper>
+
+
+  </div>
+
+
+  <!--  End    stepper Confirmer      -->
+</ion-content>

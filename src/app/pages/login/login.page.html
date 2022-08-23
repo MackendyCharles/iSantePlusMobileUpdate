@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-toolbar color="segundary">
+        <ion-title align="center">Login</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" padding>
+
+    <div style="margin-top: 10px;">
+        <button style="background-color: transparent;" ion-button color="danger" clear icon-only (click)="openDialog()" >
+            <ion-icon name="settings" style="font-size: 30px" ></ion-icon>
+        </button>
+       
+    </div>
+    <div id="container">
+
+        <app-logo2></app-logo2>
+        <h1 align="center">S'identifier</h1>
+
+        <form action="">
+            <ion-list>
+    <!--            <ion-item>-->
+    <!--                <ion-label>Utilisateur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ion-label>-->
+    <!--                <ion-input type="text" name="username" ></ion-input>-->
+    <!--            </ion-item>-->
+
+    <!--            <ion-item>-->
+    <!--                <ion-label>Mot de Passe&nbsp;</ion-label>-->
+    <!--                <ion-input type="password" name="password" ></ion-input>-->
+    <!--            </ion-item>-->
+
+                <div class="example-container" align="center">
+                    <mat-form-field appearance="outline" style="width: 50%; margin-bottom: 5px ">
+                        <mat-label>Utilisateur</mat-label>
+                        <input matInput placeholder="Placeholder"  name="username" [(ngModel)]="username">
+                        <ion-icon name="person" matSuffix></ion-icon>
+                        <mat-hint>Utilisateur Obligatoire</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="example-container" align="center">
+                    <mat-form-field appearance="fill"  style="width: 50%; ">
+                        <mat-label>Mot de Passe</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="password">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                            <ion-icon name="{{hide ? 'eye-off' : 'eye'}}"></ion-icon>
+                        </button>
+                        <mat-hint>Mot de Passe Obligatoire</mat-hint>
+                    </mat-form-field>
+                </div>
+
+
+
+
+
+                <section>
+
+                    <div class="example-button-row" align="center">
+
+                        <button class="loginBtn" mat-raised-button color="primary" (click)="login()">S'identifier</button>
+
+                    </div>
+                </section>
+
+            </ion-list>
+
+        </form>
+
+    </div>
+
+
+</ion-content>

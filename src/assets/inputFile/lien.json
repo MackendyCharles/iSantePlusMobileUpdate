@@ -1,0 +1,12 @@
+[
+  { "obsId": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lien": "Inconnu" },
+  { "obsId": "971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lien": "Père" },
+  { "obsId": "970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lien": "Mère" },
+  { "obsId": "973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lien": "Grand-parent" },
+  { "obsId": "974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lien": "Oncle" },
+  { "obsId": "975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lien": "Tante" },
+  { "obsId": "972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lien": "Enfant de mêmes parents" },
+  { "obsId": "5618AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lien": "Ami" },
+  { "obsId": "5617AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lien": "Partenaire ou conjoint" },
+  { "obsId": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lien": "Autre" }
+]

@@ -1,0 +1,774 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "Haiti"
+    },
+    {
+      "id": 2,
+      "name": "Yon Lot Peyi"
+    }
+  ],
+  "states": [
+    {
+      "id": 1,
+      "name": "Artibonite",
+      "country_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Centre",
+      "country_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Grande-Anse",
+      "country_id": 1
+    },
+    {
+      "id": 4,
+      "name": "Nippes",
+      "country_id": 1
+    },
+    {
+      "id": 5,
+      "name": "Nord",
+      "country_id": 1
+    },
+    {
+      "id": 6,
+      "name": "Nord-Est",
+      "country_id": 1
+    },
+    {
+      "id": 7,
+      "name": "Nord-Ouest",
+      "country_id": 1
+    },
+    {
+      "id": 8,
+      "name": "Ouest",
+      "country_id": 1
+    },
+    {
+      "id": 9,
+      "name": "Sud",
+      "country_id": 1
+    }
+    ,
+    {
+      "id": 10,
+      "name": "Sud-Est",
+      "country_id": 1
+    }
+
+  ],
+  "municipalities": [
+    {
+      "id": 1,
+      "name": "Anse Rouge",
+      "state_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Desdunes",
+      "state_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Dessalines",
+      "state_id": 1
+    },
+    {
+      "id": 4,
+      "name": "Ennery",
+      "state_id": 1
+    },
+    {
+      "id": 5,
+      "name": "Gonaïves",
+      "state_id": 1
+    },
+    {
+      "id": 6,
+      "name": "Grande Saline",
+      "state_id": 1
+    },
+    {
+      "id": 7,
+      "name": "Gros Morne",
+      "state_id": 1
+    },
+    {
+      "id": 8,
+      "name": "L'Estère",
+      "state_id": 1
+    },
+    {
+      "id": 9,
+      "name": "La Chapelle",
+      "state_id": 1
+    },
+    {
+      "id": 10,
+      "name": "Marmelade",
+      "state_id": 1
+    },
+    {
+      "id": 11,
+      "name": "Petite Rivière de L'Artibonite",
+      "state_id": 1
+    },
+    {
+      "id": 12,
+      "name": "Saint-Marc",
+      "state_id": 1
+    },
+    {
+      "id": 13,
+      "name": "Saint-Michel de L'Attalaye",
+      "state_id": 1
+    },
+    {
+      "id": 14,
+      "name": "Terre Neuve",
+      "state_id": 1
+    },
+    {
+      "id": 15,
+      "name": "Verrettes",
+      "state_id": 1
+    },
+    {
+      "id": 15,
+      "name": "Belladères",
+      "state_id": 2
+    },
+    {
+      "id": 16,
+      "name": "Boucan Carré",
+      "state_id": 2
+    },
+    {
+      "id": 17,
+      "name": "Cerca Cavajal",
+      "state_id": 2
+    },{
+      "id": 18,
+      "name": "Cerca La Source",
+      "state_id": 2
+    },
+    {
+      "id": 19,
+      "name": "Hinche",
+      "state_id": 2
+    },
+    {
+      "id": 20,
+      "name": "Lascahobas",
+      "state_id": 2
+    },
+    {
+      "id": 21,
+      "name": "Maïssade",
+      "state_id": 2
+    },
+    {
+      "id": 22,
+      "name": "Mirebalais",
+      "state_id": 2
+    },
+    {
+      "id": 23,
+      "name": "Saut d'Eau",
+      "state_id": 2
+    },
+    {
+      "id": 24,
+      "name": "Savanette",
+      "state_id": 2
+    },
+    {
+      "id": 25,
+      "name": "Thomassique",
+      "state_id": 2
+    },
+    {
+      "id": 26,
+      "name": "Thomonde",
+      "state_id": 2
+    },
+    {
+      "id": 27,
+      "name": "Abricots",
+      "state_id": 3
+    },
+    {
+      "id": 28,
+      "name": "Anse D'Hainault",
+      "state_id": 3
+    },
+    {
+      "id": 29,
+      "name": "Beaumont",
+      "state_id": 3
+    },
+    {
+      "id": 30,
+      "name": "Bonbons",
+      "state_id": 3
+    },
+    {
+      "id": 31,
+      "name": "Chambellan",
+      "state_id": 3
+    },
+    {
+      "id": 32,
+      "name": "Corail",
+      "state_id": 3
+    },
+    {
+      "id": 33,
+      "name": "Dame Marie",
+      "state_id": 3
+    },
+    {
+      "id": 34,
+      "name": "Jérémie",
+      "state_id": 3
+    },
+    {
+      "id": 35,
+      "name": "Les Irois",
+      "state_id": 3
+    },
+    {
+      "id": 36,
+      "name": "Moron",
+      "state_id": 3
+    },
+    {
+      "id": 37,
+      "name": "Pestel",
+      "state_id": 3
+    },
+    {
+      "id": 38,
+      "name": "Roseaux",
+      "state_id": 3
+    },
+    {
+      "id": 39,
+      "name": "Anse à Veau",
+      "state_id": 4
+    },
+    {
+      "id": 40,
+      "name": "Arnaud",
+      "state_id": 4
+    },
+    {
+      "id": 41,
+      "name": "Baradères",
+      "state_id": 4
+    },
+    {
+      "id": 42,
+      "name": "Fonds des Nègres",
+      "state_id": 4
+    },
+    {
+      "id": 43,
+      "name": "Grand Boucan",
+      "state_id": 4
+    },
+    {
+      "id": 44,
+      "name": "L'Asile",
+      "state_id": 4
+    },
+    {
+      "id": 45,
+      "name": "Miragoâne",
+      "state_id": 4
+    },
+    {
+      "id": 46,
+      "name": "Sud-Est",
+      "state_id": 4
+    },
+    {
+      "id": 47,
+      "name": "Paillant",
+      "state_id": 4
+    },
+    {
+      "id": 48,
+      "name": "Petit Trou de Nippes",
+      "state_id": 4
+    },
+    {
+      "id": 49,
+      "name": "Petite Rivière de Nippes",
+      "state_id": 4
+    },
+    {
+      "id": 50,
+      "name": "Plaisance du Sud",
+      "state_id": 4
+    },
+    {
+      "id": 51,
+      "name": "Acul du Nord",
+      "state_id": 5
+    },
+    {
+      "id": 52,
+      "name": "Bahon",
+      "state_id": 5
+    },
+    {
+      "id": 53,
+      "name": "Bas Limbé",
+      "state_id": 5
+    },
+    {
+      "id": 54,
+      "name": "Borgne",
+      "state_id": 5
+    },
+    {
+      "id": 55,
+      "name": "Cap Haitien",
+      "state_id": 5
+    },
+    {
+      "id": 56,
+      "name": "Dondon",
+      "state_id": 5
+    },
+    {
+      "id": 57,
+      "name": "Grande Rivière du Nord",
+      "state_id": 5
+    },
+    {
+      "id": 58,
+      "name": "La Victoire",
+      "state_id": 5
+    },
+    {
+      "id": 59,
+      "name": "Limbé",
+      "state_id": 5
+    },
+    {
+      "id": 60,
+      "name": "Limonade",
+      "state_id": 5
+    },
+    {
+      "id": 61,
+      "name": "Milot",
+      "state_id": 5
+    },
+    {
+      "id": 62,
+      "name": "Pignon",
+      "state_id": 5
+    },
+    {
+      "id": 63,
+      "name": "Pilate",
+      "state_id": 5
+    },
+    {
+      "id": 64,
+      "name": "Plaine du Nord",
+      "state_id": 5
+    },
+    {
+      "id": 65,
+      "name": "Plaisance",
+      "state_id": 5
+    },
+    {
+      "id": 66,
+      "name": "Port Margot",
+      "state_id": 5
+    },
+    {
+      "id": 67,
+      "name": "Quartier Morin",
+      "state_id": 5
+    },
+    {
+      "id": 68,
+      "name": "Ranquitte",
+      "state_id": 5
+    },
+    {
+      "id": 69,
+      "name": "Saint Raphaël",
+      "state_id": 5
+    },
+    {
+      "id": 70,
+      "name": "Capotille",
+      "state_id": 6
+    },
+    {
+      "id": 71,
+      "name": "Caracol",
+      "state_id": 6
+    },
+    {
+      "id": 72,
+      "name": "Carice",
+      "state_id": 6
+    },
+    {
+      "id": 73,
+      "name": "Ferrier",
+      "state_id": 6
+    },
+    {
+      "id": 74,
+      "name": "Fort-Liberté",
+      "state_id": 6
+    },
+    {
+      "id": 75,
+      "name": "Mombin Crochu",
+      "state_id": 6
+    },
+    {
+      "id": 76,
+      "name": "Mont Organisé",
+      "state_id": 6
+    },
+    {
+      "id": 77,
+      "name": "Ouanaminthe",
+      "state_id": 6
+    },
+    {
+      "id": 78,
+      "name": "Perches",
+      "state_id": 6
+    },
+    {
+      "id": 79,
+      "name": "Sainte Suzanne",
+      "state_id": 6
+    },
+    {
+      "id": 80,
+      "name": "Terrier-Rouge",
+      "state_id": 6
+    },
+    {
+      "id": 81,
+      "name": "Trou du Nord",
+      "state_id": 6
+    },
+    {
+      "id": 82,
+      "name": "Vallières",
+      "state_id": 6
+    },
+    {
+      "id": 83,
+      "name": "Anse à Foleur",
+      "state_id": 7
+    },
+    {
+      "id": 84,
+      "name": "Baie de Henne",
+      "state_id": 7
+    },
+    {
+      "id": 85,
+      "name": "Bassin Bleu",
+      "state_id": 7
+    },
+    {
+      "id": 86,
+      "name": "Bombardopolis",
+      "state_id": 7
+    },
+    {
+      "id": 87,
+      "name": "Chansolme",
+      "state_id": 7
+    },
+    {
+      "id": 88,
+      "name": "Jean Rabel",
+      "state_id": 7
+    },
+    {
+      "id": 89,
+      "name": "La Tortue",
+      "state_id": 7
+    },
+    {
+      "id": 90,
+      "name": "Môle Saint Nicolas",
+      "state_id": 7
+    },
+    {
+      "id": 91,
+      "name": "Port-de-Paix",
+      "state_id": 7
+    },
+    {
+      "id": 92,
+      "name": "Saint Louis du Nord",
+      "state_id": 7
+    },
+    {
+      "id": 93,
+      "name": "Anse à Galets",
+      "state_id": 8
+    },
+    {
+      "id": 94,
+      "name": "Arcahaie",
+      "state_id": 8
+    },
+    {
+      "id": 95,
+      "name": "Cabaret",
+      "state_id": 8
+    },
+    {
+      "id": 96,
+      "name": "Carrefour",
+      "state_id": 8
+    },
+    {
+      "id": 97,
+      "name": "Cite Soleil",
+      "state_id": 8
+    },
+    {
+      "id": 98,
+      "name": "Cornillon",
+      "state_id": 8
+    },
+    {
+      "id": 99,
+      "name": "Croix-des-Bouquets",
+      "state_id": 8
+    },
+    {
+      "id": 100,
+      "name": "Delmas",
+      "state_id": 8
+    },
+    {
+      "id": 101,
+      "name": "Fonds Verettes",
+      "state_id": 8
+    },
+    {
+      "id": 102,
+      "name": "Ganthier",
+      "state_id": 8
+    },
+    {
+      "id": 103,
+      "name": "Grand-Goâve",
+      "state_id": 8
+    },
+    {
+      "id": 104,
+      "name": "Gressier",
+      "state_id": 8
+    },
+    {
+      "id": 105,
+      "name": "Kenscoff",
+      "state_id": 8
+    },
+    {
+      "id": 106,
+      "name": "Léogâne",
+      "state_id": 8
+    },
+    {
+      "id": 107,
+      "name": "Petion-Ville",
+      "state_id": 8
+    },
+    {
+      "id": 108,
+      "name": "Petit-Goâve",
+      "state_id": 8
+    },
+    {
+      "id": 109,
+      "name": "Pointe à Raquette",
+      "state_id": 8
+    },
+    {
+      "id": 110,
+      "name": "Port-au-Prince",
+      "state_id": 8
+    },
+    {
+      "id": 111,
+      "name": "Tabarre",
+      "state_id": 8
+    },
+    {
+      "id": 112,
+      "name": "Thomazeau",
+      "state_id": 8
+    },
+    {
+      "id": 113,
+      "name": "Aquin",
+      "state_id": 9
+    },
+    {
+      "id": 114,
+      "name": "Arniquet",
+      "state_id": 9
+    },
+    {
+      "id": 115,
+      "name": "Camp-Perrin",
+      "state_id": 9
+    },
+    {
+      "id": 116,
+      "name": "Cavaillon",
+      "state_id": 9
+    },
+    {
+      "id": 117,
+      "name": "Chantal",
+      "state_id": 9
+    },
+    {
+      "id": 118,
+      "name": "Chardonnières",
+      "state_id": 9
+    },
+    {
+      "id": 119,
+      "name": "Coteaux",
+      "state_id": 9
+    },
+    {
+      "id": 120,
+      "name": "Ile à Vache",
+      "state_id": 9
+    },
+    {
+      "id": 121,
+      "name": "Les Anglais",
+      "state_id": 9
+    },
+    {
+      "id": 122,
+      "name": "Les Cayes",
+      "state_id": 9
+    },
+    {
+      "id": 123,
+      "name": "Maniche",
+      "state_id": 9
+    },
+    {
+      "id": 124,
+      "name": "Port-à-Piment",
+      "state_id": 9
+    },
+    {
+      "id": 125,
+      "name": "Port-Salut",
+      "state_id": 9
+    },
+    {
+      "id": 126,
+      "name": "Roche-à-Bâteaux",
+      "state_id": 9
+    },
+    {
+      "id": 127,
+      "name": "Saint Jean du Sud",
+      "state_id": 9
+    },
+    {
+      "id": 128,
+      "name": "Saint Louis du Sud",
+      "state_id": 9
+    },
+    {
+      "id": 129,
+      "name": "Tiburon",
+      "state_id": 9
+    },
+    {
+      "id": 130,
+      "name": "Torbeck",
+      "state_id": 9
+    },
+    {
+      "id": 140,
+      "name": "Anse à Pitre",
+      "state_id": 10
+    },
+    {
+      "id": 141,
+      "name": "Bainet",
+      "state_id": 10
+    },
+    {
+      "id": 141,
+      "name": "Belle Anse",
+      "state_id": 10
+    },
+    {
+      "id": 141,
+      "name": "Cayes Jacmel",
+      "state_id": 10
+    },
+    {
+      "id": 141,
+      "name": "Côtes de Fer",
+      "state_id": 10
+    },
+    {
+      "id": 141,
+      "name": "Grand Gosier",
+      "state_id": 10
+    },
+    {
+      "id": 141,
+      "name": "Jacmel",
+      "state_id": 10
+    },
+    {
+      "id": 141,
+      "name": "La Vallée de Jacmel",
+      "state_id": 10
+    },
+    {
+      "id": 141,
+      "name": "Marigot",
+      "state_id": 10
+    },
+    {
+      "id": 141,
+      "name": "Thiotte",
+      "state_id": 10
+    }
+
+  ]
+
+}

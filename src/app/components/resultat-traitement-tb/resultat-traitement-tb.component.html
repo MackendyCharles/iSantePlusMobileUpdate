@@ -1,0 +1,25 @@
+<form [formGroup]="resultatTraitementTB">
+
+  <ng-template matStepLabel>Date d’arret du traitement  </ng-template>
+  <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+    <mat-label>Date d’arret du traitement  </mat-label>
+    <input matInput [max]="maxDate" [matDatepicker]="pickerdateArretTraitementResultTB" formControlName="pickerdateArretTraitementResultTB" required
+           readonly="true" />
+    <mat-datepicker-toggle matSuffix [for]="pickerdateArretTraitementResultTB"></mat-datepicker-toggle>
+    <mat-datepicker #pickerdateArretTraitementResultTB> </mat-datepicker>
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>RESULTAT DU TRAITEMENT(TB) :</mat-label>
+    <mat-select formControlName="resultatTextTB">
+      <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Guéri </mat-option>
+      <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Traitement Terminé</mat-option>
+      <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Abandon</mat-option>
+      <mat-option value="159772AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Transféré</mat-option>
+      <mat-option value="974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Décédé</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+</form>

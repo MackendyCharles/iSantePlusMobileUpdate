@@ -1,0 +1,96 @@
+<div mat-dialog-content>
+
+
+
+<form [formGroup]="ordDiagForm">
+
+
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Regime ARV</mat-label>
+    <mat-select [(ngModel)]="selectedRegimeARV" (selectionChange)="selectedRegimeARV2($event)" name="regimeARV" formControlName="regimeARV">
+      <mat-option *ngFor="let regimeARVResult of regimeARVResults"   [value]="regimeARVResult" >
+        {{regimeARVResult.regimen}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-radio-group aria-label="Select an option"  formControlName="rxProphy">
+    <mat-radio-button value="138405AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Rx&nbsp;&nbsp;</mat-radio-button>
+    <mat-radio-button value="163768AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Prophy</mat-radio-button>
+  </mat-radio-group>
+  <div class="example-container" *ngFor="let drg of drug" style="width: 100%">
+<!--  <p >{{drg.drugName}}</p>-->
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{drg.drugName}}</mat-label>
+      <mat-select formControlName="posologieJ">
+        <mat-option value="{{drg.pedStdDosageFr1}}" selected="true" *ngIf="drg.pedStdDosageFr1">{{drg.pedStdDosageFr1}}</mat-option>
+        <mat-option value="{{drg.pedStdDosageFr2}}" *ngIf="drg.pedStdDosageFr2">{{drg.pedStdDosageFr2}}</mat-option>
+        <mat-option value="{{drg.pedStdDosageFr3}}" *ngIf="drg.pedStdDosageFr3">{{drg.pedStdDosageFr3}}</mat-option>
+        <mat-option value="{{drg.pedStdDosageFr4}}" *ngIf="drg.pedStdDosageFr4">{{drg.pedStdDosageFr4}}</mat-option>
+        <mat-option value="{{drg.pedStdDosageFr5}}" *ngIf="drg.pedStdDosageFr5">{{drg.pedStdDosageFr5}}</mat-option>
+        <mat-option value="{{drg.pedStdDosageFr6}}" *ngIf="drg.pedStdDosageFr6">{{drg.pedStdDosageFr6}}</mat-option>
+        <mat-option value="{{drg.pedStdDosageFr7}}" *ngIf="drg.pedStdDosageFr7">{{drg.pedStdDosageFr7}}</mat-option>
+        <mat-option value="{{drg.pedStdDosageFr8}}" *ngIf="drg.pedStdDosageFr8">{{drg.pedStdDosageFr8}</mat-option>
+        <mat-option value="{{drg.pedStdDosageFr9}}" *ngIf="drg.pedStdDosageFr9">{{drg.pedStdDosageFr9}}</mat-option>
+        <mat-option value="{{drg.pedStdDosageFr10}}" *ngIf="drg.pedStdDosageFr10">{{drg.pedStdDosageFr10}}</mat-option>
+      </mat-select>
+      <mat-hint align="end">...</mat-hint>
+    </mat-form-field>
+
+
+  </div>
+
+  <mat-divider></mat-divider>
+  <mat-form-field appearance="outline">
+    <mat-label>Posologie journalière alternative, préciser </mat-label>
+    <input matInput placeholder="Posologie journalière alternative, préciser" formControlName="posologieJAP" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre de jours</mat-label>
+    <input matInput placeholder="Nombre de jours" formControlName="nbJours" />
+  </mat-form-field>
+
+  <mat-divider></mat-divider>
+
+  <section class="example-section">
+    <mat-label>Médicaments dispensés Date dispensé:</mat-label>
+    <mat-checkbox class="example-margin" formControlName="medicamentD" >Oui&nbsp;&nbsp;</mat-checkbox>
+
+    <ng-template matStepLabel>Date:</ng-template>
+    <mat-form-field class="example-full-width" appearance="fill" >
+      <mat-label>Date:</mat-label>
+      <input matInput [max]="maxDate" [matDatepicker]="pickerDateDDD" [formControl]="date" [value]="date"
+             formControlName="medicamentDDD" required
+             readonly="true"/>
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="pickerDateDDD"></mat-datepicker-toggle>
+      <mat-datepicker #pickerDateDDD></mat-datepicker>
+    </mat-form-field>
+  </section>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Posologie alternative dispensée, préciser</mat-label>
+    <input matInput placeholder="Nombre de jours" formControlName="posologieADP" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre de jours alternatifs dispensés, préciser</mat-label>
+    <input matInput placeholder="Nombre de jours" formControlName="nbJoursADP" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre de pillules distribuées</mat-label>
+    <input matInput placeholder="Nombre de jours" formControlName="nbPillulesD" />
+  </mat-form-field>
+
+
+
+</form>
+
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addRegime()">{{actionBtn}}</button>
+
+</div>

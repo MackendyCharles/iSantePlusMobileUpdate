@@ -1,0 +1,16 @@
+[
+    {"id": 1, "name": "OpenMRS Identification Number", "description": "Unique number used in OpenMRS", "uuid": "8d793bee-c2cc-11de-8d13-0010c6dffd0f"},
+    {"id": 2, "name": "Old Identification Number", "description": "Number given out prior to the OpenMRS system (No check digit)", "uuid": "8d79403a-c2cc-11de-8d13-0010c6dffd0f"},
+    {"id": 3, "name": "Code ST", "description": "Code ST du patient", "uuid": "d059f6d0-9e42-4760-8de1-8316b48bc5f1"},
+    {"id": 4, "name": "Code National", "description": "Code National du patient", "uuid": "9fb4533d-4fd5-4276-875b-2ab41597f5dd"},
+    {"id": 5, "name": "Biometrics National Reference Code", "description": "Code referencing a patient's record in an external national biometrics system", "uuid": "5a597bcc-26ad-11e8-b467-0ed5f89f718b"},
+    {"id": 6, "name": "iSante ID", "description": "Old iSante ID generated specially for LNSP (Laboratoire National de Santé Publique)", "uuid": "0e0c7cc2-3491-4675-b705-746e372ff346"},
+    {"id": 7, "name": "No. de dossier TB", "description": "Numéro de dossier TB du patient", "uuid": "4814250c-bbba-4380-a843-206d5307808a"},
+    {"id": 8, "name": "Code PC", "description": "Numéro de dossier pour les patients de soins de santé primaire", "uuid": "b7a154fd-0097-4071-ac09-af11ee7e0310"},
+    {"id": 9, "name": "", "description": "", "uuid": ""},
+    {"id": 10, "name": "", "description": "", "uuid": ""},
+    {"id": 11, "name": "", "description": "", "uuid": ""},
+    {"id": 12, "name": "", "description": "", "uuid": ""},
+    {"id": 13, "name": "", "description": "", "uuid": ""}
+
+]

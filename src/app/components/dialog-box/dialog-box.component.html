@@ -1,0 +1,76 @@
+
+<div class="  text-center " mat-dialog-title>
+    <h1 class="fonMof"  >Add Signes Vitaux</h1>
+</div>
+
+
+<div mat-dialog-content>
+
+    <form [formGroup]="vitauxForm">
+
+        <ng-template matStepLabel >Date d'enregistrement</ng-template>
+        <mat-form-field class="example-full-width" appearance="fill" >
+            <mat-label>Date d'enregistrement</mat-label>
+            <input class="paddModif" matInput [max]="maxDate" [matDatepicker]="pickerDateEnr" [formControl]="date" [value]="date"
+                   formControlName="dateEnCtrl" required
+                   readonly="true"/>
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="pickerDateEnr"></mat-datepicker-toggle>
+            <mat-datepicker #pickerDateEnr></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Hauteur (cm)</mat-label>
+            <input formControlName="hauteur" matInput type="number" placeholder="Placeholder" >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Poids (kg)</mat-label>
+            <input formControlName="poids" matInput type="number" placeholder="Placeholder" >
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>IMC (Calculer)</mat-label>
+            <input formControlName="imc" matInput  type="number" placeholder="Placeholder"  >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Temperature (C)</mat-label>
+            <input formControlName="temperature" matInput type="number" placeholder="Placeholder" >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Pouls</mat-label>
+            <input formControlName="pouls" matInput type="number" placeholder="Placeholder" >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Frequense Respiratiore</mat-label>
+            <input formControlName="frequenseResp" type="number" matInput placeholder="Placeholder" >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Tension Arterielle Systolique</mat-label>
+            <input formControlName="tensionArtSyst" type="number" matInput placeholder="Placeholder" >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Tension Arterielle Diastolique</mat-label>
+            <input formControlName="tensionArtDiast" type="number" matInput placeholder="Placeholder" >
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Saturation en Oxygene du sang</mat-label>
+            <input formControlName="saturationOxySan" type="number" matInput placeholder="Placeholder" >
+        </mat-form-field>
+    </form>
+
+
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addVitaux()">{{actionBtn}}</button>
+
+</div>
+
+

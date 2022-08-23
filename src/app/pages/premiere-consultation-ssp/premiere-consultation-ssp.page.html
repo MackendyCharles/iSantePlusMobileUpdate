@@ -1,0 +1,2801 @@
+<ion-header>
+  <ion-toolbar color="segundary">
+    <ion-buttons>
+      <ion-menu-button menu="main-menu"><ion-icon name="menu"></ion-icon></ion-menu-button>
+      <ion-title>iSantePlus</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="font-size: 18px; color: #363463; font-weight: bold">
+    <ion-icon name="home" style="font-size: 18px; margin-right: 5px; margin-left: 4px; float: left"></ion-icon>
+    <!--    <mat-icon >home</mat-icon>-->
+    <ion-icon name="arrow-forward" style="font-size: 20px; margin-right: 7px; float: left"></ion-icon>
+    <!--    <mat-icon >navigate_next</mat-icon>-->
+    <p (click)="showDashPatient()" style="
+        font-size: 14px;
+        float: left;
+        text-decoration: underline;
+        color: #363463;
+        font-weight: bold;
+      ">
+      {{patientName}}
+    </p>
+  </div>
+
+  <div style="clear: both"></div>
+  <div style="
+      font-size: 18px;
+      color: #363463;
+      font-weight: bold;
+      padding-bottom: 0px;
+    ">
+    <h3 style="font-size: 12px; color: #363463; font-weight: bold; margin: 0px">
+      SSP - Première Consultation
+    </h3>
+  </div>
+
+  <div><br>
+    <!-- <button mat-flat-button color="warn" >Arrière</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+    <button mat-flat-button color="primary" style="font-size: 11px; padding: 2px 2px 2px 2px;"
+      (click)="AddSspPreCons()">Sauvegarder (Enregistrer)</button>
+  </div>
+  <mat-divider> </mat-divider>
+
+  <form [formGroup]="dateEnregistrement">
+    <ng-template matStepLabel>Date d'enregistrement</ng-template>
+    <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+      <mat-label>Date d'enregistrement</mat-label>
+      <input matInput [max]="maxDate" [matDatepicker]="pickerDateEnr" formControlName="dateEnCtrl" required
+        readonly="true" />
+      <mat-datepicker-toggle matSuffix [for]="pickerDateEnr"></mat-datepicker-toggle>
+      <mat-datepicker #pickerDateEnr> </mat-datepicker>
+    </mat-form-field>
+
+  </form>
+
+
+
+  <mat-accordion class="example-headers-align" multi>
+
+
+
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> INFORMATIONS GÉNÉRALES </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form [formGroup]="informationGenerales">
+
+        <mat-form-field appearance="outline" style="width: 30%;">
+          <mat-label>Age </mat-label>
+          <input matInput placeholder="Age" value="{{agePatient}}" formControlName="agePatient" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 30%;">
+          <mat-label>Sexe </mat-label>
+          <input matInput placeholder="sexe" value="{{sexePatient}}" formControlName="sexePatient" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Groupe sanguin :</mat-label>
+          <mat-select formControlName="groupeSanguin">
+            <mat-option value="690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">A+</mat-option>
+            <mat-option value="692AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">A-</mat-option>
+            <mat-option value="694AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">B+</mat-option>
+            <mat-option value="696AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">B-</mat-option>
+            <mat-option value="699AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">O+</mat-option>
+            <mat-option value="701AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">O-</mat-option>
+            <mat-option value="1230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">AB+</mat-option>
+            <mat-option value="1231AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">AB-</mat-option>
+            <mat-option value="1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Inconnu</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Électrophorèse de l’hémoglobine :</mat-label>
+          <mat-select formControlName="electroHemoglobine">
+            <mat-option value="AS">AS</mat-option>
+            <mat-option value="SS">SS</mat-option>
+            <mat-option value="AC">AC</mat-option>
+            <mat-option value="SC">SC</mat-option>
+            <mat-option value="AA">AA</mat-option>
+            <mat-option value="FS">FS</mat-option>
+            <mat-option value="AF">AF</mat-option>
+            <mat-option value="Autre">Autre</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Précisez </mat-label>
+          <input matInput placeholder="Précisez" formControlName="preciser" />
+        </mat-form-field>
+
+        <mat-divider> </mat-divider>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="151185AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="depistageCAC">Dépistage CA du Col</mat-checkbox>
+
+          </section>
+          <ng-template matStepLabel>Date</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Date </mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="pickerDateVis" [formControl]="date" [value]="date"
+              formControlName="pickerDateCAC" required readonly="true" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="pickerDateVis"></mat-datepicker-toggle>
+            <mat-datepicker #pickerDateVis></mat-datepicker>
+          </mat-form-field>
+
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163464AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="depistageCAP">Dépistage CA de la Prostate (Homme > 40ans)</mat-checkbox>
+
+          </section>
+          <ng-template matStepLabel>Date</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Date</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="pickerDateIni" [formControl]="date" [value]="date"
+              formControlName="pickerDateCAP" required readonly="true" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="pickerDateIni"></mat-datepicker-toggle>
+            <mat-datepicker #pickerDateIni></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <textarea matInput placeholder="Résultats:" formControlName="resultats"></textarea>
+        </mat-form-field>
+      </form>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> ANTECEDENTS HEREDO-COLLATERAUX </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form [formGroup]="herodoCollateraux">
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+
+          <mat-radio-group  aria-labelledby="example-radio-group-label" class="example-radio-group" formControlName="anteAucune">
+            <mat-radio-button class="radioModi example-radio-button" value="163729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Aucune</mat-radio-button>
+            <mat-radio-button style="    margin-left: 1px;margin-top: 1px;margin-bottom: 1px;"  class="radioModi example-radio-button" value="163728AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Inconnu</mat-radio-button>
+          </mat-radio-group>
+
+        </div>
+
+        <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+          <mat-label> Asthme </mat-label>
+          <mat-select name="asthme" formControlName="asthme" multiple>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Mère</mat-option>
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Père</mat-option>
+            <mat-option value="972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Frère/Sœur</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label> Cancer </mat-label>
+            <mat-select name="cancer" formControlName="cancer" multiple>
+              <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Mère</mat-option>
+              <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Père</mat-option>
+              <mat-option value="972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Frère/Sœur</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Précisez </mat-label>
+            <input matInput placeholder="Précisez" formControlName="preciserCancer" />
+          </mat-form-field>
+        </div>
+
+        <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+          <mat-label> Cardiopathie </mat-label>
+          <mat-select name="cardiopathie" formControlName="cardiopathie" multiple>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Mère</mat-option>
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Père</mat-option>
+            <mat-option value="972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Frère/Sœur</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+          <mat-label> Tuberculose </mat-label>
+          <mat-select name="tuberculose" formControlName="tuberculose" multiple>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Mère</mat-option>
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Père</mat-option>
+            <mat-option value="972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Frère/Sœur</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+          <mat-label> Diabète </mat-label>
+          <mat-select name="diabete" formControlName="diabete" multiple>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Mère</mat-option>
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Père</mat-option>
+            <mat-option value="972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Frère/Sœur</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+          <mat-label> Epilepsie </mat-label>
+          <mat-select name="epilepsie" formControlName="epilepsie" multiple style="width: 100%;">
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Mère</mat-option>
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Père</mat-option>
+            <mat-option value="972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Frère/Sœur</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+          <mat-label> HTA </mat-label>
+          <mat-select name="hta" formControlName="hta" multiple>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Mère</mat-option>
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Père</mat-option>
+            <mat-option value="972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Frère/Sœur</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+          <mat-label> MDR TB </mat-label>
+          <mat-select name="mdrtb" formControlName="mdrtb" multiple>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Mère</mat-option>
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Père</mat-option>
+            <mat-option value="972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Frère/Sœur</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <textarea matInput placeholder="Autres" formControlName="autres"></textarea>
+        </mat-form-field>
+
+
+      </form>
+
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> ANTECEDENTS PERSONNELS/HABITUDES </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form [formGroup]="personnelsHabitubes">
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+
+          <mat-radio-group  aria-labelledby="example-radio-group-label" class="example-radio-group" formControlName="anteAucunePershab">
+            <mat-radio-button class="radioModi example-radio-button" value="163608AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Aucune</mat-radio-button>
+            <mat-radio-button style="    margin-left: 1px;margin-top: 1px;margin-bottom: 1px;"  class="radioModi example-radio-button" value="163609AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Inconnu</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="152512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="accidentCerebroVas">Accident cérébro-vasculaire</mat-checkbox>
+          </section>
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="110247AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="allergiesPersHab">Allergies</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserAllerPersHab" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="139212AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="asthmePersHab">Asthme</mat-checkbox>
+          </section>
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="151286AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="cancerPersHab">Cancer</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserCancerPersHab" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="122432AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="cardiopathiePersHab">Cardiopathie</mat-checkbox>
+          </section>
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163521AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="chirugiePersHab">Chirurgie</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserChiruPersHab" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163520AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="traumaPersHab">Trauma</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserTraumaPersHab" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="156630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="duabetePersHab">Diabète</mat-checkbox>
+          </section>
+
+<!--          <section class="example-section" appearance="outline">-->
+<!--            <mat-checkbox class="example-margin" value="1625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"-->
+<!--                          formControlName="diphteriePersHab">Diphtérie</mat-checkbox>-->
+<!--          </section>-->
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="1625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="epilepsiePersHab">Epilepsie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="1434AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="grossessePersHab">Grossesse</mat-checkbox>
+          </section>
+
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163583AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="hemoglobinopathiePersHab">Hémoglobinopathie</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserHemogPersHab" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="156639AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="htaPersHab">HTA</mat-checkbox>
+          </section>
+
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="156633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="hyperchoesterolemiePersHab">Hyperchoestérolémie</mat-checkbox>
+          </section>
+
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="156660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="istPersHab">IST</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserIstPersHab" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163584AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="malnutritionPersHab">Malnutrition</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163585AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="pertePoidspersHab">Perte de poids</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="151632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="tuberculosePersHab">Tuberculose</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="mdrTbPersHab">MDR TB</mat-checkbox>
+          </section>
+
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="151282AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="troublesPsychPersHab">Troubles psychiatriques</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserTrouPsyPersHab" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="159449AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="alcoolPersHab">Alcool</mat-checkbox>
+          </section>
+
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="162556AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="droguePersHab">Drogue</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserDroPersHab" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163731AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="tabacPersHab">Tabac</mat-checkbox>
+          </section>
+
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Autres  Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserAutrePersHab" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          Médicaments actuels:
+          <section class="example-section" appearance="outline">
+
+            <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+              <mat-label> Médicaments actuels: </mat-label>
+              <mat-select name="medicamentsActPersHab" formControlName="medicamentsActPersHab">
+                <mat-option value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Oui</mat-option>
+                <mat-option value="1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Médicaments actuels </mat-label>
+              <input matInput placeholder="Précisez" formControlName="textMedicaPersHab" />
+            </mat-form-field>
+          </section>
+
+        </div>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <textarea matInput placeholder="Remarque" formControlName="remarquePersHab"></textarea>
+        </mat-form-field>
+
+      </form>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> SIGNES VITAUX/ANTHROPOMETRIE </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form [formGroup]="signesVitauxAnthropometrie">
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Pds (kg) </mat-label>
+          <input matInput placeholder="Précisez" formControlName="pds" type="number"  />
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Temp (°C)</mat-label>
+          <input matInput placeholder="Précisez" formControlName="temp" type="number"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Taille (cm)</mat-label>
+          <input matInput placeholder="Précisez" formControlName="taille" type="number"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Pouls </mat-label>
+          <input matInput placeholder="Précisez" formControlName="pouls" type="number"/>
+        </mat-form-field>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>TA </mat-label>
+          <input matInput placeholder="Précisez" formControlName="ta1" type="number"/>
+        </mat-form-field>
+        /
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>TA </mat-label>
+          <input matInput placeholder="Précisez" formControlName="ta2" type="number"/>
+        </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>FR </mat-label>
+          <input matInput placeholder="Précisez" formControlName="fr" type="number"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Nom et Prénom du Prestataire : </mat-label>
+          <input matInput placeholder="Précisez" formControlName="nomPrenomPrest" />
+        </mat-form-field>
+
+
+      </form>
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> MOTIFS DE CONSULTATION </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form [formGroup]="motifConsultation">
+        <h3>Général</h3>
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="135488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="adenopathieMC">Adénopathie</mat-checkbox>
+          </section>
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="460AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="oedemeMC">Œdème,précisez</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserOedemeMC" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="douleursMC">Douleurs </mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserDouleursMC" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="fievreM2SMC">Fièvre < 2 semaines</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="162260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="fievreP2SMC">Fièvre ≥ 2 semaines</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="pertePoidsMC">Perte de poids</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="140941AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="sueursProfusesMC">Sueurs profuses</mat-checkbox>
+          </section>
+        </div>
+       
+      
+        <h3>Trauma </h3>
+
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="128808AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="agressionAuInfliMC">Agression Auto-infligée</mat-checkbox>
+          </section>
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="126582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="agressionSexuelleMC">Agression Sexuelle </mat-checkbox>
+              <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Moment Agression Sexuelle :</mat-label>
+                <mat-select formControlName="agressionSexuelleHeureMC">
+                  <mat-option value="163733AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"><72h</mat-option>
+                  <mat-option value="163734AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">72-120h</mat-option>
+                  <mat-option value="163735AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">120h-2sem</mat-option>
+                  <mat-option value="163736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">>2sem</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+          </section>
+
+        </div>
+
+
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="119964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="accidentVoiePubliqueMC">Accident Voie Publique</mat-checkbox>
+          </section>
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="146623AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="brulureMC">Brûlure précisez:</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserBrulureMC" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="177AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="fractureOsseuseMC">Fracture osseuse</mat-checkbox>
+          </section>
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="159328AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="plaieMC">Plaie précisez:</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserPlaieMC" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="117746AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="armeFeuMC">Arme à feu</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="158843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="armeBlancheMC">Arme blanche</mat-checkbox>
+          </section>
+        </div>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="114767AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="autresArmeMC">Autres:</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="autresArmeTextMC" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="116838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="traumaCranienMC">Trauma crânien</mat-checkbox>
+          </section>
+        </div>
+
+        <h3>Oreilles, Nez, Gorge </h3>
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="113224AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="ecoulementNasalMC">Ecoulement nasal</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="133499AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="epistaxisMC">Epistaxis</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="130184AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="oeilRougeMC">Œil rouge</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="131602AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="otalgieMC">Otalgie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="151702AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="otorrheeMC">Otorrhée</mat-checkbox>
+          </section>
+        </div>
+
+
+
+        <h3>Génito-urinaire </h3>
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163606AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="brulurersMictionnellesMC">Brûlures mictionnelles</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="131034AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="douleurHypogastriqueMC">Douleur hypogastrique</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="118771AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="dysurieMC">Dysurie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="123529AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="ecoulementUrethralMC">Ecoulement uréthral</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="hematurieMC">Hématurie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="147232AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="hemorragieVaginaleMC">Hémorragie vaginale</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="123396AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="pertesVaginalesMC">Pertes vaginales</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="137593AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="pollakiurieMC">Pollakiurie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="129510AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="polyurieMC">Polyurie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="128310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="pruritVulvaireMC">Prurit vulvaire</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="145762AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="ulcerationsMC">Ulcération(s)</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="134340AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="retardReglesMC">Retard des Règles</mat-checkbox>
+          </section>
+        </div>
+
+
+        <h3 style="margin-bottom: 11px;">Psychiatrique</h3>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="134337AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="troublesmentauxMC">Troubles mentaux, précisez:</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserTroublesMentauxMC" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+
+
+        <h3>Neurologique</h3>
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="121529AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="aphasieMC">Aphasie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="122936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="boiterieSteppageMC">Boiterie/Steppage</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="139084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="cephaleeMauxTeteMC">Céphalée/Maux de tète</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="convulsionsMC"> Convulsions </mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="117655AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="hemiplegieMC">Hémiplégie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="160426AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="paralysieFlasqueMC">Paralysie flasque</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="130843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="paraplegieMC">Paraplégie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="125166AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="syncopeMC">Syncope</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="111525AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="vertigesMC">Vertiges</mat-checkbox>
+          </section>
+        </div>
+
+
+
+        <h3>Cardiovasculaire/pulmonaire</h3>
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="159361AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="douleursPrecordialesMC">Douleurs précordiales</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="120749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="douleursThoraciquesMC">Douleurs thoraciques</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="122496AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="dyspneeMC">Dyspnée</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="138905AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="hemoptysieMC">Hémoptysie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="130987AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="palpitationsMC">Palpitations</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163739AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="touxM2SMC">Toux < 2 semaines</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="159799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="touxP2SMC">Toux ≥ 2 semaines</mat-checkbox>
+          </section>
+
+        </div>
+
+
+        <h3 style="margin-bottom: 11px">Dermatologique</h3>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="eruptionsCutaneesMC">Eruptions cutanées, précisez:</mat-checkbox>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Précisez </mat-label>
+              <input matInput placeholder="Précisez" formControlName="preciserEruptionsCutaneesMC" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="128310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="pruritMC">Prurit</mat-checkbox>
+          </section>
+        </div>
+       
+
+        <h3>Gastro-intestinale </h3>
+        <div style="padding: 5px; ">
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="996AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="constipaionMC">Constipation</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="163465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="diarrheeM2SMC">Diarrhée < 2 semaines</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="5018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="diarrheeP2SMC">Diarrhée ≥ 2 semaines</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="douleursAbdominalesMC">Douleurs Abdominales</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="118789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="dysphagieMC">Dysphagie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="139006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="hematemeseMC">Hématémèse</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="136443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="ictereJaunisseMC">Ictère/jaunisse</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="6031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="inappetenceAnorexieMC">Inappétence / anorexie</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="134394AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="melenaMC">Méléna</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="5978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="nauseeMC">Nausée</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="139059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="pyrosisMC">Pyrosis</mat-checkbox>
+          </section>
+
+          <section class="example-section" appearance="outline">
+            <mat-checkbox class="example-margin" value="122983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              formControlName="vomissementMC">Vomissement</mat-checkbox>
+          </section>
+        </div>
+        
+
+        <h3>Autres </h3>
+
+        <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+          <section class="example-section" appearance="outline">
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Autres </mat-label>
+              <input matInput placeholder="Autres" formControlName="autres1MC" />
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Autres </mat-label>
+              <input matInput placeholder="Autres" formControlName="autres2MC" />
+            </mat-form-field>
+
+          </section>
+
+        </div>
+
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <textarea matInput placeholder="Remarque" formControlName="remarqueMC"></textarea>
+        </mat-form-field>
+
+
+      </form>
+     
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 5" (opened)="setStep(5)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> VACCINATION </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form [formGroup]="vaccination">
+
+        <fieldset>
+          <legend>Hépatite B</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1HepatiteBVAC" formControlName="dose1HepatiteBVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1HepatiteBVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1HepatiteBVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2HepatiteBVAC" formControlName="dose2HepatiteBVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2HepatiteBVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2HepatiteBVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 3</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3HepatiteBVAC" formControlName="dose3HepatiteBVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3HepatiteBVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3HepatiteBVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Polio (OPV/IPV)</legend>
+
+          <ng-template matStepLabel>Dose 0</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 0</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose0PolioVAC" formControlName="dose0PolioVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose0PolioVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose0PolioVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1PolioVAC" formControlName="dose1PolioVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1PolioVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1PolioVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2PolioVAC" formControlName="dose2PolioVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2PolioVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2PolioVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 3</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3PolioVAC" formControlName="dose3PolioVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3PolioVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3PolioVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 4</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 4</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose4PolioVAC" formControlName="dose4PolioVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose4PolioVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose4PolioVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>DiTePer</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1DiTePerVAC" formControlName="dose1DiTePerVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1DiTePerVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1DiTePerVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2DiTePerVAC" formControlName="dose2DiTePerVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2DiTePerVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2DiTePerVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 3</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3DiTePerVAC" formControlName="dose3DiTePerVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3DiTePerVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3DiTePerVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 4</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 4</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose4DiTePerVAC" formControlName="dose4DiTePerVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose4DiTePerVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose4DiTePerVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>HIB</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1HIBVAC" formControlName="dose1HIBVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1HIBVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1HIBVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2HIBVAC" formControlName="dose2HIBVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2HIBVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2HIBVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 3</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3HIBVAC" formControlName="dose3HIBVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3HIBVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3HIBVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 4</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 4</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose4HIBVAC" formControlName="dose4HIBVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose4HIBVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose4HIBVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Pentavalent</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1PentavalentVAC" formControlName="dose1PentavalentVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1PentavalentVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1PentavalentVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2PentavalentVAC" formControlName="dose2PentavalentVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2PentavalentVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2PentavalentVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 3</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3PentavalentVAC" formControlName="dose3PentavalentVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3PentavalentVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3PentavalentVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Pneumocoque</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1PneumociqueVAC" formControlName="dose1PneumociqueVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1PneumociqueVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1PneumociqueVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2PneumociqueVAC" formControlName="dose2PneumociqueVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2PneumociqueVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2PneumociqueVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 3</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3PneumociqueVAC" formControlName="dose3PneumociqueVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3PneumociqueVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3PneumociqueVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Rotavirus</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1RotavirusVAC" formControlName="dose1RotavirusVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1RotavirusVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1RotavirusVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2RotavirusVAC" formControlName="dose2RotavirusVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2RotavirusVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2RotavirusVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>ROR</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1RORVAC" formControlName="dose1RORVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1RORVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1RORVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2RORVAC" formControlName="dose2RORVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2RORVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2RORVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>RR</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1RRVAC" formControlName="dose1RRVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1RRVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1RRVAC> </mat-datepicker>
+          </mat-form-field>
+
+         
+
+        </fieldset>
+
+        <fieldset>
+          <legend>DT</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1DTVAC" formControlName="dose1DTVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1DTVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1DTVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2DTVAC" formControlName="dose2DTVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2DTVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2DTVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Varicelle</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1VaricelleVAC" formControlName="dose1VaricelleVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1VaricelleVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1VaricelleVAC> </mat-datepicker>
+          </mat-form-field>
+
+         
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Typhimvi</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1TyphimviVAC" formControlName="dose1TyphimviVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1TyphimviVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1TyphimviVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2TyphimviVAC" formControlName="dose2TyphimviVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2TyphimviVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2TyphimviVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Meningo AC</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1meningoACVAC" formControlName="dose1meningoACVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1meningoACVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1meningoACVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2meningoACVAC" formControlName="dose2meningoACVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2meningoACVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2meningoACVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Hépatite A</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1HematitAVAC" formControlName="dose1HematitAVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1HematitAVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1HematitAVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2HematitAVAC" formControlName="dose2HematitAVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2HematitAVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2HematitAVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Cholera</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1CholeraVAC" formControlName="dose1CholeraVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1CholeraVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1CholeraVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2CholeraVAC" formControlName="dose2CholeraVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2CholeraVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2CholeraVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 3</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3CholeraVAC" formControlName="dose3CholeraVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3CholeraVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3CholeraVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>BCG</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1BCGVAC" formControlName="dose1BCGVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1BCGVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1BCGVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+
+        <fieldset>
+          <legend>HPV</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1HPVVAC" formControlName="dose1HPVVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1HPVVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1HPVVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Diphtérie/Tétanos</legend>
+
+          <ng-template matStepLabel>Dose 1</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1DiphterieTetanosVAC" formControlName="dose1DiphterieTetanosVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1DiphterieTetanosVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1DiphterieTetanosVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2DiphterieTetanosVAC" formControlName="dose2DiphterieTetanosVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2DiphterieTetanosVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2DiphterieTetanosVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <h3>Vaccin Covid19</h3>
+
+        <fieldset>
+          <legend>Oxford AstraZeneca</legend>
+
+          <ng-template matStepLabel>Dose 1 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1 / Lot</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1OxfordAstrazenecaVAC" formControlName="dose1OxfordAstrazenecaVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1OxfordAstrazenecaVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1OxfordAstrazenecaVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2OxfordAstrazenecaVAC" formControlName="dose2OxfordAstrazenecaVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2OxfordAstrazenecaVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2OxfordAstrazenecaVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3OxfordAstrazenecaVAC" formControlName="dose3OxfordAstrazenecaVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3OxfordAstrazenecaVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3OxfordAstrazenecaVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Rappel(Dose 4)</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose4OxfordAstrazenecaVAC" formControlName="dose4OxfordAstrazenecaVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose4OxfordAstrazenecaVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose4OxfordAstrazenecaVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Moderna</legend>
+
+          <ng-template matStepLabel>Dose 1 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1 / Lot</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1ModernaVAC" formControlName="dose1ModernaVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1ModernaVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1ModernaVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2ModernaVAC" formControlName="dose2ModernaVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2ModernaVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2ModernaVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3ModernaVAC" formControlName="dose3ModernaVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3ModernaVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3ModernaVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Rappel(Dose 4)</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose4ModernaVAC" formControlName="dose4ModernaVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose4ModernaVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose4ModernaVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Pfizer-BioNTech</legend>
+
+          <ng-template matStepLabel>Dose 1 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1 / Lot</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1PfizerBioNTechVAC" formControlName="dose1PfizerBioNTechVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1PfizerBioNTechVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1PfizerBioNTechVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2PfizerBioNTechVAC" formControlName="dose2PfizerBioNTechVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2PfizerBioNTechVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2PfizerBioNTechVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3PfizerBioNTechVAC" formControlName="dose3PfizerBioNTechVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3PfizerBioNTechVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3PfizerBioNTechVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Rappel(Dose 4)</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose4PfizerBioNTechVAC" formControlName="dose4PfizerBioNTechVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose4PfizerBioNTechVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose4PfizerBioNTechVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Gamaleya-Sputnick V (Russia)</legend>
+
+          <ng-template matStepLabel>Dose 1 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1 / Lot</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1GamaleyaSputRusVAC" formControlName="dose1GamaleyaSputRusVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1GamaleyaSputRusVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1GamaleyaSputRusVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2GamaleyaSputRusVAC" formControlName="dose2GamaleyaSputRusVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2GamaleyaSputRusVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2GamaleyaSputRusVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3GamaleyaSputRusVAC" formControlName="dose3GamaleyaSputRusVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3GamaleyaSputRusVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3GamaleyaSputRusVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Rappel(Dose 4)</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose4GamaleyaSputRusVAC" formControlName="dose4GamaleyaSputRusVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose4GamaleyaSputRusVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose4GamaleyaSputRusVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Sinovac(China) Sinopharm(China)</legend>
+
+          <ng-template matStepLabel>Dose 1 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1 / Lot</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1SinovacSinopharmVAC" formControlName="dose1SinovacSinopharmVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1SinovacSinopharmVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1SinovacSinopharmVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2SinovacSinopharmVAC" formControlName="dose2SinovacSinopharmVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2SinovacSinopharmVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2SinovacSinopharmVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3SinovacSinopharmVAC" formControlName="dose3SinovacSinopharmVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3SinovacSinopharmVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3SinovacSinopharmVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Rappel(Dose 4)</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose4SinovacSinopharmVAC" formControlName="dose4SinovacSinopharmVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose4SinovacSinopharmVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose4SinovacSinopharmVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Johnson and Johnson (Janssen)</legend>
+
+          <ng-template matStepLabel>Dose 1 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 1 / Lot</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose1JohnsonVAC" formControlName="dose1JohnsonVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose1JohnsonVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose1JohnsonVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 2 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose2JohnsonVAC" formControlName="dose2JohnsonVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose2JohnsonVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose2JohnsonVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Dose 3 / Lot</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose3JohnsonVAC" formControlName="dose3JohnsonVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose3JohnsonVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose3JohnsonVAC> </mat-datepicker>
+          </mat-form-field>
+
+          <ng-template matStepLabel>Rappel(Dose 4)</ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Dose 2</mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="dose4JohnsonVAC" formControlName="dose4JohnsonVAC" />
+            <mat-datepicker-toggle matSuffix [for]="dose4JohnsonVAC"></mat-datepicker-toggle>
+            <mat-datepicker #dose4JohnsonVAC> </mat-datepicker>
+          </mat-form-field>
+
+        </fieldset>
+
+      </form>
+     
+
+      
+
+
+     
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 6" (opened)="setStep(6)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> EXAMEN PHYSIQUE </mat-panel-title>
+      </mat-expansion-panel-header>
+      <form [formGroup]="examenPhysique">
+
+        <div style="padding: 5px; ">
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Tête</mat-label>
+          <mat-select formControlName="tete">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Yeux</mat-label>
+          <mat-select formControlName="yeux">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Nez</mat-label>
+          <mat-select formControlName="nez">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Bouche/Orale</mat-label>
+          <mat-select formControlName="boucheOrale">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Oreilles</mat-label>
+          <mat-select formControlName="oreilles">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Cou</mat-label>
+          <mat-select formControlName="cou">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Coeur</mat-label>
+          <mat-select formControlName="coeur">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Poumons</mat-label>
+          <mat-select formControlName="poumons">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Abdomen</mat-label>
+          <mat-select formControlName="abdomen">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Organes génitaux</mat-label>
+          <mat-select formControlName="organesGenitaux">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Toucher Rectal</mat-label>
+          <mat-select formControlName="toucherRectal">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Membres</mat-label>
+          <mat-select formControlName="membres">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Peau</mat-label>
+          <mat-select formControlName="peau">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Examen Neurologique</mat-label>
+          <mat-select formControlName="ExamenNeurologique">
+            <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+            <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+            <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <fieldset>
+          <legend>Lymphadenopathy</legend>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>-Cervicale</mat-label>
+            <mat-select formControlName="cervicale">
+              <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+              <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+              <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>-Supraclaviculaire</mat-label>
+            <mat-select formControlName="supraclaviculaire">
+              <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+              <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+              <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>-Axillaire</mat-label>
+            <mat-select formControlName="axillaire">
+              <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+              <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+              <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>-Inguinale</mat-label>
+            <mat-select formControlName="inguinale">
+              <mat-option value="971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Normal</mat-option>
+              <mat-option value="970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Anormal</mat-option>
+              <mat-option value="160273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">Non Effectué</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </fieldset>
+
+        
+        </div>
+
+      </form>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 7" (opened)="setStep(7)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> IMPRESSIONS CLINIQUES/DIAGNOSTIQUES </mat-panel-title>
+      </mat-expansion-panel-header>
+     
+      <form [formGroup]="impressonsCliniqueDiagnostiques">
+
+        <fieldset>
+          <legend>Générales [Code CIM 10]</legend>
+          <div style="padding: 5px; ">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="accidentCereVasICD">Accident cérébro-vasculaire [I63.50]</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+          </div>
+  
+          <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="anemieICD">Anémie, précisez :</mat-checkbox>
+              <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Précisez </mat-label>
+                <input matInput placeholder="Précisez" formControlName="preciserAnemieICD" />
+              </mat-form-field>
+
+              <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Confirmé</mat-radio-button>
+                  <mat-radio-button value="2">Suspecté</mat-radio-button>
+                </mat-radio-group>
+
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Primaire</mat-radio-button>
+                  <mat-radio-button value="2">Secondaire</mat-radio-button>
+                </mat-radio-group>
+                
+      
+                </div>
+  
+            </section>
+  
+          </div>
+
+          <div style="padding: 5px; ">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="asthmeICD">Asthme [J45]</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="cardiopathieICD">Cardiopathie [I51.9]</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="diabeteType1ICD">Diabète Type 1 [E10.9]</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="diabeteType2ICD">Diabète Type 2 [E11.9]</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="diarrheeAigAqueuICD">Diarrhée aigue aqueuse [R19.7]*</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="diarrheeAigSangICD">Diarrhée aigue sanguinolente [R19.7]*</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="drepanocytoseSSSCICD">Drépanocytose : SS/SC [D57.1]</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <!-- ////////////// -->
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="epilepsieICD">Epilepsie [G40.901]</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="fievreCauseIndICD">Fièvre, cause indéterminée [R50.9]*</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="grossessICD">Grossesse [Z33.1]</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="hypertensionArterielle">Hypertension artérielle [I10]</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="malnutritionPertePoidsICD">Malnutrition/Perte de poids [E46]</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="urgenceChirurgicaleICD">Urgence Chirurgicale</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="esaviICD">ESAVI</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="microcephalieCongeICD">Microcéphalie congénitale</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="syndromeGuilBarreICD">Syndrome de Guillain barre</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+
+          </div>
+
+<!-- //////// -->
+
+          <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="decesMaternelICD">Décès maternel , Précisez</mat-checkbox>
+              <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Précisez </mat-label>
+                <input matInput placeholder="Précisez" formControlName="preciserdecesMaternelICD" />
+              </mat-form-field>
+              <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Confirmé</mat-radio-button>
+                  <mat-radio-button value="2">Suspecté</mat-radio-button>
+                </mat-radio-group>
+
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Primaire</mat-radio-button>
+                  <mat-radio-button value="2">Secondaire</mat-radio-button>
+                </mat-radio-group>
+                
+      
+                </div>
+  
+            </section>
+  
+          </div>
+
+
+          <div style="padding: 5px; ">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="amygdaliteICD">Amygdalite [J03.90]</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+          </div>
+  
+          <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="charbonICD">Charbon [A22.9]*, précisez :</mat-checkbox>
+              <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Précisez </mat-label>
+                <input matInput placeholder="Précisez" formControlName="precisercharbonICD" />
+              </mat-form-field>
+              <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Confirmé</mat-radio-button>
+                  <mat-radio-button value="2">Suspecté</mat-radio-button>
+                </mat-radio-group>
+
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Primaire</mat-radio-button>
+                  <mat-radio-button value="2">Secondaire</mat-radio-button>
+                </mat-radio-group>
+                
+      
+                </div>
+  
+            </section>
+  
+          </div>
+
+          <div style="padding: 5px; ">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="choleraICD">Choléra [A00.9]*</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+          </div>
+  
+          <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="conjonctiviteICD">Conjonctivite [H10.9], précisez :</mat-checkbox>
+              <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Précisez </mat-label>
+                <input matInput placeholder="Précisez" formControlName="preciserConjonctiviteICD" />
+              </mat-form-field>
+              <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Confirmé</mat-radio-button>
+                  <mat-radio-button value="2">Suspecté</mat-radio-button>
+                </mat-radio-group>
+
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Primaire</mat-radio-button>
+                  <mat-radio-button value="2">Secondaire</mat-radio-button>
+                </mat-radio-group>
+                
+      
+                </div>
+  
+            </section>
+  
+          </div>
+
+          <div style="padding: 5px; ">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="coquelucheICD">Coqueluche [A37.90]*</mat-checkbox>
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+          </div>
+
+
+         
+
+        </fieldset>
+
+
+
+        <fieldset>
+          <legend>Maladies Infectieuses [Code CIM 10]]</legend>
+       
+          <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="dengueICD">Dengue [A90]*, précisez:</mat-checkbox>
+              <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Précisez </mat-label>
+                <input matInput placeholder="Précisez" formControlName="preciserDengueICD" />
+              </mat-form-field>
+  
+            </section>
+  
+          </div>
+
+          <div style="padding: 5px; ">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="diphterieICD">Diphtérie [A36]*</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="fievreHemorraigiqueAigICD">Fièvre hémorragique aiguë [N/A]</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="fievreTyphoideICD">Fièvre Typhoïde * [Z22.0]*</mat-checkbox>
+            </section>            
+
+          </div>
+
+
+
+
+         
+        
+
+
+         
+
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Maladies Infectieuses [Code CIM 10]]</legend>
+
+          <!-- <button (click)="toggleShow()" type="checkbox" >show/hide</button> -->
+
+         
+
+          <div style="padding: 5px; ">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="filarioseLymphatiqueICD" (click)="filarioseLymphatiqueICD()">Filariose lymphatique [B74.9]</mat-checkbox>
+
+                <div *ngIf="isShown" class="row container-fluid"  id="divfilarioseLymphatiqueICD" >
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Confirmé</mat-radio-button>
+                    <mat-radio-button value="2">Suspecté</mat-radio-button>
+                  </mat-radio-group>
+
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Primaire</mat-radio-button>
+                    <mat-radio-button value="2">Secondaire</mat-radio-button>
+                  </mat-radio-group>
+                  
+        
+                  </div>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="galeICD">Gale [B86]</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="infectionRespiratoireICD">Infection respiratoire aiguë [J06.9]</mat-checkbox>
+            </section>  
+            
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="fievreHemorraigiqueAigICD">Fièvre hémorragique aiguë [N/A]</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="fievreTyphoideICD">Fièvre Typhoïde * [Z22.0]*</mat-checkbox>
+            </section>   
+
+          </div>
+       
+          <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="dengueICD">Dengue [A90]*, précisez:</mat-checkbox>
+              <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Précisez </mat-label>
+                <input matInput placeholder="Précisez" formControlName="preciserDengueICD" />
+              </mat-form-field>
+  
+            </section>
+  
+          </div>
+
+          <div style="padding: 5px; ">
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="diphterieICD">Diphtérie [A36]*</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="fievreHemorraigiqueAigICD">Fièvre hémorragique aiguë [N/A]</mat-checkbox>
+            </section>
+
+            <section class="example-section" appearance="outline">
+              <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                formControlName="fievreTyphoideICD">Fièvre Typhoïde * [Z22.0]*</mat-checkbox>
+            </section>            
+
+          </div>
+
+
+
+
+         
+        
+
+
+         
+
+        </fieldset>
+
+      </form>
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 8" (opened)="setStep(8)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> TURBERCULOSE </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form [formGroup]="turberclose">
+
+      <mat-radio-group aria-label="Select an option" formControlName="nouveauDiagSuiTUR">
+        <mat-radio-button value="1">Nouveau diagnostic</mat-radio-button>
+        <mat-radio-button value="2">Suivi</mat-radio-button>
+      </mat-radio-group>
+
+      <section class="example-section" appearance="outline">
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>No. d’enregistrement TB </mat-label>
+          <input matInput placeholder="No. d’enregistrement TB" formControlName="numbEnregisTBTUR" />
+        </mat-form-field>
+      </section>
+
+      <ng-template matStepLabel>Date d'enregistrement</ng-template>
+      <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+        <mat-label>Date d'enregistrement</mat-label>
+        <input matInput [max]="maxDate" [matDatepicker]="pickerDateEnrTUR" formControlName="pickerDateEnrTUR" required
+          readonly="true" />
+        <mat-datepicker-toggle matSuffix [for]="pickerDateEnrTUR"></mat-datepicker-toggle>
+        <mat-datepicker #pickerDateEnrTUR> </mat-datepicker>
+      </mat-form-field>
+
+      <section class="example-section" appearance="outline">
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label> Etablissement </mat-label>
+          <input matInput placeholder=" Etablissement" formControlName="etablissementTUR" />
+        </mat-form-field>
+      </section>
+
+
+      <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+        <mat-label> Type de Malade </mat-label>
+        <mat-select name="typeMaladeTUR" formControlName="typeMaladeTUR" multiple>
+          <mat-option value="option1">Nouveau</mat-option>
+          <mat-option value="option2">Traitement après interruption</mat-option>
+          <mat-option value="option3">Echec</mat-option>
+          <mat-option value="option3">Rechute</mat-option>
+          <mat-option value="option3">Transféré</mat-option>
+          <mat-option value="option3">MDR TB</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+        <mat-label> Classification de la maladie </mat-label>
+        <mat-select name="clasificationMaladieTUR" formControlName="clasificationMaladieTUR" multiple>
+          <mat-option value="option1">Pulmonaire</mat-option>
+          <mat-option value="option2">Extra-pulmonaire</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+        <section class="example-section" appearance="outline">
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label> marquer ci-dessous </mat-label>
+            <mat-select name="marquerCiDessousTUR" formControlName="marquerCiDessousTUR" multiple>
+              <mat-option value="option1">Méningite</mat-option>
+              <mat-option value="option2">Génitale</mat-option>
+              <mat-option value="option3">Pleurale</mat-option>
+              <mat-option value="option3">Miliaire</mat-option>
+              <mat-option value="option3">Ganglionnaire</mat-option>
+              <mat-option value="option3">Intestinale</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Autre </mat-label>
+            <input matInput placeholder="Autre" formControlName="autreMarquerTUR" />
+          </mat-form-field>
+
+        </section>
+
+      </div>
+
+      <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+        <mat-label> Diagnostic basé sur </mat-label>
+        <mat-select name="diagnosticBaseTUR" formControlName="diagnosticBaseTUR" multiple>
+          <mat-option value="option1">Crachat</mat-option>
+          <mat-option value="option2">X-Ray</mat-option>
+          <mat-option value="option3">Impression Clinique</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <ng-template matStepLabel>Date début traitement</ng-template>
+      <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+        <mat-label>Date début traitement</mat-label>
+        <input matInput [max]="maxDate" [matDatepicker]="pickerDateDebutTraitementTUR" formControlName="pickerDateDebutTraitementTUR" required
+          readonly="true" />
+        <mat-datepicker-toggle matSuffix [for]="pickerDateDebutTraitementTUR"></mat-datepicker-toggle>
+        <mat-datepicker #pickerDateDebutTraitementTUR> </mat-datepicker>
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+        <mat-label> Régime et posologie prescrits </mat-label>
+        <mat-select name="regimePosologiePreTUR" formControlName="regimePosologiePreTUR" multiple>
+          <mat-option value="option1">E</mat-option>
+          <mat-option value="option2">4RH</mat-option>
+          <mat-option value="option3">5RHE</mat-option>
+          <mat-option value="option3">1RHEZ</mat-option>
+          <mat-option value="option3">2RHEZ</mat-option>
+          <mat-option value="option3">S</mat-option>
+          <mat-option value="option3">2S</mat-option>
+          <mat-option value="option3">2SRHEZ</mat-option>
+          <mat-option value="option3">Z</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p>S: Streptomycine</p>
+      <p>R: Rifampicine</p>
+      <p>H: Isoniazide </p>
+      <p>E: Ethambutol</p>
+      <p>Z: Pyrizinamide</p>
+
+      <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+        <section class="example-section" appearance="outline">
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label> Cas Contact (TPM+) </mat-label>
+            <mat-select name="casContactTUR" formControlName="casContactTUR" multiple>
+              <mat-option value="option1">Oui</mat-option>
+              <mat-option value="option2">Non</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Nombre de contacts </mat-label>
+            <input matInput placeholder="Autre" formControlName="nombreContactTUR" />
+          </mat-form-field>
+          
+
+        </section>
+
+      </div>
+
+      <section class="example-section" appearance="outline">
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label> No de référence du cas index </mat-label>
+          <input matInput placeholder=" No de référence du cas index" formControlName="numbReferenceIndexTUR" />
+        </mat-form-field>
+      </section>
+
+
+      <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+        <section class="example-section" appearance="outline">
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label> Accompagnateur </mat-label>
+            <mat-select name="accompagnateurTUR" formControlName="accompagnateurTUR" multiple>
+              <mat-option value="option1">Oui</mat-option>
+              <mat-option value="option2">Non</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Nom et Prénom  </mat-label>
+            <input matInput placeholder="Nom et Prénom " formControlName="nomPrenomAccomTUR" />
+          </mat-form-field>
+
+        </section>
+
+      </div>
+      <br/>
+
+      <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+        <section class="example-section" appearance="outline">
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label> Statut VIH  </mat-label>
+            <mat-select name="statutVIHTUR" formControlName="statutVIHTUR" multiple>
+              <mat-option value="option1">Non testé</mat-option>
+              <mat-option value="option2">Négatif</mat-option>
+              <mat-option value="option2">Positif</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <ng-template matStepLabel>Date Statut VIH </ng-template>
+          <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+            <mat-label>Date Statut VIH </mat-label>
+            <input matInput [max]="maxDate" [matDatepicker]="pickerDateStatusVIHTUR" formControlName="pickerDateStatusVIHTUR" required
+              readonly="true" />
+            <mat-datepicker-toggle matSuffix [for]="pickerDateStatusVIHTUR"></mat-datepicker-toggle>
+            <mat-datepicker #pickerDateStatusVIHTUR> </mat-datepicker>
+          </mat-form-field>
+
+        </section>
+
+      </div>
+
+  
+
+      <mat-divider></mat-divider>
+      
+
+
+     
+
+      <section class="example-section" appearance="outline">
+        <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          formControlName="prophylaxieINHTUR">Prophylaxie : INH</mat-checkbox>
+      </section>
+
+      <div style="border: solid 1px #718BB7; padding: 5px; border-radius: 10px;">
+        <section class="example-section" appearance="outline">
+          <mat-checkbox class="example-margin" value="1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            formControlName="suplementationVitBTUR">Supplémentation en vitamine B</mat-checkbox>
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Supplémentation en vitamine B </mat-label>
+            <input matInput placeholder="Supplémentation en vitamine B" formControlName="suplementationVitBTextTUR" />
+          </mat-form-field>
+
+        </section>
+
+      </div>
+</form>
+   
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 9" (opened)="setStep(9)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> SURVEILLANCE DU TRAITEMENT(TB) </mat-panel-title>
+      </mat-expansion-panel-header>
+
+    <app-surveillance-traitement-tb></app-surveillance-traitement-tb>
+
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 10" (opened)="setStep(10)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> RESULTAT DU TRAITEMENT(TB) </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-resultat-traitement-tb></app-resultat-traitement-tb>
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 11" (opened)="setStep(11)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> CONDUITE A TENIR </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-conduite-tenir></app-conduite-tenir>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 12" (opened)="setStep(12)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> AUTRE PLAN </mat-panel-title>
+      </mat-expansion-panel-header>
+        <app-autre-plan></app-autre-plan>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+
+
+  <mat-divider> </mat-divider>
+
+  <div>
+    <!-- <button mat-flat-button color="warn" >Arrière</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+    <button mat-flat-button color="primary" style="font-size: 11px; padding: 2px 2px 2px 2px;"
+      (click)="AddSspPreCons()">Sauvegarder (Enregistrer)</button>
+  </div>
+</ion-content>

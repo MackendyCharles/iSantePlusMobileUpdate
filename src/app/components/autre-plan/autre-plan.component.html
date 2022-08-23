@@ -1,0 +1,33 @@
+      <form [formGroup] = "autrePlan">
+
+        <mat-form-field appearance="outline" style="width: 100%">
+          <textarea matInput placeholder="remarque" formControlName="remarque"></textarea>
+        </mat-form-field>
+
+        <ng-template matStepLabel>Date de Prochaine Visite  </ng-template>
+        <mat-form-field class="example-full-width" appearance="outline" style="width: 100%;">
+          <mat-label>Date de Prochaine Visite  </mat-label>
+          <input matInput [max]="maxDate" [matDatepicker]="pickerdateProchVisitAutPlan" formControlName="pickerdateProchVisitAutPlan" required
+                 readonly="true" />
+          <mat-datepicker-toggle matSuffix [for]="pickerdateProchVisitAutPlan"></mat-datepicker-toggle>
+          <mat-datepicker #pickerdateProchVisitAutPlan> </mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Nom et Prénom 1 </mat-label>
+          <input matInput placeholder="Nom et Prénom 1 " formControlName="nomPrenom1AutPlan" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Nom et Prénom 2 </mat-label>
+          <input matInput placeholder="Nom et Prénom 2" formControlName="nomPrenom2AutPlan" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Nom et Prénom 3</mat-label>
+          <input matInput placeholder="Nom et Prénom 3" formControlName="nomPrenom3AutPlan" />
+        </mat-form-field>
+
+
+
+      </form>

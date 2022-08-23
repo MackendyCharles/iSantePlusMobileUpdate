@@ -1,0 +1,154 @@
+mat-form-field {
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mat-dialog-content {
+  display: block;
+  margin: 0 -24px;
+  padding: 0 4px;
+  max-height: 65vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fonMof {
+  font: 400 18px/18px Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+  margin: 0 0 1px;
+}
+
+ion-segment-button {
+  min-width: 70px;
+  font-size: 12px;
+}
+
+.mat-dialog-container {
+  display: block;
+  padding: 2px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: auto;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  max-height: inherit;
+}
+
+.mat-dialog-content {
+  display: block;
+  margin: 0 -24px;
+  padding: 0 2px;
+  max-height: 65vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mat-dialog-actions {
+  padding: 1px 0;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 52px;
+  align-items: center;
+  box-sizing: content-box;
+  margin-bottom: -4px;
+}
+
+
+//element.style {
+//  transform: none;
+//  padding-top: 0;
+//  padding-bottom: 10px;
+//}
+//
+//.mat-form-field {
+//  font-size: 12px;
+//  font-weight: 200;
+//  line-height: 1.0;
+//  font-family: Roboto, "Helvetica Neue", sans-serif;
+//  letter-spacing: normal;
+//}
+
+::ng-deep.mat-form-field-appearance-outline .mat-form-field-wrapper {
+   margin: 0.1em 0; 
+}
+
+
+.mat-form-field-wrapper {
+  position: relative;
+}
+::ng-deep.mat-form-field-wrapper {
+  padding-bottom: 0em;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 0px;
+}
+
+:host::ng-deep.mat-radio-button.mat-radio-button{
+   margin-left: 0px; 
+   margin-top: 0px; 
+   margin-bottom: 0px; 
+  font-size: 10px;
+}
+
+:host::ng-deep.mat-radio-outer-circle {
+  box-sizing: border-box;
+  display: block;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: border-color ease 280ms;
+  width: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.radioModi{
+  margin-left: 0px; 
+  margin-top: 0px; 
+  margin-bottom: 0px; 
+ font-size: 10px;
+}
+
+:host::ng-deep.mat-radio-container {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 10px; 
+   height: 10px; 
+  flex-shrink: 0;
+}
+
+:host::ng-deep.mat-radio-inner-circle {
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: block;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: transform ease 280ms,background-color ease 280ms,opacity linear 1ms 280ms;
+  width: 10px;
+  transform: scale(0.001);
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+}

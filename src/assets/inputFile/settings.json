@@ -1,0 +1,9 @@
+{
+  "ipAddress": "192.168.1.220",
+  "protocol": "http",
+  "port": "8081",
+  "api": "openmrs/ws/rest/v1",
+  "location": "8d6c993e-c2cc-11de-8d13-0010c6dffd0f",
+  "id": 1
+}
+

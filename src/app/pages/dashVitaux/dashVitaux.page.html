@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="segundary">
+
+    <ion-buttons>
+      <ion-menu-button menu="main-menu"><ion-icon name="menu"></ion-icon></ion-menu-button>
+      <ion-title> Signes vitaux </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="font-size: 18px; color: #363463; font-weight: bold;">
+    <ion-icon name="home" style="font-size: 18px; margin-right: 5px; margin-left: 4px; float: left"></ion-icon>
+    <!--    <mat-icon >home</mat-icon>-->
+    <ion-icon name="arrow-forward" style="font-size: 20px; margin-right: 7px; float: left"></ion-icon>
+    <!--    <mat-icon >navigate_next</mat-icon>-->
+    <p (click)="showDashPatient()" style=" font-size: 14px; float: left;  text-decoration: underline; color: #363463; font-weight: bold;">{{patientName}} </p>
+    </div>
+
+    <div style="clear:both;"></div>
+
+
+
+<!-- <span style="font-size: x-small; font-weight: bold; text-transform: capitalize; color: #363463"><img src="assets/images/entete.png" style="width: 30px; height: 20px; padding-top: 5px ">{{patientName}}</span> -->
+
+
+  <span class="example-spacer"></span>
+
+<div class="bottomDivDesc" style="margin-top:10px; padding-top: 0px; margin-bottom: 0px; padding-bottom: 0px;" >
+
+
+
+
+
+  <button ion-button color="danger" clear icon-only (click)="openDialog()" >
+    <ion-icon name='add-circle' is-active="true" style="font-size: 30px; font-weight: bold; color: #00463f;;"></ion-icon>
+  </button>
+</div>
+  <ion-searchbar style="margin-top: 0px; padding-top: 0px; margin-bottom: 0px; padding-bottom: 0px;" (ionInput)="getItems($event)"></ion-searchbar>
+
+  <ion-list *ngIf="dataSource" style="margin-top: 0px; padding-top: 0px;">
+    <ion-item *ngFor="let item of dataSource.results | paginate: { itemsPerPage: 5, currentPage: cp }" class="listMargin">
+
+      <div style="width: 100%;">
+        <div style="float: left;">
+          <ion-thumbnail item-start style="width: 20px;">
+            <img src="assets/images/vitaux-logo.png" style="width: 25px; height: 25px; margin-top: 15px;"/>
+          </ion-thumbnail>
+        </div>
+        <div style="font-size: small; float: left; padding-top: 20px;">
+          {{ item.display.replace(" ","&nbsp;&nbsp;&nbsp;") }}
+        </div>
+        <div style="float: right; padding-top: 20px; margin-right: 10px;">
+          <button ion-button color="primary" outline icon-only style="margin-right: 0px; color: rgb(9, 78, 168);">
+            <ion-icon name='eye' is-active="false"></ion-icon>
+          </button>&nbsp;
+          <button ion-button color="danger" clear icon-only (click)="editVitaux(item)" style="margin-right: 0px; color: rgb(238, 166, 22);" >
+            <ion-icon name='create' is-active="false"></ion-icon>
+          </button>&nbsp;
+          <button ion-button color="danger" clear icon-only (click)="deleteVitaux(item)" style="margin-right: 0px; color: rgb(247, 3, 55);">
+            <ion-icon name='trash' is-active="false"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </ion-item>
+
+  </ion-list>
+  <pagination-controls (pageChange)="cp = $event"></pagination-controls>
+
+
+</ion-content>

@@ -1,0 +1,315 @@
+h2 {
+    margin: 2px;
+    font-weight: 50;
+    font-size: 10px;
+    color: rgb(40, 72, 179);
+}
+p {
+    margin: 0px;
+    font-size: 12px;
+    color: #3b44be;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
+
+.nomPatient{
+    margin: 1px;
+    color: #060657;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration : underline;
+    quotes : none;
+  font-size: 8px;
+  text-transform: capitalize;
+}
+
+.markPatient {
+
+    background-color: #f7f7f8;
+    text-shadow: #060657;
+    color: #19037a;
+    font-size: 12px;
+    text-transform: capitalize;
+
+
+}
+.pPatient {
+
+    font-size: 16px;
+    font-style: italic;
+    text-shadow: #060657;
+
+}
+.ionPatient{
+    text-align: right;
+    font-size: 15px;
+}
+.iconPatient{
+    font-size: 8px;
+    color: #0796e9;
+}
+
+
+  mat-grid-tile {
+    background: lightblue;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .code_patient{
+    font-size: 10px;
+    color: #3f474d;
+    font-style: italic;
+    text-decoration : underline;
+    font-weight: bold;
+  }
+.code_patient2{
+  font-size: 8px;
+  color: #718BB7;
+  font-style: italic;
+  text-decoration : underline;
+  font-weight: bold;
+}
+.btnMenu{
+  font-size: 12px;
+  color: white;
+  padding-right: 15px;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid white;
+}
+.mat-icon{
+  font-size: small;
+}
+ .matMenu2 {
+      padding: 10px;
+      margin: 2px;
+      font-size: x-small;
+      width: 60px;
+      height: 35px;
+  }
+
+  .example-action-buttons {
+    padding-bottom: 20px;
+  }
+
+  .example-headers-align .mat-expansion-panel-header-title,
+  .example-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+  }
+
+  .example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .example-headers-align .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  .mac.mat-expansion-panel-header{
+    padding-left: 0px !important;
+    padding-top: 1px !important;
+    //background-color: #0070c040  !important;
+    padding-bottom: 1px !important;
+}
+
+.menuBoVi {
+    color: #00463f;
+    font-weight: 500;
+    width: 100%;
+    padding-top: 0px;
+  margin-top: 0px;
+}
+
+.dashPanelDiv {
+  border-bottom: 2px solid  #00463f;
+  width: 100%;
+  padding-top: 0px;
+  margin-top: 0px;
+  height: 20px;
+}
+.bottomDivDesc{
+  text-align: right;
+   width: 100%;
+  padding-bottom: 0px;
+margin-bottom: 0px;
+
+}
+::ng-deep .mat-menu-content {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.mat-menu-item{
+  line-height:18px;
+  height:18px;
+}
+
+.ionBtn {
+  -webkit-user-select: none;
+  user-select: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: 15px;
+  margin-right: 1px;
+  width: 15px;
+  color: white;
+}
+
+ion-header{
+  background-color: #718BB7;
+  color: white;
+}
+:host ::ng-deep .mat-expansion-panel-body {
+  padding: 0px 14px 14px 14px;
+}
+
+.mat-expansion-panel-header {
+  padding: 0px 16px;
+}
+
+::ng-deep .mat-grid-tile-content{
+  justify-content: flex-start !important ;
+  align-items: flex-start !important;
+  background-color: white;
+}
+
+//.my-fab {
+//  width: 20px;
+//  height: 20px;
+//  line-height: 16px;
+//
+//  .mat-button-wrapper {
+//    padding: 2px 0 !important;
+//    line-height: 16px !important;
+//    width: 16px !important;
+//    height: 16px !important;
+//
+//    .mat-icon {
+//      font-size: 16px;
+//      padding-right: 4px;
+//      line-height: 16px;
+//    }
+//  }
+//}
+
+.my-fab {
+  width: 30px;
+  height: 30px;
+  line-height: 24px;
+  font-size: 24px;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 20px;
+    padding: 0;
+
+    .mat-icon {
+      font-size: 18px;
+      padding-right: 2px;
+      padding-top: 2px;
+    }
+  }
+}
+
+.mat-expansion-panel-header {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+::ng-deep .mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 1px;
+  align-items: center;
+}
+
+//.mat-icon {
+//  -webkit-user-select: none;
+//  user-select: none;
+//  background-repeat: no-repeat;
+//  display: inline-block;
+//  fill: currentColor;
+//  height: 15px;
+//  width: 15px;
+//  margin-right: -12px;
+//}
+.mat-expansion-panel-header.mat-expanded {
+  height: 24px;
+}
+
+.mat-iconModi {
+  -webkit-user-select: none;
+  user-select: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: 20px;
+  width: 20px;
+  margin-right: -1px;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: 0px 0px 0px -2px rgb(0 0 0 / 20%), 0px 0px 2px 0px rgb(0 0 0 / 14%), 0px 0px 0px 0px rgb(0 0 0 / 12%);
+}
+.mat-expansion-panel-spacing {
+  margin: 1px 0;
+}
+
+.iconModifier {
+  -webkit-user-select: none;
+  user-select: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: 20px;
+  width: 20px;
+}
+
+.mat-expansion-panel-header {
+  padding: 0px 0px;
+}
+
+.mat-expansion-panel-header {
+  height: 24px;
+}
+
+::ng-deep .mat-expansion-indicator::after {
+  height: 1px;
+width: 1px;
+  font-size: 3px;
+}
+
+
+ ::ng-deep .mat-menu-panel {
+   //border: 2px solid red;
+  min-width: 150px;
+  max-width: 200px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: calc(100vh - 28px);
+  border-radius: 4px;
+  /* outline: 0; */
+  min-height: 4px;
+   width: 300px;
+   height: 270px;
+}
+
+::ng-deep .mat-menu-panel {
+  background: linear-gradient(45deg, #363463, #718BB7);
+}
+
+::ng-deep .mat-elevation-z4 {
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+
+
+#vitauxView{
+  font-size: 12px;
+  height: 12px;
+  //font-weight: bold;
+  color: #000000;
+}

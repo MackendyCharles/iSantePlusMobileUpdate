@@ -1,0 +1,23 @@
+[
+  { "obsId": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Inconnu" },
+  { "obsId": "159466AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Chauffeur" },
+  { "obsId": "1539AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Commerçant" },
+  { "obsId": "165202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Mineur" },
+  { "obsId": "165200AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Berger" },
+  { "obsId": "165201AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Ouvrier" },
+  { "obsId": "5619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Membre du service de santé" },
+  { "obsId": "162944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Fonctionnnaire" },
+  { "obsId": "159390AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Main-d'oeuvre" },
+  { "obsId": "159464AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Ménage" },
+  { "obsId": "162946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Professeur" },
+  { "obsId": "159463AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Professionnel" },
+  { "obsId": "159673AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Proprietaire de la boutique" },
+  { "obsId": "159674AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Pêcheur" },
+  { "obsId": "159461AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Retraité" },
+  { "obsId": "159675AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Vendeur de fruits ou de légumes" },
+  { "obsId": "162945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Vendeur de marché" },
+  { "obsId": "159465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Étudiant" },
+  { "obsId": "123801AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Sans emploi" },
+  { "obsId": "1538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Fermier" },
+  { "obsId": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "profession": "Autre" }
+]

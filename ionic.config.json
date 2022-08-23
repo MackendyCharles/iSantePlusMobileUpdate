@@ -1,0 +1,8 @@
+{
+  "name": "mobileisante",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

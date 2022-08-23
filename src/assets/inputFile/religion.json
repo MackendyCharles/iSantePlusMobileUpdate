@@ -1,0 +1,11 @@
+[
+  { "obsId": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "religion": "Inconnu" },
+  { "obsId": "162930AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "religion": "Vaudou" },
+  { "obsId": "162931AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "religion": "Catholique" },
+  { "obsId": "162932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "religion": "Baptiste" },
+  { "obsId": "162933AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "religion": "Musulman" },
+  { "obsId": "162934AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "religion": "Pentecôtiste" },
+  { "obsId": "162935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "religion": "Adventiste" },
+  { "obsId": "162936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "religion": "Témoin de Jéhovah" },
+  { "obsId": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "religion": "Autre" }
+]

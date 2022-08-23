@@ -1,0 +1,135 @@
+{
+  "uuid": "eddf8708-a00f-4f1e-a532-7bbed6a45251",
+  "display": "88888 - aladin jean",
+  "identifiers": [
+    {
+      "uuid": "d23ca558-b6b4-4ac2-afaf-2788f17f2663",
+      "display": "Code ST = 88888",
+      "links": [
+        {
+          "rel": "self",
+          "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/patient/eddf8708-a00f-4f1e-a532-7bbed6a45251/identifier/d23ca558-b6b4-4ac2-afaf-2788f17f2663"
+        }
+      ]
+    },
+    {
+      "uuid": "c1739054-91eb-43c7-a9e4-3da901077ced",
+      "display": "Code National = 8989",
+      "links": [
+        {
+          "rel": "self",
+          "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/patient/eddf8708-a00f-4f1e-a532-7bbed6a45251/identifier/c1739054-91eb-43c7-a9e4-3da901077ced"
+        }
+      ]
+    },
+    {
+      "uuid": "008a55aa-5e0a-472f-8bf7-b4a662d2ed3a",
+      "display": "Code PC = 8777",
+      "links": [
+        {
+          "rel": "self",
+          "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/patient/eddf8708-a00f-4f1e-a532-7bbed6a45251/identifier/008a55aa-5e0a-472f-8bf7-b4a662d2ed3a"
+        }
+      ]
+    },
+    {
+      "uuid": "a9888e24-b734-4619-a918-b17304294adf",
+      "display": "iSantePlus ID = 100EAU",
+      "links": [
+        {
+          "rel": "self",
+          "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/patient/eddf8708-a00f-4f1e-a532-7bbed6a45251/identifier/a9888e24-b734-4619-a918-b17304294adf"
+        }
+      ]
+    }
+  ],
+  "person": {
+    "uuid": "eddf8708-a00f-4f1e-a532-7bbed6a45251",
+    "display": "aladin jean",
+    "gender": "M",
+    "age": 23,
+    "birthdate": "1999-01-04T00:00:00.000-0500",
+    "birthdateEstimated": false,
+    "dead": false,
+    "deathDate": null,
+    "causeOfDeath": null,
+    "preferredName": {
+      "uuid": "7e978f46-4587-4245-a5dc-912318cdef57",
+      "display": "aladin jean",
+      "links": [
+        {
+          "rel": "self",
+          "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/person/eddf8708-a00f-4f1e-a532-7bbed6a45251/name/7e978f46-4587-4245-a5dc-912318cdef57"
+        }
+      ]
+    },
+    "preferredAddress": {
+      "uuid": "3a6c3afd-59ff-46d5-9eb7-91b0bca0882c",
+      "display": "delmas 40b",
+      "links": [
+        {
+          "rel": "self",
+          "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/person/eddf8708-a00f-4f1e-a532-7bbed6a45251/address/3a6c3afd-59ff-46d5-9eb7-91b0bca0882c"
+        }
+      ]
+    },
+    "attributes": [
+      {
+        "uuid": "65463be1-3873-4177-a101-c211468cd1c0",
+        "display": "First Name of Mother = manman",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/person/eddf8708-a00f-4f1e-a532-7bbed6a45251/attribute/65463be1-3873-4177-a101-c211468cd1c0"
+          }
+        ]
+      },
+      {
+        "uuid": "cd94744b-426f-441d-91a1-f0f2cdfb9def",
+        "display": null,
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/person/eddf8708-a00f-4f1e-a532-7bbed6a45251/attribute/cd94744b-426f-441d-91a1-f0f2cdfb9def"
+          }
+        ]
+      },
+      {
+        "uuid": "529ea461-0394-42b6-965f-8d3bc79ee538",
+        "display": "Telephone Number = 34415349",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/person/eddf8708-a00f-4f1e-a532-7bbed6a45251/attribute/529ea461-0394-42b6-965f-8d3bc79ee538"
+          }
+        ]
+      }
+    ],
+    "voided": false,
+    "deathdateEstimated": false,
+    "birthtime": null,
+    "links": [
+      {
+        "rel": "self",
+        "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/person/eddf8708-a00f-4f1e-a532-7bbed6a45251"
+      },
+      {
+        "rel": "full",
+        "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/person/eddf8708-a00f-4f1e-a532-7bbed6a45251?v=full"
+      }
+    ],
+    "resourceVersion": "1.11"
+  },
+  "voided": false,
+  "links": [
+    {
+      "rel": "self",
+      "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/patient/eddf8708-a00f-4f1e-a532-7bbed6a45251"
+    },
+    {
+      "rel": "full",
+      "uri": "http://192.168.1.126:8080/openmrs/ws/rest/v1/patient/eddf8708-a00f-4f1e-a532-7bbed6a45251?v=full"
+    }
+  ],
+  "resourceVersion": "1.8"
+}

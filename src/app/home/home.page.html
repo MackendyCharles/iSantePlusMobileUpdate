@@ -1,0 +1,30 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="dashboad">
+      <ion-icon name="grid"></ion-icon>
+      <ion-label>Dashboard</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="patient">
+      <ion-icon name="person-add" ></ion-icon>
+      <ion-label style="margin-left: 0px; margin-right: 0px" >Patient</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="vitaux">
+      <ion-icon name="medkit"></ion-icon>
+      <ion-label>SignesVitaux</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="recherche" (click)="reloadReche()">
+      <ion-icon name="search-circle"></ion-icon>
+      <ion-label>Recherche</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="rapport">
+      <ion-icon name="albums"></ion-icon>
+      <ion-label>Rapport</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>
+
