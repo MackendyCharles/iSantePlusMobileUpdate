@@ -1063,7 +1063,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabAccCereVas: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabAccCereVas.concept = "e2347728-d872-4f2b-9c86-64f16c274461";
         obsAntPersHabAccCereVas.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabAccCereVas.person = this.dataVisit.patient;
+        obsAntPersHabAccCereVas.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabAccCereVas: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.accidentCerebroVas !== ""){
@@ -1087,7 +1087,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabAllergies: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabAllergies.concept = "5d1236b4-f769-4691-9718-8762506c13bf";
         obsAntPersHabAllergies.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabAllergies.person = this.dataVisit.patient;
+        obsAntPersHabAllergies.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabAllergies: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.allergiesPersHab !== ""){
@@ -1112,7 +1112,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabAsthme: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabAsthme.concept = "15254540-025e-44f9-91ab-27c243cdf79f";
         obsAntPersHabAsthme.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabAsthme.person = this.dataVisit.patient;
+        obsAntPersHabAsthme.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabAsthme: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.asthmePersHab !== ""){
@@ -1136,7 +1136,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabCancer: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabCancer.concept = "53e0d1c2-3df5-4ab9-9b5c-d492fc22fd08";
         obsAntPersHabCancer.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabCancer.person = this.dataVisit.patient;
+        obsAntPersHabCancer.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabCancer: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.cancerPersHab !== ""){
@@ -1161,7 +1161,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabCardiopathie: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabCardiopathie.concept = "4c33937a-3cdc-49f1-8be8-611ecd41246f";
         obsAntPersHabCardiopathie.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabCardiopathie.person = this.dataVisit.patient;
+        obsAntPersHabCardiopathie.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabCardiopathie: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.cardiopathiePersHab !== ""){
@@ -1185,7 +1185,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabChirurgie: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabChirurgie.concept = "35d13d8d-1fa2-4734-8c41-66c8ccee0c9f";
         obsAntPersHabChirurgie.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabChirurgie.person = this.dataVisit.patient;
+        obsAntPersHabChirurgie.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabChirurgie: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.cancerPersHab !== ""){
@@ -1210,7 +1210,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabTrauma: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabTrauma.concept = "48282f87-a839-4db8-b288-e260ccdef960";
         obsAntPersHabTrauma.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabTrauma.person = this.dataVisit.patient;
+        obsAntPersHabTrauma.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabTrauma: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.traumaPersHab !== ""){
@@ -1236,7 +1236,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabDiabete: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabDiabete.concept = "8bf6b860-463a-43f4-9719-5b97491ccc2e";
         obsAntPersHabDiabete.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabDiabete.person = this.dataVisit.patient;
+        obsAntPersHabDiabete.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabDiabete: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.duabetePersHab !== ""){
@@ -1261,7 +1261,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabEpilepsie: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabEpilepsie.concept = "e6eee25b-3aef-4728-b652-24407369e93e";
         obsAntPersHabEpilepsie.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabEpilepsie.person = this.dataVisit.patient;
+        obsAntPersHabEpilepsie.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabEpilepsie: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.epilepsiePersHab !== ""){
@@ -1285,7 +1285,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabGrossesse: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabGrossesse.concept = "4de7f0d5-9ab4-4f91-8783-729480c01c45";
         obsAntPersHabGrossesse.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabGrossesse.person = this.dataVisit.patient;
+        obsAntPersHabGrossesse.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabGrossesse: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.grossessePersHab !== ""){
@@ -1310,7 +1310,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabHemoglobinopathie: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabHemoglobinopathie.concept = "3b56c307-f65c-4eb9-8a43-b31dadb11fd1";
         obsAntPersHabHemoglobinopathie.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabHemoglobinopathie.person = this.dataVisit.patient;
+        obsAntPersHabHemoglobinopathie.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabHemoglobinopathie: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.hemoglobinopathiePersHab !== ""){
@@ -1335,7 +1335,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabHTA: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabHTA.concept = "1c5c74d9-f6cd-4050-a065-e4c53734cdb0";
         obsAntPersHabHTA.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabHTA.person = this.dataVisit.patient;
+        obsAntPersHabHTA.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabHTA: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.htaPersHab !== ""){
@@ -1359,7 +1359,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabHyperchoestérolémie: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabHyperchoestérolémie.concept = "bcf2138a-51c8-4e1a-84fc-979a4ceb1567";
         obsAntPersHabHyperchoestérolémie.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabHyperchoestérolémie.person = this.dataVisit.patient;
+        obsAntPersHabHyperchoestérolémie.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabHyperchoestérolémie: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.hyperchoesterolemiePersHab !== ""){
@@ -1383,7 +1383,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabIST: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabIST.concept = "1da9522f-fded-4bf1-b728-0efccfd761cf";
         obsAntPersHabIST.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabIST.person = this.dataVisit.patient;
+        obsAntPersHabIST.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabIST: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.istPersHab !== ""){
@@ -1408,7 +1408,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabMalnutrition: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabMalnutrition.concept = "2d7111a8-095d-400a-af37-b9bffca66da4";
         obsAntPersHabMalnutrition.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabMalnutrition.person = this.dataVisit.patient;
+        obsAntPersHabMalnutrition.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabMalnutrition: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.malnutritionPersHab !== ""){
@@ -1432,7 +1432,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabPertePoids: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabPertePoids.concept = "451dd9ad-c031-46cb-b27c-00e6375f9fec";
         obsAntPersHabPertePoids.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabPertePoids.person = this.dataVisit.patient;
+        obsAntPersHabPertePoids.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabPertePoids: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.pertePoidspersHab !== ""){
@@ -1456,7 +1456,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabTuberculose: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabTuberculose.concept = "02d31d6e-7bd8-4acc-9c52-4ba8da14f17e";
         obsAntPersHabTuberculose.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabTuberculose.person = this.dataVisit.patient;
+        obsAntPersHabTuberculose.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabTuberculose: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.tuberculosePersHab !== ""){
@@ -1480,7 +1480,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabMDRTB: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabMDRTB.concept = "cc6cd6cc-436a-4d25-813c-52a6265b6ccc";
         obsAntPersHabMDRTB.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabMDRTB.person = this.dataVisit.patient;
+        obsAntPersHabMDRTB.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabMDRTB: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.mdrTbPersHab !== ""){
@@ -1504,7 +1504,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabTrouPsy: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabTrouPsy.concept = "219fde2a-421e-4c48-96a9-c0f4451cc11f";
         obsAntPersHabTrouPsy.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabTrouPsy.person = this.dataVisit.patient;
+        obsAntPersHabTrouPsy.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabTrouPsy: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.troublesPsychPersHab !== ""){
@@ -1529,7 +1529,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabAlcool: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabAlcool.concept = "8e455764-beb8-4c99-9922-82bb4e06506e";
         obsAntPersHabAlcool.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabAlcool.person = this.dataVisit.patient;
+        obsAntPersHabAlcool.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabAlcool: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.alcoolPersHab !== ""){
@@ -1554,7 +1554,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabDrogue: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabDrogue.concept = "4c0d6e3c-0cbb-4ffe-923f-e65a0d81eb3e";
         obsAntPersHabDrogue.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabDrogue.person = this.dataVisit.patient;
+        obsAntPersHabDrogue.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabDrogue: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.droguePersHab !== ""){
@@ -1579,7 +1579,7 @@ export class PremiereConsultationSSPPage implements OnInit {
         let obsAntPersHabTabac: ObsGroupRequest = new ObsGroupRequest();
         obsAntPersHabTabac.concept = "1741cdff-5df3-4d0b-8dca-1d0082e9f628";
         obsAntPersHabTabac.obsDatetime= this.dateEnregistrement.value.dateEnCtrl;
-        obsAntPersHabTabac.person = this.dataVisit.patient;
+        obsAntPersHabTabac.person = this.dataVisit.patient.visit;
 
         let groupeMembreAntPersHabTabac: ObsRequest[] = [];
         if(this.personnelsHabitubes.value.tabacPersHab !== ""){
@@ -1638,77 +1638,874 @@ export class PremiereConsultationSSPPage implements OnInit {
         }
 
 
-        if(this.personnelsHabitubes.value.pds !== ""){
+        if(this.signesVitauxAnthropometrie.value.pds !== ""){
             let obsGroupePersHabMedActuelPds: ObsRequest = new ObsRequest();
             obsGroupePersHabMedActuelPds.concept = "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             obsGroupePersHabMedActuelPds.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
             obsGroupePersHabMedActuelPds.person = this.dataVisit.patient.uuid;
-            obsGroupePersHabMedActuelPds.value = this.personnelsHabitubes.value.pds;
+            obsGroupePersHabMedActuelPds.value = this.signesVitauxAnthropometrie.value.pds;
             groupMembreSspPersHabMedActuel.push(obsGroupePersHabMedActuelPds);
         }
 
-        if(this.personnelsHabitubes.value.temp !== ""){
+        if(this.signesVitauxAnthropometrie.value.temp !== ""){
             let obsGroupePersHabMedActuelTemp: ObsRequest = new ObsRequest();
             obsGroupePersHabMedActuelTemp.concept = "5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             obsGroupePersHabMedActuelTemp.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
             obsGroupePersHabMedActuelTemp.person = this.dataVisit.patient.uuid;
-            obsGroupePersHabMedActuelTemp.value = this.personnelsHabitubes.value.temp;
+            obsGroupePersHabMedActuelTemp.value = this.signesVitauxAnthropometrie.value.temp;
             groupMembreSspPersHabMedActuel.push(obsGroupePersHabMedActuelTemp);
         }
 
-        if(this.personnelsHabitubes.value.taille !== ""){
+        if(this.signesVitauxAnthropometrie.value.taille !== ""){
             let obsGroupePersHabMedActuelTaille: ObsRequest = new ObsRequest();
             obsGroupePersHabMedActuelTaille.concept = "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             obsGroupePersHabMedActuelTaille.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
             obsGroupePersHabMedActuelTaille.person = this.dataVisit.patient.uuid;
-            obsGroupePersHabMedActuelTaille.value = this.personnelsHabitubes.value.taille;
+            obsGroupePersHabMedActuelTaille.value = this.signesVitauxAnthropometrie.value.taille;
             groupMembreSspPersHabMedActuel.push(obsGroupePersHabMedActuelTaille);
         }
 
 
-        if(this.personnelsHabitubes.value.pouls !== ""){
+        if(this.signesVitauxAnthropometrie.value.pouls !== ""){
             let obsGroupePersHabMedActuelPouls: ObsRequest = new ObsRequest();
             obsGroupePersHabMedActuelPouls.concept = "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             obsGroupePersHabMedActuelPouls.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
             obsGroupePersHabMedActuelPouls.person = this.dataVisit.patient.uuid;
-            obsGroupePersHabMedActuelPouls.value = this.personnelsHabitubes.value.pouls;
+            obsGroupePersHabMedActuelPouls.value = this.signesVitauxAnthropometrie.value.pouls;
             groupMembreSspPersHabMedActuel.push(obsGroupePersHabMedActuelPouls);
         }
 
-        if(this.personnelsHabitubes.value.ta1 !== ""){
+        if(this.signesVitauxAnthropometrie.value.ta1 !== ""){
             let obsGroupePersHabMedActuelTa1: ObsRequest = new ObsRequest();
             obsGroupePersHabMedActuelTa1.concept = "5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             obsGroupePersHabMedActuelTa1.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
             obsGroupePersHabMedActuelTa1.person = this.dataVisit.patient.uuid;
-            obsGroupePersHabMedActuelTa1.value = this.personnelsHabitubes.value.ta1;
+            obsGroupePersHabMedActuelTa1.value = this.signesVitauxAnthropometrie.value.ta1;
             groupMembreSspPersHabMedActuel.push(obsGroupePersHabMedActuelTa1);
         }
 
-        if(this.personnelsHabitubes.value.ta2 !== ""){
+        if(this.signesVitauxAnthropometrie.value.ta2 !== ""){
             let obsGroupePersHabMedActuelTa2: ObsRequest = new ObsRequest();
             obsGroupePersHabMedActuelTa2.concept = "5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             obsGroupePersHabMedActuelTa2.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
             obsGroupePersHabMedActuelTa2.person = this.dataVisit.patient.uuid;
-            obsGroupePersHabMedActuelTa2.value = this.personnelsHabitubes.value.ta2;
+            obsGroupePersHabMedActuelTa2.value = this.signesVitauxAnthropometrie.value.ta2;
             groupMembreSspPersHabMedActuel.push(obsGroupePersHabMedActuelTa2);
         }
 
-        if(this.personnelsHabitubes.value.fr !== ""){
+        if(this.signesVitauxAnthropometrie.value.fr !== ""){
             let obsGroupePersHabMedActuelFr: ObsRequest = new ObsRequest();
             obsGroupePersHabMedActuelFr.concept = "5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             obsGroupePersHabMedActuelFr.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
             obsGroupePersHabMedActuelFr.person = this.dataVisit.patient.uuid;
-            obsGroupePersHabMedActuelFr.value = this.personnelsHabitubes.value.fr;
+            obsGroupePersHabMedActuelFr.value = this.signesVitauxAnthropometrie.value.fr;
             groupMembreSspPersHabMedActuel.push(obsGroupePersHabMedActuelFr);
         }
 
-        if(this.personnelsHabitubes.value.nomPrenomPrest !== ""){
+        if(this.signesVitauxAnthropometrie.value.nomPrenomPrest !== ""){
             let obsGroupePersHabMedActuelNomPrenomPrest: ObsRequest = new ObsRequest();
-            obsGroupePersHabMedActuelNomPrenomPrest.concept = "157d5d16-b207-40c3-9447-9819c2863df5\n";
+            obsGroupePersHabMedActuelNomPrenomPrest.concept = "157d5d16-b207-40c3-9447-9819c2863df5";
             obsGroupePersHabMedActuelNomPrenomPrest.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
             obsGroupePersHabMedActuelNomPrenomPrest.person = this.dataVisit.patient.uuid;
-            obsGroupePersHabMedActuelNomPrenomPrest.value = this.personnelsHabitubes.value.nomPrenomPrest;
+            obsGroupePersHabMedActuelNomPrenomPrest.value = this.signesVitauxAnthropometrie.value.nomPrenomPrest;
             groupMembreSspPersHabMedActuel.push(obsGroupePersHabMedActuelNomPrenomPrest);
+        }
+
+
+        if(this.motifConsultation.value.adenopathieMC !== ""){
+            let obsGroupePersHabMotiConAdenopa: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConAdenopa.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConAdenopa.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConAdenopa.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.adenopathieMC == true){
+                obsGroupePersHabMotiConAdenopa.value = "135488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConAdenopa);
+        }
+
+        if(this.motifConsultation.value.oedemeMC !== ""){
+            let obsGroupePersHabMotiConoEdemeMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConoEdemeMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConoEdemeMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConoEdemeMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.oedemeMC == true){
+                obsGroupePersHabMotiConoEdemeMC.value = "460AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            obsGroupePersHabMotiConoEdemeMC.comment = this.motifConsultation.value.preciserOedemeMC
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConoEdemeMC);
+        }
+
+        if(this.motifConsultation.value.douleursMC !== ""){
+            let obsGroupePersHabMotiConDouleursMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConDouleursMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConDouleursMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConDouleursMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.douleursMC == true){
+                obsGroupePersHabMotiConDouleursMC.value = "151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            obsGroupePersHabMotiConDouleursMC.comment = this.motifConsultation.value.preciserDouleursMC
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConDouleursMC);
+        }
+
+
+        if(this.motifConsultation.value.fievreM2SMC !== ""){
+            let obsGroupePersHabMotiConFievreM2SMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConFievreM2SMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConFievreM2SMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConFievreM2SMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.fievreM2SMC == true){
+                obsGroupePersHabMotiConFievreM2SMC.value = "163740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConFievreM2SMC);
+        }
+
+        if(this.motifConsultation.value.fievreP2SMC !== ""){
+            let obsGroupePersHabMotiConFievreP2SMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConFievreP2SMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConFievreP2SMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConFievreP2SMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.fievreP2SMC == true){
+                obsGroupePersHabMotiConFievreP2SMC.value = "162260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConFievreP2SMC);
+        }
+
+        if(this.motifConsultation.value.pertePoidsMC !== ""){
+            let obsGroupePersHabMotiConPertePoidsMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConPertePoidsMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConPertePoidsMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConPertePoidsMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.pertePoidsMC == true){
+                obsGroupePersHabMotiConPertePoidsMC.value = "832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConPertePoidsMC);
+        }
+
+
+        if(this.motifConsultation.value.sueursProfusesMC !== ""){
+            let obsGroupePersHabMotiConSueursProfusesMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConSueursProfusesMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConSueursProfusesMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConSueursProfusesMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.sueursProfusesMC == true){
+                obsGroupePersHabMotiConSueursProfusesMC.value = "140941AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConSueursProfusesMC);
+        }
+
+
+        if(this.motifConsultation.value.agressionAuInfliMC !== ""){
+            let obsGroupePersHabMotiConAgressionAuInfliMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConAgressionAuInfliMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConAgressionAuInfliMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConAgressionAuInfliMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.agressionAuInfliMC == true){
+                obsGroupePersHabMotiConAgressionAuInfliMC.value = "128808AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConAgressionAuInfliMC);
+        }
+
+
+        if(this.motifConsultation.value.agressionSexuelleMC !== ""){
+            let obsGroupePersHabMotiConagressionSexuelleMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConagressionSexuelleMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConagressionSexuelleMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConagressionSexuelleMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.agressionSexuelleMC == true){
+                obsGroupePersHabMotiConagressionSexuelleMC.value = "126582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConagressionSexuelleMC);
+        }
+
+
+        if(this.motifConsultation.value.agressionSexuelleHeureMC !== ""){
+            let obsGroupePersHabMotiConAgressionSexuelleHeureMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConAgressionSexuelleHeureMC.concept = "163737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConAgressionSexuelleHeureMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConAgressionSexuelleHeureMC.person = this.dataVisit.patient.uuid;
+
+            obsGroupePersHabMotiConAgressionSexuelleHeureMC.value = this.motifConsultation.value.agressionSexuelleHeureMC;
+
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConAgressionSexuelleHeureMC);
+        }
+
+        if(this.motifConsultation.value.accidentVoiePubliqueMC !== ""){
+            let obsGroupePersHabMotiConAccidentVoiePubliqueMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConAccidentVoiePubliqueMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConAccidentVoiePubliqueMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConAccidentVoiePubliqueMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.accidentVoiePubliqueMC == true){
+                obsGroupePersHabMotiConAccidentVoiePubliqueMC.value = "119964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConAccidentVoiePubliqueMC);
+        }
+
+
+        if(this.motifConsultation.value.brulureMC !== ""){
+            let obsGroupePersHabMotiConBrulureMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConBrulureMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConBrulureMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConBrulureMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.brulureMC == true){
+                obsGroupePersHabMotiConBrulureMC.value = "146623AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            obsGroupePersHabMotiConBrulureMC.comment = this.motifConsultation.value.preciserBrulureMC
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConBrulureMC);
+        }
+
+
+        if(this.motifConsultation.value.fractureOsseuseMC !== ""){
+            let obsGroupePersHabMotiConFractureOsseuseMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConFractureOsseuseMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConFractureOsseuseMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConFractureOsseuseMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.fractureOsseuseMC == true){
+                obsGroupePersHabMotiConFractureOsseuseMC.value = "177AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConFractureOsseuseMC);
+        }
+
+
+        if(this.motifConsultation.value.plaieMC !== ""){
+            let obsGroupePersHabMotiConPlaieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConPlaieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConPlaieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConPlaieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.plaieMC == true){
+                obsGroupePersHabMotiConPlaieMC.value = "159328AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            obsGroupePersHabMotiConPlaieMC.comment = this.motifConsultation.value.preciserPlaieMC
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConPlaieMC);
+        }
+
+
+        if(this.motifConsultation.value.armeFeuMC !== ""){
+            let obsGroupePersHabMotiConarmeFeuMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConarmeFeuMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConarmeFeuMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConarmeFeuMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.armeFeuMC == true){
+                obsGroupePersHabMotiConarmeFeuMC.value = "117746AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConarmeFeuMC);
+        }
+
+        if(this.motifConsultation.value.armeBlancheMC !== ""){
+            let obsGroupePersHabMotiConArmeBlancheMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConArmeBlancheMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConArmeBlancheMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConArmeBlancheMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.armeBlancheMC == true){
+                obsGroupePersHabMotiConArmeBlancheMC.value = "158843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConArmeBlancheMC);
+        }
+
+
+        if(this.motifConsultation.value.autresArmeMC !== ""){
+            let obsGroupePersHabMotiConAutresArmeMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConAutresArmeMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConAutresArmeMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConAutresArmeMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.autresArmeMC == true){
+                obsGroupePersHabMotiConAutresArmeMC.value = "114767AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            obsGroupePersHabMotiConAutresArmeMC.comment = this.motifConsultation.value.autresArmeTextMC
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConAutresArmeMC);
+        }
+
+        if(this.motifConsultation.value.traumaCranienMC !== ""){
+            let obsGroupePersHabMotiConTraumaCranienMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConTraumaCranienMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConTraumaCranienMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConTraumaCranienMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.traumaCranienMC == true){
+                obsGroupePersHabMotiConTraumaCranienMC.value = "116838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConTraumaCranienMC);
+        }
+
+        if(this.motifConsultation.value.ecoulementNasalMC !== ""){
+            let obsGroupePersHabMotiConEcoulementNasalMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConEcoulementNasalMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConEcoulementNasalMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConEcoulementNasalMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.ecoulementNasalMC == true){
+                obsGroupePersHabMotiConEcoulementNasalMC.value = "113224AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConEcoulementNasalMC);
+        }
+
+        if(this.motifConsultation.value.epistaxisMC !== ""){
+            let obsGroupePersHabMotiConEpistaxisMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConEpistaxisMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConEpistaxisMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConEpistaxisMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.epistaxisMC == true){
+                obsGroupePersHabMotiConEpistaxisMC.value = "133499AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConEpistaxisMC);
+        }
+
+        if(this.motifConsultation.value.oeilRougeMC !== ""){
+            let obsGroupePersHabMotiConOeilRougeMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConOeilRougeMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConOeilRougeMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConOeilRougeMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.oeilRougeMC == true){
+                obsGroupePersHabMotiConOeilRougeMC.value = "130184AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConOeilRougeMC);
+        }
+
+        if(this.motifConsultation.value.otalgieMC !== ""){
+            let obsGroupePersHabMotiConOtalgieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConOtalgieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConOtalgieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConOtalgieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.otalgieMC == true){
+                obsGroupePersHabMotiConOtalgieMC.value = "131602AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConOtalgieMC);
+        }
+
+
+        if(this.motifConsultation.value.otorrheeMC !== ""){
+            let obsGroupePersHabMotiConOtorrheeMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConOtorrheeMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConOtorrheeMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConOtorrheeMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.otorrheeMC == true){
+                obsGroupePersHabMotiConOtorrheeMC.value = "151702AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConOtorrheeMC);
+        }
+
+
+        if(this.motifConsultation.value.brulurersMictionnellesMC !== ""){
+            let obsGroupePersHabMotiConBrulurersMictionnellesMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConBrulurersMictionnellesMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConBrulurersMictionnellesMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConBrulurersMictionnellesMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.brulurersMictionnellesMC == true){
+                obsGroupePersHabMotiConBrulurersMictionnellesMC.value = "163606AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConBrulurersMictionnellesMC);
+        }
+
+
+        if(this.motifConsultation.value.douleurHypogastriqueMC !== ""){
+            let obsGroupePersHabMotiConDouleurHypogastriqueMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConDouleurHypogastriqueMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConDouleurHypogastriqueMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConDouleurHypogastriqueMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.douleurHypogastriqueMC == true){
+                obsGroupePersHabMotiConDouleurHypogastriqueMC.value = "131034AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConDouleurHypogastriqueMC);
+        }
+
+
+        if(this.motifConsultation.value.dysurieMC !== ""){
+            let obsGroupePersHabMotiConDysurieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConDysurieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConDysurieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConDysurieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.dysurieMC == true){
+                obsGroupePersHabMotiConDysurieMC.value = "118771AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConDysurieMC);
+        }
+
+
+        if(this.motifConsultation.value.ecoulementUrethralMC !== ""){
+            let obsGroupePersHabMotiConEcoulementUrethralMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConEcoulementUrethralMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConEcoulementUrethralMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConEcoulementUrethralMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.ecoulementUrethralMC == true){
+                obsGroupePersHabMotiConEcoulementUrethralMC.value = "123529AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConEcoulementUrethralMC);
+        }
+
+
+        if(this.motifConsultation.value.hematurieMC !== ""){
+            let obsGroupePersHabMotiConHematurieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConHematurieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConHematurieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConHematurieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.hematurieMC == true){
+                obsGroupePersHabMotiConHematurieMC.value = "840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConHematurieMC);
+        }
+
+        if(this.motifConsultation.value.hemorragieVaginaleMC !== ""){
+            let obsGroupePersHabMotiConHemorragieVaginaleMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConHemorragieVaginaleMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConHemorragieVaginaleMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConHemorragieVaginaleMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.hemorragieVaginaleMC == true){
+                obsGroupePersHabMotiConHemorragieVaginaleMC.value = "147232AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConHemorragieVaginaleMC);
+        }
+
+
+        if(this.motifConsultation.value.pertesVaginalesMC !== ""){
+            let obsGroupePersHabMotiConPertesVaginalesMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConPertesVaginalesMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConPertesVaginalesMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConPertesVaginalesMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.pertesVaginalesMC == true){
+                obsGroupePersHabMotiConPertesVaginalesMC.value = "123396AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConPertesVaginalesMC);
+        }
+
+
+        if(this.motifConsultation.value.pollakiurieMC !== ""){
+            let obsGroupePersHabMotiConPollakiurieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConPollakiurieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConPollakiurieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConPollakiurieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.pollakiurieMC == true){
+                obsGroupePersHabMotiConPollakiurieMC.value = "137593AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConPollakiurieMC);
+        }
+
+        if(this.motifConsultation.value.polyurieMC !== ""){
+            let obsGroupePersHabMotiConPolyurieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConPolyurieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConPolyurieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConPolyurieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.polyurieMC == true){
+                obsGroupePersHabMotiConPolyurieMC.value = "129510AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConPolyurieMC);
+        }
+
+
+        if(this.motifConsultation.value.pruritVulvaireMC !== ""){
+            let obsGroupePersHabMotiConPruritVulvaireMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConPruritVulvaireMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConPruritVulvaireMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConPruritVulvaireMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.pruritVulvaireMC == true){
+                obsGroupePersHabMotiConPruritVulvaireMC.value = "128310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConPruritVulvaireMC);
+        }
+
+
+        if(this.motifConsultation.value.ulcerationsMC !== ""){
+            let obsGroupePersHabMotiConulCerationsMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConulCerationsMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConulCerationsMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConulCerationsMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.ulcerationsMC == true){
+                obsGroupePersHabMotiConulCerationsMC.value = "145762AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConulCerationsMC);
+        }
+
+
+        if(this.motifConsultation.value.retardReglesMC !== ""){
+            let obsGroupePersHabMotiConRetardReglesMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConRetardReglesMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConRetardReglesMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConRetardReglesMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.retardReglesMC == true){
+                obsGroupePersHabMotiConRetardReglesMC.value = "134340AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConRetardReglesMC);
+        }
+
+
+        if(this.motifConsultation.value.troublesmentauxMC !== ""){
+            let obsGroupePersHabMotiConTroublesmentauxMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConTroublesmentauxMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConTroublesmentauxMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConTroublesmentauxMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.troublesmentauxMC == true){
+                obsGroupePersHabMotiConTroublesmentauxMC.value = "134337AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            obsGroupePersHabMotiConTroublesmentauxMC.comment = this.motifConsultation.value.preciserTroublesMentauxMC;
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConTroublesmentauxMC);
+        }
+
+
+        if(this.motifConsultation.value.aphasieMC !== ""){
+            let obsGroupePersHabMotiConAphasieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConAphasieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConAphasieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConAphasieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.aphasieMC == true){
+                obsGroupePersHabMotiConAphasieMC.value = "121529AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConAphasieMC);
+        }
+
+
+        if(this.motifConsultation.value.boiterieSteppageMC !== ""){
+            let obsGroupePersHabMotiConBoiterieSteppageMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConBoiterieSteppageMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConBoiterieSteppageMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConBoiterieSteppageMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.boiterieSteppageMC == true){
+                obsGroupePersHabMotiConBoiterieSteppageMC.value = "122936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConBoiterieSteppageMC);
+        }
+
+
+        if(this.motifConsultation.value.cephaleeMauxTeteMC !== ""){
+            let obsGroupePersHabMotiConCephaleeMauxTeteMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConCephaleeMauxTeteMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConCephaleeMauxTeteMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConCephaleeMauxTeteMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.cephaleeMauxTeteMC == true){
+                obsGroupePersHabMotiConCephaleeMauxTeteMC.value = "139084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConCephaleeMauxTeteMC);
+        }
+
+
+        if(this.motifConsultation.value.convulsionsMC !== ""){
+            let obsGroupePersHabMotiConConvulsionsMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConConvulsionsMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConConvulsionsMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConConvulsionsMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.convulsionsMC == true){
+                obsGroupePersHabMotiConConvulsionsMC.value = "206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConConvulsionsMC);
+        }
+
+
+        if(this.motifConsultation.value.hemiplegieMC !== ""){
+            let obsGroupePersHabMotiConHemiplegieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConHemiplegieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConHemiplegieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConHemiplegieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.hemiplegieMC == true){
+                obsGroupePersHabMotiConHemiplegieMC.value = "117655AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConHemiplegieMC);
+        }
+
+
+        if(this.motifConsultation.value.paralysieFlasqueMC !== ""){
+            let obsGroupePersHabMotiConParalysieFlasqueMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConParalysieFlasqueMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConParalysieFlasqueMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConParalysieFlasqueMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.paralysieFlasqueMC == true){
+                obsGroupePersHabMotiConParalysieFlasqueMC.value = "160426AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConParalysieFlasqueMC);
+        }
+
+
+        if(this.motifConsultation.value.paraplegieMC !== ""){
+            let obsGroupePersHabMotiConParaplegieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConParaplegieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConParaplegieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConParaplegieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.paraplegieMC == true){
+                obsGroupePersHabMotiConParaplegieMC.value = "130843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConParaplegieMC);
+        }
+
+
+        if(this.motifConsultation.value.syncopeMC !== ""){
+            let obsGroupePersHabMotiConSyncopeMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConSyncopeMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConSyncopeMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConSyncopeMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.syncopeMC == true){
+                obsGroupePersHabMotiConSyncopeMC.value = "125166AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConSyncopeMC);
+        }
+
+
+        if(this.motifConsultation.value.vertigesMC !== ""){
+            let obsGroupePersHabMotiConVertigesMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConVertigesMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConVertigesMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConVertigesMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.vertigesMC == true){
+                obsGroupePersHabMotiConVertigesMC.value = "111525AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConVertigesMC);
+        }
+
+
+        if(this.motifConsultation.value.douleursPrecordialesMC !== ""){
+            let obsGroupePersHabMotiConDouleursPrecordialesMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConDouleursPrecordialesMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConDouleursPrecordialesMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConDouleursPrecordialesMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.douleursPrecordialesMC == true){
+                obsGroupePersHabMotiConDouleursPrecordialesMC.value = "159361AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConDouleursPrecordialesMC);
+        }
+
+
+        if(this.motifConsultation.value.douleursThoraciquesMC !== ""){
+            let obsGroupePersHabMotiConDouleursThoraciquesMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConDouleursThoraciquesMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConDouleursThoraciquesMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConDouleursThoraciquesMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.douleursThoraciquesMC == true){
+                obsGroupePersHabMotiConDouleursThoraciquesMC.value = "120749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConDouleursThoraciquesMC);
+        }
+
+
+        if(this.motifConsultation.value.dyspneeMC !== ""){
+            let obsGroupePersHabMotiConDyspneeMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConDyspneeMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConDyspneeMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConDyspneeMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.dyspneeMC == true){
+                obsGroupePersHabMotiConDyspneeMC.value = "122496AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConDyspneeMC);
+        }
+
+
+        if(this.motifConsultation.value.hemoptysieMC !== ""){
+            let obsGroupePersHabMotiConHemoptysieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConHemoptysieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConHemoptysieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConHemoptysieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.hemoptysieMC == true){
+                obsGroupePersHabMotiConHemoptysieMC.value = "138905AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConHemoptysieMC);
+        }
+
+
+        if(this.motifConsultation.value.palpitationsMC !== ""){
+            let obsGroupePersHabMotiConPalpitationsMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConPalpitationsMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConPalpitationsMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConPalpitationsMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.palpitationsMC == true){
+                obsGroupePersHabMotiConPalpitationsMC.value = "130987AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConPalpitationsMC);
+        }
+
+
+        if(this.motifConsultation.value.touxM2SMC !== ""){
+            let obsGroupePersHabMotiConTouxM2SMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConTouxM2SMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConTouxM2SMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConTouxM2SMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.touxM2SMC == true){
+                obsGroupePersHabMotiConTouxM2SMC.value = "163739AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConTouxM2SMC);
+        }
+
+
+        if(this.motifConsultation.value.touxP2SMC !== ""){
+            let obsGroupePersHabMotiConTouxP2SMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConTouxP2SMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConTouxP2SMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConTouxP2SMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.touxP2SMC == true){
+                obsGroupePersHabMotiConTouxP2SMC.value = "159799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConTouxP2SMC);
+        }
+
+
+        if(this.motifConsultation.value.eruptionsCutaneesMC !== ""){
+            let obsGroupePersHabMotiConEruptionsCutaneesMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConEruptionsCutaneesMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConEruptionsCutaneesMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConEruptionsCutaneesMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.eruptionsCutaneesMC == true){
+                obsGroupePersHabMotiConEruptionsCutaneesMC.value = "512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            obsGroupePersHabMotiConEruptionsCutaneesMC.comment = this.motifConsultation.value.preciserEruptionsCutaneesMC;
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConEruptionsCutaneesMC);
+        }
+
+
+        if(this.motifConsultation.value.pruritMC !== ""){
+            let obsGroupePersHabMotiConPruritMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConPruritMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConPruritMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConPruritMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.pruritMC == true){
+                obsGroupePersHabMotiConPruritMC.value = "128310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConPruritMC);
+        }
+
+
+        if(this.motifConsultation.value.constipaionMC !== ""){
+            let obsGroupePersHabMotiConConstipaionMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConConstipaionMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConConstipaionMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConConstipaionMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.constipaionMC == true){
+                obsGroupePersHabMotiConConstipaionMC.value = "996AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConConstipaionMC);
+        }
+
+
+        if(this.motifConsultation.value.diarrheeM2SMC !== ""){
+            let obsGroupePersHabMotiConDiarrheeM2SMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConDiarrheeM2SMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConDiarrheeM2SMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConDiarrheeM2SMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.diarrheeM2SMC == true){
+                obsGroupePersHabMotiConDiarrheeM2SMC.value = "163465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConDiarrheeM2SMC);
+        }
+
+
+        if(this.motifConsultation.value.diarrheeP2SMC !== ""){
+            let obsGroupePersHabMotiConDiarrheeP2SMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConDiarrheeP2SMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConDiarrheeP2SMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConDiarrheeP2SMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.diarrheeP2SMC == true){
+                obsGroupePersHabMotiConDiarrheeP2SMC.value = "5018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConDiarrheeP2SMC);
+        }
+
+
+        if(this.motifConsultation.value.douleursAbdominalesMC !== ""){
+            let obsGroupePersHabMotiConDouleursAbdominalesMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConDouleursAbdominalesMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConDouleursAbdominalesMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConDouleursAbdominalesMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.douleursAbdominalesMC == true){
+                obsGroupePersHabMotiConDouleursAbdominalesMC.value = "151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConDouleursAbdominalesMC);
+        }
+
+
+        if(this.motifConsultation.value.dysphagieMC !== ""){
+            let obsGroupePersHabMotiConDysphagieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConDysphagieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConDysphagieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConDysphagieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.dysphagieMC == true){
+                obsGroupePersHabMotiConDysphagieMC.value = "118789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConDysphagieMC);
+        }
+
+
+        if(this.motifConsultation.value.hematemeseMC !== ""){
+            let obsGroupePersHabMotiConHematemeseMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConHematemeseMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConHematemeseMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConHematemeseMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.hematemeseMC == true){
+                obsGroupePersHabMotiConHematemeseMC.value = "139006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConHematemeseMC);
+        }
+
+
+        if(this.motifConsultation.value.ictereJaunisseMC !== ""){
+            let obsGroupePersHabMotiConIctereJaunisseMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConIctereJaunisseMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConIctereJaunisseMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConIctereJaunisseMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.ictereJaunisseMC == true){
+                obsGroupePersHabMotiConIctereJaunisseMC.value = "136443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConIctereJaunisseMC);
+        }
+
+
+
+        if(this.motifConsultation.value.inappetenceAnorexieMC !== ""){
+            let obsGroupePersHabMotiConInappetenceAnorexieMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConInappetenceAnorexieMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConInappetenceAnorexieMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConInappetenceAnorexieMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.inappetenceAnorexieMC == true){
+                obsGroupePersHabMotiConInappetenceAnorexieMC.value = "6031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConInappetenceAnorexieMC);
+        }
+
+
+        if(this.motifConsultation.value.melenaMC !== ""){
+            let obsGroupePersHabMotiConMelenaMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConMelenaMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConMelenaMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConMelenaMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.melenaMC == true){
+                obsGroupePersHabMotiConMelenaMC.value = "134394AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConMelenaMC);
+        }
+
+
+        if(this.motifConsultation.value.nauseeMC !== ""){
+            let obsGroupePersHabMotiConNauseeMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConNauseeMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConNauseeMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConNauseeMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.nauseeMC == true){
+                obsGroupePersHabMotiConNauseeMC.value = "5978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConNauseeMC);
+        }
+
+
+        if(this.motifConsultation.value.pyrosisMC !== ""){
+            let obsGroupePersHabMotiConPyrosisMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConPyrosisMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConPyrosisMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConPyrosisMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.pyrosisMC == true){
+                obsGroupePersHabMotiConPyrosisMC.value = "139059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConPyrosisMC);
+        }
+
+
+        if(this.motifConsultation.value.vomissementMC !== ""){
+            let obsGroupePersHabMotiConVomissementMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConVomissementMC.concept = "159614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConVomissementMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConVomissementMC.person = this.dataVisit.patient.uuid;
+            if(this.motifConsultation.value.vomissementMC == true){
+                obsGroupePersHabMotiConVomissementMC.value = "122983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            }
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConVomissementMC);
+        }
+
+
+        if(this.motifConsultation.value.remarqueMC !== ""){
+            let obsGroupePersHabMotiConRemarqueMC: ObsRequest = new ObsRequest();
+            obsGroupePersHabMotiConRemarqueMC.concept = "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            obsGroupePersHabMotiConRemarqueMC.obsDatetime = this.dateEnregistrement.value.dateEnCtrl;
+            obsGroupePersHabMotiConRemarqueMC.person = this.dataVisit.patient.uuid;
+            obsGroupePersHabMotiConRemarqueMC.value = this.motifConsultation.value.remarqueMC
+            groupMembreSspPersHabMedActuel.push(obsGroupePersHabMotiConRemarqueMC);
         }
 
 
